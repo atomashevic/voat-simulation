@@ -3,6 +3,8 @@
 Preprocess simulation data to extract clean text for topic modeling.
 Handles the special "TITLE: ..." format and filters comments.
 Fixes common issues in simulated text like missing spaces after periods.
+
+Defaults: minimum text length is 25 characters (applies to both posts and comments).
 """
 
 import pandas as pd
@@ -11,8 +13,14 @@ from pathlib import Path
 import argparse
 
 
-def extract_clean_posts(df: pd.DataFrame, text_column: str = 'tweet') -> pd.DataFrame:
-    """Extract and clean posts from simulation data."""
+def extract_clean_posts(df: pd.DataFrame, text_column: str = 'tweet', min_length: int = 25) -> pd.DataFrame:
+    """Extract and clean posts/comments from simulation data.
+
+    Args:
+        df: Input DataFrame containing at least the text_column.
+        text_column: Name of the column with raw text (default: 'tweet').
+        min_length: Minimum number of characters to keep a text (default: 25).
+    """
     
     # Create a copy to work with
     df = df.copy()
@@ -72,9 +80,9 @@ def extract_clean_posts(df: pd.DataFrame, text_column: str = 'tweet') -> pd.Data
         axis=1
     )
     
-    # Filter out very short texts
+    # Filter out very short texts (default: 25 chars)
     df['text_length'] = df['full_text'].str.len()
-    df = df[df['text_length'] >= 50]
+    df = df[df['text_length'] >= int(min_length)]
     
     # Add post type
     df['post_type'] = df['has_title'].apply(lambda x: 'post' if x else 'comment')
@@ -88,7 +96,7 @@ def main():
     parser.add_argument("--output", type=Path, required=True, help="Output CSV file")
     parser.add_argument("--text-column", type=str, default="tweet", help="Column containing text")
     parser.add_argument("--posts-only", action="store_true", help="Keep only posts (not comments)")
-    parser.add_argument("--min-length", type=int, default=50, help="Minimum text length")
+    parser.add_argument("--min-length", type=int, default=25, help="Minimum text length (applies to posts and comments)")
     
     args = parser.parse_args()
     
@@ -97,17 +105,14 @@ def main():
     print(f"Loaded {len(df)} rows from {args.input}")
     
     # Process
-    df_clean = extract_clean_posts(df, args.text_column)
+    df_clean = extract_clean_posts(df, args.text_column, min_length=args.min_length)
     
     # Filter if requested
     if args.posts_only:
         df_clean = df_clean[df_clean['post_type'] == 'post']
         print(f"Filtered to {len(df_clean)} posts (excluded comments)")
     
-    # Additional length filtering if specified
-    if args.min_length > 50:
-        df_clean = df_clean[df_clean['text_length'] >= args.min_length]
-        print(f"Filtered to {len(df_clean)} texts with length >= {args.min_length}")
+    # Length filtering already applied in extract_clean_posts via --min-length
     
     # Save
     columns_to_save = ['id', 'title', 'body', 'full_text', 'post_type', 'text_length']

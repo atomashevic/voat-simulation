@@ -44,20 +44,29 @@ fi
 
 PY=${PYTHON:-python3}
 
-echo "[1/7] Visualize simulation"
+echo "[1/8] Visualize simulation"
 ${PY} scripts/visualize_simulation2_additional.py --sim-dir "${SIM_DIR}" || echo "visualize_simulation2_additional.py failed" >&2
 
-echo "[2/7] Additional plots"
+echo "[2/8] Additional plots"
 if [[ -f "${USERS_CSV}" ]]; then
   ${PY} scripts/additional_plots.py --sim-dir "${SIM_DIR}" --out-dir "${SIM_DIR}" || echo "additional_plots.py failed" >&2
 else
   echo "Skipping additional_plots.py (no users.csv in ${SIM_DIR})"
 fi
 
-echo "[3/7] Convergence entropy"
+echo "[3/8] Comparative network analysis (Voat)"
+# The current comparator script looks under 'simulation3' and MADOC/voat-technology
+# Guard to run only when SIM_DIR is simulation3 and Voat data directory exists.
+if [[ "${SIM_DIR}" == "simulation3" && -d "MADOC/voat-technology" ]]; then
+  ${PY} scripts/comparative_network_analysis_voat.py || echo "comparative_network_analysis_voat.py failed" >&2
+else
+  echo "Skipping comparative_network_analysis_voat.py (requires SIM_DIR=simulation3 and MADOC/voat-technology)"
+fi
+
+echo "[4/8] Convergence entropy"
 ${PY} scripts/convergence_entropy_chains.py --posts-csv "${POSTS_CSV}" || echo "convergence_entropy_chains.py failed" >&2
 
-echo "[4/7] NER (requires MADOC Voat parquet + toxigen.csv)"
+echo "[5/8] NER (requires MADOC Voat parquet + toxigen.csv)"
 VOAT_PQ="MADOC/voat-technology/voat_technology_madoc.parquet"
 if [[ -f "${VOAT_PQ}" && -f "${TOX_CSV}" ]]; then
   ${PY} scripts/voat_ner_structure.py --sim2-posts "${POSTS_CSV}" --sim2-tox "${TOX_CSV}" --mode both --plot-compare --plot-bipartite || echo "voat_ner_structure.py failed" >&2
@@ -65,7 +74,7 @@ else
   echo "Skipping NER (requires ${VOAT_PQ} and ${TOX_CSV})"
 fi
 
-echo "[5/7] Topics (BERTopic)"
+echo "[6/8] Topics (BERTopic)"
 if [[ -f "${VOAT_PQ}" ]]; then
   ${PY} scripts/voat_topic_compare.py \
     --sim2-posts-csv "${POSTS_CSV}" \
@@ -86,7 +95,7 @@ else
   echo "Skipping topic comparison (missing ${VOAT_PQ})"
 fi
 
-echo "[6/7] Embeddings (similarity)"
+echo "[7/8] Embeddings (similarity)"
 if [[ -f "${VOAT_PQ}" && -f "${TOX_CSV}" ]]; then
   ${PY} scripts/voat_sim_embedding_similarity.py \
     --sim2-posts "${POSTS_CSV}" \
@@ -100,7 +109,7 @@ else
   echo "Skipping embedding similarity (requires ${VOAT_PQ} and ${TOX_CSV})"
 fi
 
-echo "[7/7] Matching and smaller scripts"
+echo "[8/8] Matching and smaller scripts"
 if [[ -f "${VOAT_PQ}" && -f "${TOX_CSV}" ]]; then
   ${PY} scripts/sim_comments_to_voat_match.py --sim2-posts "${POSTS_CSV}" --sim2-tox "${TOX_CSV}" || echo "sim_comments_to_voat_match.py failed" >&2
   ${PY} scripts/voat_toxic_match.py --sim2-posts "${POSTS_CSV}" --sim2-tox "${TOX_CSV}" || echo "voat_toxic_match.py failed" >&2

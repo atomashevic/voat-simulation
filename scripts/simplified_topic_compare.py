@@ -20,7 +20,13 @@ def load_data(path: Path, text_column: str = None, max_docs: int = None) -> Tupl
     if path.suffix.lower() == '.csv':
         df = pd.read_csv(path)
     elif path.suffix.lower() == '.parquet':
-        df = pd.read_parquet(path)
+        try:
+            df = pd.read_parquet(path)
+        except ImportError as e:
+            raise ImportError(
+                "pandas parquet support requires 'pyarrow' or 'fastparquet'. "
+                "Install one of them in your environment (e.g., pip install pyarrow)."
+            ) from e
     else:
         raise ValueError(f"Unsupported file type: {path.suffix}")
     
@@ -69,44 +75,60 @@ def load_data(path: Path, text_column: str = None, max_docs: int = None) -> Tupl
     return cleaned_texts, df
 
 
-def train_bertopic_model(texts: List[str], 
-                        min_topic_size: int = 15,
-                        nr_topics: str = "auto") -> tuple:
-    """Train a BERTopic model with sensible defaults."""
+def train_bertopic_model(
+    texts: List[str],
+    min_topic_size: int = 15,
+    nr_topics: str = "auto",
+) -> tuple:
+    """Train a BERTopic model with sensible defaults.
+
+    Falls back to no dimensionality reduction when UMAP/numba is unavailable
+    or incompatible with the local NumPy version.
+    """
     from bertopic import BERTopic
     from sentence_transformers import SentenceTransformer
     from sklearn.feature_extraction.text import CountVectorizer
     from hdbscan import HDBSCAN
-    from umap import UMAP
-    
+
     # Embedding model
     embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-    
-    # UMAP for dimensionality reduction
-    umap_model = UMAP(
-        n_neighbors=15,
-        n_components=5,
-        min_dist=0.0,
-        metric='cosine',
-        random_state=42
-    )
-    
+
+    # Try to configure UMAP. If import fails (e.g., numba/numpy mismatch),
+    # disable dimensionality reduction and let HDBSCAN operate on embeddings.
+    umap_model = None
+    reduce_dimensionality = False
+    try:
+        from umap import UMAP  # type: ignore
+
+        umap_model = UMAP(
+            n_neighbors=15,
+            n_components=5,
+            min_dist=0.0,
+            metric="cosine",
+            random_state=42,
+        )
+        reduce_dimensionality = True
+    except Exception as e:
+        print(
+            f"UMAP unavailable or incompatible ({e}); proceeding without dimensionality reduction."
+        )
+
     # HDBSCAN for clustering
     hdbscan_model = HDBSCAN(
         min_cluster_size=min_topic_size,
-        metric='euclidean',
-        cluster_selection_method='eom',
-        prediction_data=True
+        metric="euclidean",
+        cluster_selection_method="eom",
+        prediction_data=True,
     )
-    
+
     # Vectorizer with reasonable constraints
     vectorizer_model = CountVectorizer(
-        stop_words='english',
+        stop_words="english",
         ngram_range=(1, 2),
         min_df=10,  # Words must appear in at least 10 documents
-        max_df=0.5  # Words can't appear in more than 50% of documents
+        max_df=0.5,  # Words can't appear in more than 50% of documents
     )
-    
+
     # Create and train model
     topic_model = BERTopic(
         embedding_model=embedding_model,
@@ -116,11 +138,11 @@ def train_bertopic_model(texts: List[str],
         nr_topics=nr_topics,
         min_topic_size=min_topic_size,
         calculate_probabilities=False,
-        verbose=True
+        verbose=True,
     )
-    
-    topics, probs = topic_model.fit_transform(texts)
-    
+
+    topics, _ = topic_model.fit_transform(texts)
+
     return topic_model, topics
 
 

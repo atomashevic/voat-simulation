@@ -90,8 +90,13 @@ WS_RE = re.compile(r"\s+")
 
 def clean_text(s: str) -> str:
     s = s or ""
+    # Remove URLs and normalize whitespace/newlines
     s = URL_RE.sub(" ", s)
     s = s.replace("\n", " ")
+    # Fix missing space after periods before capital letters (e.g., "end.Sentence")
+    s = re.sub(r"\.([A-Z])", r". \1", s)
+    # Strip username/mention prefix at start of text (e.g., ".user", "@user")
+    s = re.sub(r"^[.@]\S+\s+", "", s)
     s = WS_RE.sub(" ", s)
     return s.strip()
 
@@ -262,8 +267,14 @@ def build_bertopic(
         cluster_selection_method="eom",
         prediction_data=True,
     )
+    # Vectorizer with stricter token pattern:
+    # - drop pure numbers and very short tokens
+    # - keep words starting with a letter, allow digits/underscore/hyphen after
     vectorizer_model = CountVectorizer(
-        stop_words="english", ngram_range=(1, 2), min_df=vectorizer_min_df
+        stop_words="english",
+        ngram_range=(1, 2),
+        min_df=vectorizer_min_df,
+        token_pattern=r"(?u)\\b[^\W\d][\w\-]{2,}\\b",
     )
     topic_model = BERTopic(
         embedding_model=embedding_model,
@@ -516,7 +527,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--hf-offline", action="store_true", help="Set HF_HUB_OFFLINE=1 to avoid network calls when loading the model")
     parser.add_argument("--outdir", type=Path, default=Path("simulation3/topic_compare"))
     parser.add_argument("--save-heatmap", action="store_true")
-    parser.add_argument("--vectorizer-min-df", type=int, default=5)
+    parser.add_argument("--vectorizer-min-df", type=int, default=1)
     parser.add_argument("--topk-per-sim2", type=int, default=3, help="Top-K MADOC matches to keep per simulation topic (many-to-one)")
     parser.add_argument("--word-sim-threshold", type=float, default=0.6, help="Threshold for word embedding similarity in soft Jaccard")
     parser.add_argument("--topic-repr", type=str, default="centroid", choices=["centroid", "bertopic", "hybrid"], help="Topic vector representation")
@@ -528,7 +539,15 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--min-doc-chars", type=int, default=15, help="Minimum cleaned character length to keep a document")
     parser.add_argument("--drop-header-rows", action="store_true", help="Attempt to drop rows whose text is just a column header like 'title'")
     parser.add_argument("--extra-stopwords", type=str, default=None, help="Comma-separated extra stopwords to remove (added to english + column names)")
-    parser.add_argument("--min-token-freq", type=int, default=3, help="Tokens appearing in >= this fraction of docs (as absolute count if >1) will be pruned via dynamic stopwords (set 0 to disable)")
+    parser.add_argument(
+        "--min-token-freq",
+        type=float,
+        default=0.0,
+        help=(
+            "Dynamic stopwords: if 0<val<1 treat as fraction of docs; "
+            "if >=1 treat as absolute doc count. Set 0 to disable."
+        ),
+    )
 
     args = parser.parse_args(argv)
 
@@ -590,10 +609,16 @@ def main(argv: Optional[List[str]] = None) -> int:
     for d in sim2_texts + madoc_texts:
         for t in doc_tokens(d):
             token_counts[t] += 1
-    # Absolute threshold mode (legacy)
-    if args.min_token_freq > 1:
+    # Dynamic stopwords by doc frequency threshold
+    mtf = float(args.min_token_freq or 0.0)
+    if 0 < mtf < 1:
+        df_cut = mtf * total_docs
         for tok, cnt in token_counts.items():
-            if cnt >= args.min_token_freq:
+            if cnt >= df_cut:
+                extra_stop.add(tok)
+    elif mtf >= 1:
+        for tok, cnt in token_counts.items():
+            if cnt >= mtf:
                 extra_stop.add(tok)
     # Fractional DF threshold
     if 0 < args.df_threshold < 1:
@@ -606,12 +631,46 @@ def main(argv: Optional[List[str]] = None) -> int:
     if extra_stop and hasattr(topic_model_sim2, 'vectorizer_model'):
         base_stop = set(topic_model_sim2.vectorizer_model.get_stop_words() or [])
         topic_model_sim2.vectorizer_model.stop_words = list(base_stop.union(extra_stop))
-    _topics_sim2, _ = topic_model_sim2.fit_transform(sim2_texts)
+    # Fit with fallback if vocabulary collapses
+    try:
+        _topics_sim2, _ = topic_model_sim2.fit_transform(sim2_texts)
+    except ValueError as e:
+        if "empty vocabulary" in str(e):
+            # Relax vectorizer and retry once
+            print("Warning: empty vocabulary for sim2 topics; relaxing vectorizer (min_df=1, default token pattern)", file=sys.stderr)
+            topic_model_sim2.vectorizer_model = CountVectorizer(
+                stop_words="english",
+                ngram_range=(1, 2),
+                min_df=1,
+                token_pattern=r"(?u)\\b\\w\\w+\\b",
+            )
+            if extra_stop:
+                base_stop = set(topic_model_sim2.vectorizer_model.get_stop_words() or [])
+                topic_model_sim2.vectorizer_model.stop_words = list(base_stop.union(extra_stop))
+            _topics_sim2, _ = topic_model_sim2.fit_transform(sim2_texts)
+        else:
+            raise
     topic_model_madoc = build_bertopic(embedding_model, min_topic_size=args.min_topic_size, seed=args.seed, vectorizer_min_df=args.vectorizer_min_df)
     if extra_stop and hasattr(topic_model_madoc, 'vectorizer_model'):
         base_stop = set(topic_model_madoc.vectorizer_model.get_stop_words() or [])
         topic_model_madoc.vectorizer_model.stop_words = list(base_stop.union(extra_stop))
-    _topics_madoc, _ = topic_model_madoc.fit_transform(madoc_texts)
+    try:
+        _topics_madoc, _ = topic_model_madoc.fit_transform(madoc_texts)
+    except ValueError as e:
+        if "empty vocabulary" in str(e):
+            print("Warning: empty vocabulary for MADOC topics; relaxing vectorizer (min_df=1, default token pattern)", file=sys.stderr)
+            topic_model_madoc.vectorizer_model = CountVectorizer(
+                stop_words="english",
+                ngram_range=(1, 2),
+                min_df=1,
+                token_pattern=r"(?u)\\b\\w\\w+\\b",
+            )
+            if extra_stop:
+                base_stop = set(topic_model_madoc.vectorizer_model.get_stop_words() or [])
+                topic_model_madoc.vectorizer_model.stop_words = list(base_stop.union(extra_stop))
+            _topics_madoc, _ = topic_model_madoc.fit_transform(madoc_texts)
+        else:
+            raise
 
     # Extract topic infos
     sim2_infos = extract_topic_info(topic_model_sim2, sim2_texts, top_n_words=args.top_n_words)

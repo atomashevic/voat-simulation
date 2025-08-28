@@ -10,9 +10,10 @@ Usage:
     python scripts/comparative_network_analysis_voat.py
 
 Output:
-    - Comparative visualizations in plots/comparison/
-    - Analysis results in CSVs
-    - Detailed similarity report
+    - All outputs are now saved under simulation3/voat-comparison/
+      - Comparative visualizations: simulation3/voat-comparison/plots/
+      - CSV summaries: simulation3/voat-comparison/
+      - Text report: simulation3/voat-comparison/similarity_report.txt
 """
 
 import pandas as pd
@@ -48,7 +49,8 @@ class VoatNetworkComparator:
         self.base_path = Path(base_path)
         self.simulation2_path = self.base_path / "simulation3"
         self.voat_path = self.base_path / "MADOC" / "voat-technology" 
-        self.output_path = self.base_path / "voat-comparison"
+        # Save all outputs under the simulation directory for easier packaging
+        self.output_path = (self.base_path / "simulation3" / "voat-comparison")
         self.output_path.mkdir(parents=True, exist_ok=True)
         
         # Storage for loaded data
