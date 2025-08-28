@@ -1,0 +1,139 @@
+================================================================================
+Voat Technology Analysis Results
+================================================================================
+
+Sample Period: 2017-03-09 to 2017-04-08
+Total Records: 1,543
+
+===== ACTIVE USERS =====
+Unique Users: 712
+Low Activity Users (1-2 interactions): 624 (87.6%)
+Medium Activity Users (3-10 interactions): 72 (10.1%)
+High Activity Users (>10 interactions): 16 (2.2%)
+One-Day-Only Users: 570 (80.1%)
+Average Interactions per User: 2.17
+Median Interactions per User: 1.00
+Average Activity Span: 2.69 days
+
+===== USER DYNAMICS =====
+Average New Users Percentage (days 10+): 55.14%
+Average Churn Percentage (days 10+): 85.60%
+Total Unique Users: 712
+
+===== INTERACTIONS PER USER =====
+Overall Average Interactions per User per Day: 1.35
+Overall Median Interactions per User per Day: 1.00
+
+===== UNIQUE ACTIVE USERS PER DAY =====
+Average Unique Active Users per Day: 38.27
+Median Unique Active Users per Day: 37.50
+Maximum Unique Active Users in a Day: 68.00
+Minimum Unique Active Users in a Day: 20.00
+
+Average Interactions on Active Days: 1.13
+Median Interactions on Active Days: 1.00
+Maximum Interactions on Active Days: 8.00
+Average Active Days per User: 1.61
+Median Active Days per User: 1.00
+Maximum Active Days per User: 26.00
+Users with Single Day Activity: 558
+Users with High Activity (>10 days): 8
+
+===== POSTS AND COMMENTS =====
+Total Posts: 735
+Total Comments: 808
+Post-Comment Ratio: 1:1.10
+Average Posts per Day: 24.50
+Average Comments per Day: 26.93
+Maximum Posts in a Day: 36
+Maximum Comments in a Day: 58
+Unique Users Who Posted: 280
+Unique Users Who Commented: 488
+Average Posts per User: 2.62
+Average Comments per User: 1.66
+Maximum Posts by a Single User: 117
+Maximum Comments by a Single User: 26
+
+===== TOXICITY ANALYSIS =====
+Toxicity Coverage: 100.00% (1,543 out of 1,543 records)
+Mean Toxicity Score: 0.1055
+Median Toxicity Score: 0.0014
+Min Toxicity Score: 0.0006
+Max Toxicity Score: 0.9909
+Standard Deviation: 0.2641
+
+Toxicity by Interaction Type:
+  Posts: Mean 0.0320, Median 0.0008, Count 735
+  Comments: Mean 0.1723, Median 0.0029, Count 808
+
+High Toxicity Content:
+  High Toxicity Threshold: 0.5043
+  High Toxicity Posts: 21 (2.86%)
+  High Toxicity Comments: 134 (16.58%)
+  Total High Toxicity: 155 (10.05%)
+
+  Very High Toxicity Threshold: 0.9116
+  Very High Toxicity Posts: 7 (0.95%)
+  Very High Toxicity Comments: 71 (8.79%)
+  Total Very High Toxicity: 78 (5.06%)
+
+User Toxicity Metrics:
+  Users with Consistently High Toxicity: 1 (0.14%)
+
+===== THREAD LENGTH ANALYSIS =====
+Total Threads: 735
+Average Thread Length: 2.07 interactions
+Median Thread Length: 1.00 interactions
+Maximum Thread Length: 28 interactions
+
+Thread Length Percentiles:
+  p50: 1.0 interactions
+  p75: 2.0 interactions
+  p90: 4.0 interactions
+  p95: 6.0 interactions
+  p99: 11.7 interactions
+
+Thread Categories:
+  Posts with no comments: 440 (59.86%)
+  Short threads (2-5): 248 (33.74%)
+  Medium threads (6-20): 46 (6.26%)
+  Long threads (>20): 1 (0.14%)
+
+===== THREAD ACTIVITY ANALYSIS =====
+Threads Analyzed: 735
+Average Active Days per Thread: 1.15 days
+Median Active Days per Thread: 1.00 days
+Maximum Active Days for a Thread: 3 days
+Average Thread Lifespan: 1.26 days
+Median Thread Lifespan: 1.00 days
+Average Activity Density: 0.99
+
+Active Days Percentiles:
+  p50: 1.0 days
+  p75: 1.0 days
+  p90: 2.0 days
+  p95: 2.0 days
+  p99: 2.0 days
+
+Thread Duration Categories:
+  One-day only: 630 (85.71%)
+  Short duration (2-3 days): 105 (14.29%)
+  Medium duration (4-7 days): 0 (0.00%)
+  Long duration (>7 days): 0 (0.00%)
+
+================================================================================
+KEY METRICS SUMMARY
+------------------------------
+Total Unique Users: 712
+Avg. Unique Active Users per Day: 38.27
+Avg. Interactions per User per Day: 1.35
+Total Posts: 735
+Total Comments: 808
+Post-Comment Ratio: 1:1.10
+Avg. Thread Length: 2.07 interactions
+Avg. Thread Active Days: 1.15 days
+Avg. Toxicity Score: 0.1055
+Toxicity Coverage: 100.00%
+================================================================================
+Report generated at: 2025-08-11 14:20:50
+================================================================================

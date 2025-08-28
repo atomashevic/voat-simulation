@@ -1,0 +1,73 @@
+{
+  "unique_users": 712,
+  "low_activity_users": 624,
+  "medium_activity_users": 72,
+  "high_activity_users": 16,
+  "one_day_users": 570,
+  "one_day_percentage": 80.0561797752809,
+  "avg_interactions_per_user": 2.167134831460674,
+  "median_interactions_per_user": 1.0,
+  "avg_activity_span_days": 2.6928185308728674,
+  "top_users": [
+    {
+      "interactions": 123,
+      "first_seen": 1489174900,
+      "last_seen": 1491660309,
+      "activity_span_days": 28.76630787037037
+    },
+    {
+      "interactions": 75,
+      "first_seen": 1489153524,
+      "last_seen": 1491678248,
+      "activity_span_days": 29.221342592592592
+    },
+    {
+      "interactions": 56,
+      "first_seen": 1489239613,
+      "last_seen": 1491668640,
+      "activity_span_days": 28.113738425925927
+    },
+    {
+      "interactions": 36,
+      "first_seen": 1489502484,
+      "last_seen": 1491492874,
+      "activity_span_days": 23.036921296296295
+    },
+    {
+      "interactions": 22,
+      "first_seen": 1489134995,
+      "last_seen": 1491652096,
+      "activity_span_days": 29.133113425925927
+    },
+    {
+      "interactions": 21,
+      "first_seen": 1489371654,
+      "last_seen": 1490881384,
+      "activity_span_days": 17.47372685185185
+    },
+    {
+      "interactions": 21,
+      "first_seen": 1489170988,
+      "last_seen": 1491574348,
+      "activity_span_days": 27.816666666666666
+    },
+    {
+      "interactions": 20,
+      "first_seen": 1489588988,
+      "last_seen": 1491499803,
+      "activity_span_days": 22.115914351851853
+    },
+    {
+      "interactions": 20,
+      "first_seen": 1489147049,
+      "last_seen": 1491572987,
+      "activity_span_days": 28.077986111111112
+    },
+    {
+      "interactions": 18,
+      "first_seen": 1489164560,
+      "last_seen": 1491319779,
+      "activity_span_days": 24.944664351851852
+    }
+  ]
+}

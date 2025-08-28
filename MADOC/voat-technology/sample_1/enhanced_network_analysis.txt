@@ -1,0 +1,93 @@
+
+--------------------------------------------------------------------------------
+Enhanced Core-Periphery Analysis for Voat Data: Voat Sample 1
+Multi-Sample Analysis with Quality Assessment
+--------------------------------------------------------------------------------
+
+Date: 2025-08-17 13:27:09
+Input data: MADOC/voat-technology/sample_1/voat_sample_1.parquet
+Number of independent runs: 5
+[1/7] Loading posts data...
+  - Loaded 793 posts with valid parent relationships
+[2/7] Building network...
+  - Created 665 unique user interaction pairs
+  - Network has 554 nodes and 623 edges
+  - Normalizing edge weights...
+[3/7] Calculating network statistics...
+[4/7] Running enhanced core-periphery detection...
+  - Network is disconnected, focusing on largest connected component...
+  - Largest component: 435 nodes (78.5% of network)
+  - Component has 555 edges, density: 0.0059
+  - Performing 5 independent runs for robustness...
+  - Run 1/5...
+    - Extracting samples from posterior...
+  - Run 2/5...
+    - Extracting samples from posterior...
+  - Run 3/5...
+    - Extracting samples from posterior...
+  - Run 4/5...
+    - Extracting samples from posterior...
+  - Run 5/5...
+    - Extracting samples from posterior...
+  - Found 25 valid partitions with non-empty cores out of 25 total partitions
+[5/7] Analyzing partition ensemble...
+  - Best partition by MDL: Core=22, MDL=3018.28
+  - Best partition by core density: Core=21, Density=0.157
+  - Best partition by composite score: Core=21, Score=0.089
+  - Core size range: 21 - 23 nodes
+  - Average core size: 22.5 nodes
+[6/7] Saving enhanced analysis results...
+[7/7] Creating enhanced visualizations...
+
+Enhanced Core-Periphery Analysis Complete!
+
+Network Statistics:
+- Num Nodes: 554
+- Num Edges: 623
+- Is Directed: False
+- Is Connected: False
+- Avg Degree: 2.2490974729241877
+- Avg Weighted Degree: 0.4145607701564334
+- Avg Clustering: 0.002673994720662355
+- Num Components: 52
+- Density: 0.004067084037837591
+- Largest Component Size: 435
+- Largest Component Ratio: 0.7851985559566786
+- Avg Shortest Path Length: N/A (disconnected graph)
+- Diameter: N/A (disconnected graph)
+
+Core-Periphery Analysis Scope:
+- Analyzed largest connected component only
+- Component size: 435 nodes (78.5% of network)
+- Component edges: 555
+- Component density: 0.0059
+
+Best Core-Periphery Partition:
+- Core Size: 21 nodes (4.83% of analyzed component)
+- Periphery Size: 414 nodes (95.17% of analyzed component)
+- MDL Score: 3019.60
+- Composite Quality Score: 0.0889
+
+Partition Quality Metrics:
+- Core Density: 0.1571
+- Core-Periphery Density: 0.0362
+- Modularity: -0.0945
+- Core Avg Degree: 18.14
+
+Top Core Nodes by Weighted Degree:
+- User 2155195b-5979-5a02-940e-44a63bc4927c: 20.5000
+- User aae41ded-e0cf-5cdd-86d1-c9239297126e: 7.0000
+- User 501e9847-4a97-5627-b9d6-628219b787b6: 5.5000
+- User ae47e6a9-b41c-5a12-900f-394a14ef5094: 4.5000
+- User 0904032d-a279-547a-ae4b-df15d5169b2b: 4.0000
+- User 66a13e7c-f282-51ff-8a38-5a15f3bd5471: 3.5000
+- User 267acc41-1451-5585-a434-03720bd80a8a: 3.0000
+- User 96de23b6-8953-554b-b1bb-6c7babae30ab: 3.0000
+- User 709ce883-3e10-5dff-b983-1cc1a4519acc: 2.8333
+- User 640f8132-bfc8-5f50-a3e2-36189d18d684: 2.5000
+
+Results saved to:
+- Enhanced membership: MADOC/voat-technology/sample_1/enhanced_core_periphery_membership.csv
+- Detailed analysis: MADOC/voat-technology/sample_1/partition_analysis.txt
+- Enhanced visualization: MADOC/voat-technology/sample_1/enhanced_core_periphery_visualization.png
+- Complete log: MADOC/voat-technology/sample_1/enhanced_network_analysis.txt

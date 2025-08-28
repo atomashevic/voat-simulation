@@ -1,0 +1,417 @@
+{
+  "daily_dynamics": [
+    {
+      "day": 1,
+      "active_users": 20,
+      "new_users": 20,
+      "new_users_percentage": 100.0,
+      "churned_users": 0,
+      "churned_percentage": 0
+    },
+    {
+      "day": 2,
+      "active_users": 41,
+      "new_users": 35,
+      "new_users_percentage": 85.36585365853658,
+      "churned_users": 11,
+      "churned_percentage": 55.00000000000001
+    },
+    {
+      "day": 3,
+      "active_users": 52,
+      "new_users": 43,
+      "new_users_percentage": 82.6923076923077,
+      "churned_users": 29,
+      "churned_percentage": 52.72727272727272
+    },
+    {
+      "day": 4,
+      "active_users": 54,
+      "new_users": 42,
+      "new_users_percentage": 77.77777777777779,
+      "churned_users": 61,
+      "churned_percentage": 62.244897959183675
+    },
+    {
+      "day": 5,
+      "active_users": 38,
+      "new_users": 27,
+      "new_users_percentage": 71.05263157894737,
+      "churned_users": 90,
+      "churned_percentage": 64.28571428571429
+    },
+    {
+      "day": 6,
+      "active_users": 30,
+      "new_users": 21,
+      "new_users_percentage": 70.0,
+      "churned_users": 111,
+      "churned_percentage": 66.46706586826348
+    },
+    {
+      "day": 7,
+      "active_users": 32,
+      "new_users": 25,
+      "new_users_percentage": 78.125,
+      "churned_users": 126,
+      "churned_percentage": 67.02127659574468
+    },
+    {
+      "day": 8,
+      "active_users": 46,
+      "new_users": 27,
+      "new_users_percentage": 58.69565217391305,
+      "churned_users": 143,
+      "churned_percentage": 67.13615023474179
+    },
+    {
+      "day": 9,
+      "active_users": 26,
+      "new_users": 16,
+      "new_users_percentage": 61.53846153846154,
+      "churned_users": 166,
+      "churned_percentage": 69.16666666666667
+    },
+    {
+      "day": 10,
+      "active_users": 20,
+      "new_users": 11,
+      "new_users_percentage": 55.00000000000001,
+      "churned_users": 177,
+      "churned_percentage": 69.140625
+    },
+    {
+      "day": 11,
+      "active_users": 41,
+      "new_users": 25,
+      "new_users_percentage": 60.97560975609756,
+      "churned_users": 189,
+      "churned_percentage": 70.78651685393258
+    },
+    {
+      "day": 12,
+      "active_users": 37,
+      "new_users": 24,
+      "new_users_percentage": 64.86486486486487,
+      "churned_users": 206,
+      "churned_percentage": 70.54794520547945
+    },
+    {
+      "day": 13,
+      "active_users": 30,
+      "new_users": 17,
+      "new_users_percentage": 56.666666666666664,
+      "churned_users": 231,
+      "churned_percentage": 73.10126582278481
+    },
+    {
+      "day": 14,
+      "active_users": 23,
+      "new_users": 10,
+      "new_users_percentage": 43.47826086956522,
+      "churned_users": 247,
+      "churned_percentage": 74.17417417417418
+    },
+    {
+      "day": 15,
+      "active_users": 26,
+      "new_users": 12,
+      "new_users_percentage": 46.15384615384615,
+      "churned_users": 258,
+      "churned_percentage": 75.21865889212827
+    },
+    {
+      "day": 16,
+      "active_users": 38,
+      "new_users": 18,
+      "new_users_percentage": 47.368421052631575,
+      "churned_users": 273,
+      "churned_percentage": 76.90140845070422
+    },
+    {
+      "day": 17,
+      "active_users": 33,
+      "new_users": 21,
+      "new_users_percentage": 63.63636363636363,
+      "churned_users": 291,
+      "churned_percentage": 78.01608579088472
+    },
+    {
+      "day": 18,
+      "active_users": 32,
+      "new_users": 16,
+      "new_users_percentage": 50.0,
+      "churned_users": 313,
+      "churned_percentage": 79.44162436548223
+    },
+    {
+      "day": 19,
+      "active_users": 51,
+      "new_users": 30,
+      "new_users_percentage": 58.82352941176471,
+      "churned_users": 332,
+      "churned_percentage": 80.97560975609757
+    },
+    {
+      "day": 20,
+      "active_users": 20,
+      "new_users": 7,
+      "new_users_percentage": 35.0,
+      "churned_users": 362,
+      "churned_percentage": 82.27272727272728
+    },
+    {
+      "day": 21,
+      "active_users": 35,
+      "new_users": 19,
+      "new_users_percentage": 54.285714285714285,
+      "churned_users": 376,
+      "churned_percentage": 84.11633109619687
+    },
+    {
+      "day": 22,
+      "active_users": 35,
+      "new_users": 15,
+      "new_users_percentage": 42.857142857142854,
+      "churned_users": 398,
+      "churned_percentage": 85.40772532188842
+    },
+    {
+      "day": 23,
+      "active_users": 24,
+      "new_users": 12,
+      "new_users_percentage": 50.0,
+      "churned_users": 417,
+      "churned_percentage": 86.6943866943867
+    },
+    {
+      "day": 24,
+      "active_users": 26,
+      "new_users": 13,
+      "new_users_percentage": 50.0,
+      "churned_users": 433,
+      "churned_percentage": 87.82961460446246
+    },
+    {
+      "day": 25,
+      "active_users": 36,
+      "new_users": 20,
+      "new_users_percentage": 55.55555555555556,
+      "churned_users": 451,
+      "churned_percentage": 89.13043478260869
+    },
+    {
+      "day": 26,
+      "active_users": 36,
+      "new_users": 15,
+      "new_users_percentage": 41.66666666666667,
+      "churned_users": 481,
+      "churned_percentage": 91.4448669201521
+    },
+    {
+      "day": 27,
+      "active_users": 26,
+      "new_users": 9,
+      "new_users_percentage": 34.61538461538461,
+      "churned_users": 508,
+      "churned_percentage": 93.90018484288355
+    },
+    {
+      "day": 28,
+      "active_users": 14,
+      "new_users": 4,
+      "new_users_percentage": 28.57142857142857,
+      "churned_users": 523,
+      "churned_percentage": 95.0909090909091
+    },
+    {
+      "day": 29,
+      "active_users": 23,
+      "new_users": 15,
+      "new_users_percentage": 65.21739130434783,
+      "churned_users": 530,
+      "churned_percentage": 95.66787003610109
+    },
+    {
+      "day": 30,
+      "active_users": 50,
+      "new_users": 25,
+      "new_users_percentage": 50.0,
+      "churned_users": 569,
+      "churned_percentage": 100.0
+    }
+  ],
+  "days_10_onwards": [
+    {
+      "day": 10,
+      "active_users": 20,
+      "new_users": 11,
+      "new_users_percentage": 55.00000000000001,
+      "churned_users": 177,
+      "churned_percentage": 69.140625
+    },
+    {
+      "day": 11,
+      "active_users": 41,
+      "new_users": 25,
+      "new_users_percentage": 60.97560975609756,
+      "churned_users": 189,
+      "churned_percentage": 70.78651685393258
+    },
+    {
+      "day": 12,
+      "active_users": 37,
+      "new_users": 24,
+      "new_users_percentage": 64.86486486486487,
+      "churned_users": 206,
+      "churned_percentage": 70.54794520547945
+    },
+    {
+      "day": 13,
+      "active_users": 30,
+      "new_users": 17,
+      "new_users_percentage": 56.666666666666664,
+      "churned_users": 231,
+      "churned_percentage": 73.10126582278481
+    },
+    {
+      "day": 14,
+      "active_users": 23,
+      "new_users": 10,
+      "new_users_percentage": 43.47826086956522,
+      "churned_users": 247,
+      "churned_percentage": 74.17417417417418
+    },
+    {
+      "day": 15,
+      "active_users": 26,
+      "new_users": 12,
+      "new_users_percentage": 46.15384615384615,
+      "churned_users": 258,
+      "churned_percentage": 75.21865889212827
+    },
+    {
+      "day": 16,
+      "active_users": 38,
+      "new_users": 18,
+      "new_users_percentage": 47.368421052631575,
+      "churned_users": 273,
+      "churned_percentage": 76.90140845070422
+    },
+    {
+      "day": 17,
+      "active_users": 33,
+      "new_users": 21,
+      "new_users_percentage": 63.63636363636363,
+      "churned_users": 291,
+      "churned_percentage": 78.01608579088472
+    },
+    {
+      "day": 18,
+      "active_users": 32,
+      "new_users": 16,
+      "new_users_percentage": 50.0,
+      "churned_users": 313,
+      "churned_percentage": 79.44162436548223
+    },
+    {
+      "day": 19,
+      "active_users": 51,
+      "new_users": 30,
+      "new_users_percentage": 58.82352941176471,
+      "churned_users": 332,
+      "churned_percentage": 80.97560975609757
+    },
+    {
+      "day": 20,
+      "active_users": 20,
+      "new_users": 7,
+      "new_users_percentage": 35.0,
+      "churned_users": 362,
+      "churned_percentage": 82.27272727272728
+    },
+    {
+      "day": 21,
+      "active_users": 35,
+      "new_users": 19,
+      "new_users_percentage": 54.285714285714285,
+      "churned_users": 376,
+      "churned_percentage": 84.11633109619687
+    },
+    {
+      "day": 22,
+      "active_users": 35,
+      "new_users": 15,
+      "new_users_percentage": 42.857142857142854,
+      "churned_users": 398,
+      "churned_percentage": 85.40772532188842
+    },
+    {
+      "day": 23,
+      "active_users": 24,
+      "new_users": 12,
+      "new_users_percentage": 50.0,
+      "churned_users": 417,
+      "churned_percentage": 86.6943866943867
+    },
+    {
+      "day": 24,
+      "active_users": 26,
+      "new_users": 13,
+      "new_users_percentage": 50.0,
+      "churned_users": 433,
+      "churned_percentage": 87.82961460446246
+    },
+    {
+      "day": 25,
+      "active_users": 36,
+      "new_users": 20,
+      "new_users_percentage": 55.55555555555556,
+      "churned_users": 451,
+      "churned_percentage": 89.13043478260869
+    },
+    {
+      "day": 26,
+      "active_users": 36,
+      "new_users": 15,
+      "new_users_percentage": 41.66666666666667,
+      "churned_users": 481,
+      "churned_percentage": 91.4448669201521
+    },
+    {
+      "day": 27,
+      "active_users": 26,
+      "new_users": 9,
+      "new_users_percentage": 34.61538461538461,
+      "churned_users": 508,
+      "churned_percentage": 93.90018484288355
+    },
+    {
+      "day": 28,
+      "active_users": 14,
+      "new_users": 4,
+      "new_users_percentage": 28.57142857142857,
+      "churned_users": 523,
+      "churned_percentage": 95.0909090909091
+    },
+    {
+      "day": 29,
+      "active_users": 23,
+      "new_users": 15,
+      "new_users_percentage": 65.21739130434783,
+      "churned_users": 530,
+      "churned_percentage": 95.66787003610109
+    },
+    {
+      "day": 30,
+      "active_users": 50,
+      "new_users": 25,
+      "new_users_percentage": 50.0,
+      "churned_users": 569,
+      "churned_percentage": 100.0
+    }
+  ],
+  "avg_new_users_percentage_after_day10": 50.22556410800195,
+  "avg_churn_percentage_after_day10": 82.85042690352306,
+  "total_unique_users": 594
+}

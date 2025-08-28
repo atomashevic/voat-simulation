@@ -1,0 +1,85 @@
+
+------------------------------------------------------------
+Network Analysis with Core-Periphery Detection for Simulation: Sample_7
+------------------------------------------------------------
+
+Date: 2025-08-14 12:05:33
+Input data: MADOC/voat-technology/sample_7/voat_sample_7.parquet
+[1/5] Loading posts data...
+  - Loaded 605 posts
+[2/5] Building network...
+  - Added 379 nodes (users)
+  - Created 467 edges (comments)
+  - Normalizing edge weights...
+[3/5] Calculating network statistics...
+32 0.005086813498028451
+[4/5] Running core-periphery detection using stochastic block model...
+  - Initializing HubSpokeCorePeriphery model...
+  - Inferring core-periphery structure...
+  - Extracting core-periphery labels...
+  - Performing model selection...
+  - Minimum description length (MDL): 2408.3050
+  - Core size: 17 nodes
+  - Periphery size: 412 nodes
+  - Saving core-periphery membership to CSV...
+[5/5] Creating network visualizations...
+  - Visualizing core-periphery structure...
+  - Extracting largest connected component for visualization...
+  - Visualizing network with 377 nodes and 446 edges
+  - Computing network layout...
+  - Core: 17 nodes, Periphery: 360 nodes
+  - Extracting largest connected component for visualization...
+  - Visualizing network with 377 nodes and 446 edges
+  - Detecting communities...
+  - Computing network layout...
+  - Detected 16 communities
+  - Creating full network visualization with core-periphery coloring...
+  - Core: 17 nodes, Periphery: 412 nodes
+  - Computing k-core decomposition for layout...
+  - Network has cores from 1 to 3
+  - Computing network layout for full visualization with increased repulsion...
+  - Drawing edges...
+  - Drawing core nodes...
+  - Drawing periphery nodes...
+  - Creating degree distribution plots...
+
+Network Analysis with Core-Periphery Detection Complete!
+
+Network Statistics:
+- Num Nodes: 429
+- Num Edges: 467
+- Is Directed: False
+- Is Connected: False
+- Avg Degree: 2.1771561771561774
+- Avg Weighted Degree: 0.4932400932400872
+- Avg Clustering: 0.002344029717317219
+- Num Components: 32
+- Density: 0.005086813498028451
+- Largest Component Size: 377
+- Largest Component Ratio: 0.8787878787878788
+- Avg Shortest Path Length: N/A (disconnected graph)
+- Diameter: N/A (disconnected graph)
+
+Core-Periphery Detection Results:
+- Minimum Description Length (MDL): 2408.3050
+- Core Size: 17 nodes (3.96% of network)
+- Periphery Size: 412 nodes (96.04% of network)
+
+Top 10 Core Nodes by Weighted Degree:
+- User 2155195b-5979-5a02-940e-44a63bc4927c: 24.0000
+- User 2c99d9b7-61cc-50f0-9eb1-bd96259017e6: 7.6000
+- User aae41ded-e0cf-5cdd-86d1-c9239297126e: 5.2000
+- User 697474f1-a839-5f5d-8c8e-155883692769: 5.0000
+- User 501e9847-4a97-5627-b9d6-628219b787b6: 4.8000
+- User e7090168-9611-5b1c-a448-1bc22458cbb2: 4.6000
+- User 2239d673-47ed-502c-bba1-14f76e877598: 3.8000
+- User 151c2022-0613-5947-a8cf-3008204f21f9: 3.2000
+- User 5579dd13-99a9-5fb8-98d2-7fcfa5528c10: 3.2000
+- User 67e634d5-8ca7-5de5-9771-e04321e3e196: 3.0000
+
+Core-periphery membership exported to: MADOC/voat-technology/sample_7/core_periphery_membership.csv
+Core-periphery visualization saved to: MADOC/voat-technology/sample_7/core_periphery_visualization.png
+Network visualization saved to: MADOC/voat-technology/sample_7/network_visualization.png
+Full network visualization saved to: MADOC/voat-technology/sample_7/core-periphery-full-network.png
+Degree distribution plots saved to: MADOC/voat-technology/sample_7/degree_distribution.png (and others)
+Network statistics saved to: MADOC/voat-technology/sample_7/network_stats_cp.txt

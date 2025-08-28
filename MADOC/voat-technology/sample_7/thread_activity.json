@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "thread_count": 512,
+  "mapped_threads": 512,
+  "unmapped_comments": 8,
+  "avg_active_days": 1.173828125,
+  "median_active_days": 1.0,
+  "max_active_days": 3,
+  "min_active_days": 1,
+  "percentiles": {
+    "active_days": {
+      "p50": 1.0,
+      "p75": 1.0,
+      "p90": 2.0,
+      "p95": 2.0,
+      "p99": 2.0
+    },
+    "span_days": {
+      "p50": 1.0,
+      "p75": 1.0,
+      "p90": 2.0,
+      "p95": 2.0,
+      "p99": 2.0
+    }
+  },
+  "avg_span_days": 1.181640625,
+  "median_span_days": 1.0,
+  "avg_activity_density": 0.9982421875,
+  "thread_categories": {
+    "one_day_only": 428,
+    "short_duration": 84,
+    "medium_duration": 0,
+    "long_duration": 0,
+    "one_day_pct": 83.59375,
+    "short_duration_pct": 16.40625,
+    "medium_duration_pct": 0.0,
+    "long_duration_pct": 0.0
+  },
+  "active_days_distribution": {
+    "counts": [
+      428,
+      79,
+      5
+    ],
+    "bin_edges": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}

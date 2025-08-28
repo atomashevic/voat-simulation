@@ -1,0 +1,479 @@
+{
+  "has_toxicity_data": true,
+  "toxicity_coverage_pct": 100.0,
+  "records_with_toxicity": 1153,
+  "total_records": 1153,
+  "toxicity_stats": {
+    "mean": 0.10600203697663366,
+    "median": 0.0011836562771350145,
+    "min": 0.0005647113430313766,
+    "max": 0.9896591305732727,
+    "std": 0.26494288739175237
+  },
+  "toxicity_distribution": {
+    "counts": [
+      949,
+      24,
+      16,
+      8,
+      8,
+      7,
+      9,
+      1,
+      8,
+      4,
+      4,
+      6,
+      5,
+      6,
+      9,
+      5,
+      7,
+      17,
+      16,
+      44
+    ],
+    "counts_pct": [
+      82.30702515177796,
+      2.0815264527320037,
+      1.3876843018213356,
+      0.6938421509106678,
+      0.6938421509106678,
+      0.6071118820468344,
+      0.7805724197745013,
+      0.08673026886383348,
+      0.6938421509106678,
+      0.3469210754553339,
+      0.3469210754553339,
+      0.5203816131830009,
+      0.43365134431916735,
+      0.5203816131830009,
+      0.7805724197745013,
+      0.43365134431916735,
+      0.6071118820468344,
+      1.4744145706851692,
+      1.3876843018213356,
+      3.8161318300086733
+    ],
+    "bin_edges": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2,
+      0.25,
+      0.30000000000000004,
+      0.35000000000000003,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6000000000000001,
+      0.65,
+      0.7000000000000001,
+      0.75,
+      0.8,
+      0.8500000000000001,
+      0.9,
+      0.9500000000000001,
+      1.0
+    ]
+  },
+  "interaction_toxicity": {
+    "posts": {
+      "count": 587,
+      "mean": 0.01932945063185372,
+      "median": 0.0007851543487049639,
+      "distribution": [
+        556,
+        11,
+        3,
+        1,
+        2,
+        1,
+        3,
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    "comments": {
+      "count": 566,
+      "mean": 0.19589039065929412,
+      "median": 0.0028877026634290814,
+      "distribution": [
+        393,
+        13,
+        13,
+        7,
+        6,
+        6,
+        6,
+        1,
+        7,
+        4,
+        3,
+        5,
+        3,
+        5,
+        8,
+        4,
+        7,
+        16,
+        16,
+        43
+      ]
+    }
+  },
+  "high_toxicity_threshold": 0.5414541482925411,
+  "very_high_toxicity_threshold": 0.9073665976524352,
+  "high_toxicity_counts": {
+    "posts": 8,
+    "comments": 108,
+    "total": 116,
+    "pct_of_posts": 1.362862010221465,
+    "pct_of_comments": 19.081272084805654,
+    "pct_of_all": 10.060711188204683
+  },
+  "very_high_toxicity_counts": {
+    "posts": 1,
+    "comments": 57,
+    "total": 58,
+    "pct_of_posts": 0.17035775127768313,
+    "pct_of_comments": 10.070671378091872,
+    "pct_of_all": 5.030355594102342
+  },
+  "user_toxicity": {
+    "high_toxicity_users_count": 0,
+    "high_toxicity_users_pct": 0.0,
+    "user_toxicity_distribution": {
+      "counts": [
+        17,
+        6,
+        1,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bin_edges": [
+        0.0,
+        0.05,
+        0.1,
+        0.15000000000000002,
+        0.2,
+        0.25,
+        0.30000000000000004,
+        0.35000000000000003,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6000000000000001,
+        0.65,
+        0.7000000000000001,
+        0.75,
+        0.8,
+        0.8500000000000001,
+        0.9,
+        0.9500000000000001,
+        1.0
+      ]
+    }
+  },
+  "daily_toxicity": {
+    "0": {
+      "date": "2017-06-07",
+      "day_num": 1,
+      "mean_toxicity": 0.08961465292765448,
+      "median_toxicity": 0.0012573759304359555,
+      "high_toxicity_count": 3,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 45
+    },
+    "1": {
+      "date": "2017-06-08",
+      "day_num": 2,
+      "mean_toxicity": 0.10794904932243235,
+      "median_toxicity": 0.0009300209349021316,
+      "high_toxicity_count": 3,
+      "very_high_toxicity_count": 0,
+      "total_interactions": 29
+    },
+    "2": {
+      "date": "2017-06-09",
+      "day_num": 3,
+      "mean_toxicity": 0.22041854100320868,
+      "median_toxicity": 0.006701031234115362,
+      "high_toxicity_count": 11,
+      "very_high_toxicity_count": 5,
+      "total_interactions": 49
+    },
+    "3": {
+      "date": "2017-06-10",
+      "day_num": 4,
+      "mean_toxicity": 0.119378402416425,
+      "median_toxicity": 0.0022204467095434666,
+      "high_toxicity_count": 2,
+      "very_high_toxicity_count": 2,
+      "total_interactions": 22
+    },
+    "4": {
+      "date": "2017-06-11",
+      "day_num": 5,
+      "mean_toxicity": 0.11999645460728613,
+      "median_toxicity": 0.001277941046282649,
+      "high_toxicity_count": 5,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 33
+    },
+    "5": {
+      "date": "2017-06-12",
+      "day_num": 6,
+      "mean_toxicity": 0.07661051111604456,
+      "median_toxicity": 0.001134695252403617,
+      "high_toxicity_count": 2,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 43
+    },
+    "6": {
+      "date": "2017-06-13",
+      "day_num": 7,
+      "mean_toxicity": 0.12459034053361083,
+      "median_toxicity": 0.0009401328861713409,
+      "high_toxicity_count": 6,
+      "very_high_toxicity_count": 4,
+      "total_interactions": 47
+    },
+    "7": {
+      "date": "2017-06-14",
+      "day_num": 8,
+      "mean_toxicity": 0.11627870005918894,
+      "median_toxicity": 0.001672382466495037,
+      "high_toxicity_count": 5,
+      "very_high_toxicity_count": 3,
+      "total_interactions": 41
+    },
+    "8": {
+      "date": "2017-06-15",
+      "day_num": 9,
+      "mean_toxicity": 0.10794540449874042,
+      "median_toxicity": 0.0014112343196757138,
+      "high_toxicity_count": 10,
+      "very_high_toxicity_count": 3,
+      "total_interactions": 86
+    },
+    "9": {
+      "date": "2017-06-16",
+      "day_num": 10,
+      "mean_toxicity": 0.12949828036001015,
+      "median_toxicity": 0.0015307610156014562,
+      "high_toxicity_count": 4,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 29
+    },
+    "10": {
+      "date": "2017-06-17",
+      "day_num": 11,
+      "mean_toxicity": 0.08370942348847166,
+      "median_toxicity": 0.0013198369997553527,
+      "high_toxicity_count": 1,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 12
+    },
+    "11": {
+      "date": "2017-06-18",
+      "day_num": 12,
+      "mean_toxicity": 0.12363816049426447,
+      "median_toxicity": 0.000993233290500939,
+      "high_toxicity_count": 5,
+      "very_high_toxicity_count": 2,
+      "total_interactions": 43
+    },
+    "12": {
+      "date": "2017-06-19",
+      "day_num": 13,
+      "mean_toxicity": 0.03546585162646722,
+      "median_toxicity": 0.0009919642470777035,
+      "high_toxicity_count": 1,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 43
+    },
+    "13": {
+      "date": "2017-06-20",
+      "day_num": 14,
+      "mean_toxicity": 0.09319050005999291,
+      "median_toxicity": 0.001126870047301054,
+      "high_toxicity_count": 5,
+      "very_high_toxicity_count": 2,
+      "total_interactions": 63
+    },
+    "14": {
+      "date": "2017-06-21",
+      "day_num": 15,
+      "mean_toxicity": 0.1019957580540974,
+      "median_toxicity": 0.0010843203635886312,
+      "high_toxicity_count": 4,
+      "very_high_toxicity_count": 3,
+      "total_interactions": 39
+    },
+    "15": {
+      "date": "2017-06-22",
+      "day_num": 16,
+      "mean_toxicity": 0.13385847066970671,
+      "median_toxicity": 0.0019416507566347718,
+      "high_toxicity_count": 3,
+      "very_high_toxicity_count": 3,
+      "total_interactions": 29
+    },
+    "16": {
+      "date": "2017-06-23",
+      "day_num": 17,
+      "mean_toxicity": 0.07366563112538477,
+      "median_toxicity": 0.0008431458845734596,
+      "high_toxicity_count": 3,
+      "very_high_toxicity_count": 0,
+      "total_interactions": 33
+    },
+    "17": {
+      "date": "2017-06-24",
+      "day_num": 18,
+      "mean_toxicity": 0.0785208610524874,
+      "median_toxicity": 0.0014574870001524687,
+      "high_toxicity_count": 2,
+      "very_high_toxicity_count": 2,
+      "total_interactions": 31
+    },
+    "18": {
+      "date": "2017-06-25",
+      "day_num": 19,
+      "mean_toxicity": 0.09822156632643393,
+      "median_toxicity": 0.0012082834145985544,
+      "high_toxicity_count": 3,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 28
+    },
+    "19": {
+      "date": "2017-06-26",
+      "day_num": 20,
+      "mean_toxicity": 0.06829694063943702,
+      "median_toxicity": 0.0009886795887723565,
+      "high_toxicity_count": 2,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 34
+    },
+    "20": {
+      "date": "2017-06-27",
+      "day_num": 21,
+      "mean_toxicity": 0.09468126936238815,
+      "median_toxicity": 0.0011678950395435095,
+      "high_toxicity_count": 5,
+      "very_high_toxicity_count": 4,
+      "total_interactions": 67
+    },
+    "21": {
+      "date": "2017-06-28",
+      "day_num": 22,
+      "mean_toxicity": 0.12416469965925596,
+      "median_toxicity": 0.0016217483207583427,
+      "high_toxicity_count": 8,
+      "very_high_toxicity_count": 4,
+      "total_interactions": 60
+    },
+    "22": {
+      "date": "2017-06-29",
+      "day_num": 23,
+      "mean_toxicity": 0.10641126479644891,
+      "median_toxicity": 0.0013610447058454156,
+      "high_toxicity_count": 4,
+      "very_high_toxicity_count": 2,
+      "total_interactions": 43
+    },
+    "23": {
+      "date": "2017-06-30",
+      "day_num": 24,
+      "mean_toxicity": 0.05343187728794874,
+      "median_toxicity": 0.0008423015533480793,
+      "high_toxicity_count": 1,
+      "very_high_toxicity_count": 0,
+      "total_interactions": 16
+    },
+    "24": {
+      "date": "2017-07-01",
+      "day_num": 25,
+      "mean_toxicity": 0.23890691175489712,
+      "median_toxicity": 0.009798355400562286,
+      "high_toxicity_count": 8,
+      "very_high_toxicity_count": 6,
+      "total_interactions": 39
+    },
+    "25": {
+      "date": "2017-07-02",
+      "day_num": 26,
+      "mean_toxicity": 0.022307159015767727,
+      "median_toxicity": 0.0007889967528171837,
+      "high_toxicity_count": 1,
+      "very_high_toxicity_count": 0,
+      "total_interactions": 33
+    },
+    "26": {
+      "date": "2017-07-03",
+      "day_num": 27,
+      "mean_toxicity": 0.041818457734771074,
+      "median_toxicity": 0.000733311811927706,
+      "high_toxicity_count": 1,
+      "very_high_toxicity_count": 0,
+      "total_interactions": 25
+    },
+    "27": {
+      "date": "2017-07-04",
+      "day_num": 28,
+      "mean_toxicity": 0.14352709354451773,
+      "median_toxicity": 0.0012015993706882,
+      "high_toxicity_count": 4,
+      "very_high_toxicity_count": 3,
+      "total_interactions": 33
+    },
+    "28": {
+      "date": "2017-07-05",
+      "day_num": 29,
+      "mean_toxicity": 0.08036743453891587,
+      "median_toxicity": 0.0009927749633789062,
+      "high_toxicity_count": 2,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 31
+    },
+    "29": {
+      "date": "2017-07-06",
+      "day_num": 30,
+      "mean_toxicity": 0.06108399700261308,
+      "median_toxicity": 0.0022054342553019524,
+      "high_toxicity_count": 2,
+      "very_high_toxicity_count": 1,
+      "total_interactions": 27
+    }
+  }
+}

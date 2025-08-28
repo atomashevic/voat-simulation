@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "thread_count": 587,
+  "avg_thread_length": 1.9540034071550256,
+  "median_thread_length": 1.0,
+  "max_thread_length": 20,
+  "percentiles": {
+    "p50": 1.0,
+    "p75": 2.0,
+    "p90": 3.0,
+    "p95": 5.0,
+    "p99": 12.279999999999973
+  },
+  "thread_categories": {
+    "no_comments": 369,
+    "few_comments": 190,
+    "many_comments": 28,
+    "very_many_comments": 0,
+    "no_comments_pct": 62.862010221465084,
+    "few_comments_pct": 32.36797274275979,
+    "many_comments_pct": 4.770017035775128,
+    "very_many_comments_pct": 0.0
+  },
+  "thread_length_distribution": {
+    "counts": [
+      369,
+      128,
+      37,
+      14,
+      11,
+      3,
+      2,
+      5,
+      4,
+      2,
+      3,
+      3,
+      0,
+      1,
+      1,
+      0,
+      2,
+      0,
+      0,
+      2
+    ],
+    "bin_edges": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "unmapped_comments": 6
+}

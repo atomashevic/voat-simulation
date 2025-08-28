@@ -1,0 +1,2193 @@
+{
+  "sample_info": {
+    "sample_id": 6,
+    "start_date": "2017-06-07",
+    "end_date": "2017-07-07",
+    "record_count": 1153
+  },
+  "active_users": {
+    "unique_users": 534,
+    "low_activity_users": 458,
+    "medium_activity_users": 70,
+    "high_activity_users": 6,
+    "one_day_users": 426,
+    "one_day_percentage": 79.7752808988764,
+    "avg_interactions_per_user": 2.1591760299625467,
+    "median_interactions_per_user": 1.0,
+    "avg_activity_span_days": 2.6428971598002495,
+    "top_users": [
+      {
+        "interactions": 158,
+        "first_seen": 1496890894,
+        "last_seen": 1499454511,
+        "activity_span_days": 29.671493055555555
+      },
+      {
+        "interactions": 42,
+        "first_seen": 1496962978,
+        "last_seen": 1499353006,
+        "activity_span_days": 27.66236111111111
+      },
+      {
+        "interactions": 38,
+        "first_seen": 1497247405,
+        "last_seen": 1499373044,
+        "activity_span_days": 24.602303240740742
+      },
+      {
+        "interactions": 24,
+        "first_seen": 1497460774,
+        "last_seen": 1499351741,
+        "activity_span_days": 21.88619212962963
+      },
+      {
+        "interactions": 21,
+        "first_seen": 1497068229,
+        "last_seen": 1499437233,
+        "activity_span_days": 27.419027777777778
+      },
+      {
+        "interactions": 19,
+        "first_seen": 1497034747,
+        "last_seen": 1499450840,
+        "activity_span_days": 27.964039351851852
+      },
+      {
+        "interactions": 10,
+        "first_seen": 1497444720,
+        "last_seen": 1499433308,
+        "activity_span_days": 23.016064814814815
+      },
+      {
+        "interactions": 9,
+        "first_seen": 1497057865,
+        "last_seen": 1499459353,
+        "activity_span_days": 27.795
+      },
+      {
+        "interactions": 9,
+        "first_seen": 1497256006,
+        "last_seen": 1498804928,
+        "activity_span_days": 17.927337962962962
+      },
+      {
+        "interactions": 9,
+        "first_seen": 1496885201,
+        "last_seen": 1498881517,
+        "activity_span_days": 23.10550925925926
+      }
+    ]
+  },
+  "user_dynamics": {
+    "daily_dynamics": [
+      {
+        "day": 1,
+        "active_users": 34,
+        "new_users": 34,
+        "new_users_percentage": 100.0,
+        "churned_users": 0,
+        "churned_percentage": 0
+      },
+      {
+        "day": 2,
+        "active_users": 24,
+        "new_users": 22,
+        "new_users_percentage": 91.66666666666666,
+        "churned_users": 17,
+        "churned_percentage": 50.0
+      },
+      {
+        "day": 3,
+        "active_users": 39,
+        "new_users": 32,
+        "new_users_percentage": 82.05128205128204,
+        "churned_users": 29,
+        "churned_percentage": 51.78571428571429
+      },
+      {
+        "day": 4,
+        "active_users": 19,
+        "new_users": 11,
+        "new_users_percentage": 57.89473684210527,
+        "churned_users": 53,
+        "churned_percentage": 60.22727272727273
+      },
+      {
+        "day": 5,
+        "active_users": 26,
+        "new_users": 19,
+        "new_users_percentage": 73.07692307692307,
+        "churned_users": 62,
+        "churned_percentage": 62.62626262626263
+      },
+      {
+        "day": 6,
+        "active_users": 32,
+        "new_users": 20,
+        "new_users_percentage": 62.5,
+        "churned_users": 75,
+        "churned_percentage": 63.559322033898304
+      },
+      {
+        "day": 7,
+        "active_users": 42,
+        "new_users": 33,
+        "new_users_percentage": 78.57142857142857,
+        "churned_users": 93,
+        "churned_percentage": 67.3913043478261
+      },
+      {
+        "day": 8,
+        "active_users": 29,
+        "new_users": 21,
+        "new_users_percentage": 72.41379310344827,
+        "churned_users": 118,
+        "churned_percentage": 69.00584795321637
+      },
+      {
+        "day": 9,
+        "active_users": 54,
+        "new_users": 37,
+        "new_users_percentage": 68.51851851851852,
+        "churned_users": 137,
+        "churned_percentage": 71.35416666666666
+      },
+      {
+        "day": 10,
+        "active_users": 18,
+        "new_users": 9,
+        "new_users_percentage": 50.0,
+        "churned_users": 166,
+        "churned_percentage": 72.48908296943232
+      },
+      {
+        "day": 11,
+        "active_users": 11,
+        "new_users": 6,
+        "new_users_percentage": 54.54545454545454,
+        "churned_users": 174,
+        "churned_percentage": 73.10924369747899
+      },
+      {
+        "day": 12,
+        "active_users": 33,
+        "new_users": 21,
+        "new_users_percentage": 63.63636363636363,
+        "churned_users": 181,
+        "churned_percentage": 74.18032786885246
+      },
+      {
+        "day": 13,
+        "active_users": 27,
+        "new_users": 16,
+        "new_users_percentage": 59.25925925925925,
+        "churned_users": 199,
+        "churned_percentage": 75.09433962264151
+      },
+      {
+        "day": 14,
+        "active_users": 46,
+        "new_users": 31,
+        "new_users_percentage": 67.3913043478261,
+        "churned_users": 215,
+        "churned_percentage": 76.51245551601423
+      },
+      {
+        "day": 15,
+        "active_users": 29,
+        "new_users": 17,
+        "new_users_percentage": 58.620689655172406,
+        "churned_users": 246,
+        "churned_percentage": 78.84615384615384
+      },
+      {
+        "day": 16,
+        "active_users": 23,
+        "new_users": 10,
+        "new_users_percentage": 43.47826086956522,
+        "churned_users": 263,
+        "churned_percentage": 79.93920972644378
+      },
+      {
+        "day": 17,
+        "active_users": 23,
+        "new_users": 13,
+        "new_users_percentage": 56.52173913043478,
+        "churned_users": 277,
+        "churned_percentage": 81.71091445427729
+      },
+      {
+        "day": 18,
+        "active_users": 19,
+        "new_users": 10,
+        "new_users_percentage": 52.63157894736842,
+        "churned_users": 293,
+        "churned_percentage": 83.23863636363636
+      },
+      {
+        "day": 19,
+        "active_users": 20,
+        "new_users": 15,
+        "new_users_percentage": 75.0,
+        "churned_users": 302,
+        "churned_percentage": 83.42541436464089
+      },
+      {
+        "day": 20,
+        "active_users": 23,
+        "new_users": 11,
+        "new_users_percentage": 47.82608695652174,
+        "churned_users": 318,
+        "churned_percentage": 84.3501326259947
+      },
+      {
+        "day": 21,
+        "active_users": 54,
+        "new_users": 32,
+        "new_users_percentage": 59.25925925925925,
+        "churned_users": 336,
+        "churned_percentage": 86.5979381443299
+      },
+      {
+        "day": 22,
+        "active_users": 46,
+        "new_users": 23,
+        "new_users_percentage": 50.0,
+        "churned_users": 376,
+        "churned_percentage": 89.52380952380953
+      },
+      {
+        "day": 23,
+        "active_users": 34,
+        "new_users": 19,
+        "new_users_percentage": 55.88235294117647,
+        "churned_users": 407,
+        "churned_percentage": 91.87358916478556
+      },
+      {
+        "day": 24,
+        "active_users": 11,
+        "new_users": 4,
+        "new_users_percentage": 36.36363636363637,
+        "churned_users": 427,
+        "churned_percentage": 92.42424242424242
+      },
+      {
+        "day": 25,
+        "active_users": 30,
+        "new_users": 16,
+        "new_users_percentage": 53.333333333333336,
+        "churned_users": 436,
+        "churned_percentage": 93.56223175965665
+      },
+      {
+        "day": 26,
+        "active_users": 23,
+        "new_users": 15,
+        "new_users_percentage": 65.21739130434783,
+        "churned_users": 453,
+        "churned_percentage": 93.98340248962656
+      },
+      {
+        "day": 27,
+        "active_users": 15,
+        "new_users": 5,
+        "new_users_percentage": 33.33333333333333,
+        "churned_users": 471,
+        "churned_percentage": 94.76861167002012
+      },
+      {
+        "day": 28,
+        "active_users": 26,
+        "new_users": 14,
+        "new_users_percentage": 53.84615384615385,
+        "churned_users": 482,
+        "churned_percentage": 96.01593625498009
+      },
+      {
+        "day": 29,
+        "active_users": 22,
+        "new_users": 11,
+        "new_users_percentage": 50.0,
+        "churned_users": 503,
+        "churned_percentage": 97.48062015503875
+      },
+      {
+        "day": 30,
+        "active_users": 20,
+        "new_users": 7,
+        "new_users_percentage": 35.0,
+        "churned_users": 527,
+        "churned_percentage": 100.0
+      }
+    ],
+    "days_10_onwards": [
+      {
+        "day": 10,
+        "active_users": 18,
+        "new_users": 9,
+        "new_users_percentage": 50.0,
+        "churned_users": 166,
+        "churned_percentage": 72.48908296943232
+      },
+      {
+        "day": 11,
+        "active_users": 11,
+        "new_users": 6,
+        "new_users_percentage": 54.54545454545454,
+        "churned_users": 174,
+        "churned_percentage": 73.10924369747899
+      },
+      {
+        "day": 12,
+        "active_users": 33,
+        "new_users": 21,
+        "new_users_percentage": 63.63636363636363,
+        "churned_users": 181,
+        "churned_percentage": 74.18032786885246
+      },
+      {
+        "day": 13,
+        "active_users": 27,
+        "new_users": 16,
+        "new_users_percentage": 59.25925925925925,
+        "churned_users": 199,
+        "churned_percentage": 75.09433962264151
+      },
+      {
+        "day": 14,
+        "active_users": 46,
+        "new_users": 31,
+        "new_users_percentage": 67.3913043478261,
+        "churned_users": 215,
+        "churned_percentage": 76.51245551601423
+      },
+      {
+        "day": 15,
+        "active_users": 29,
+        "new_users": 17,
+        "new_users_percentage": 58.620689655172406,
+        "churned_users": 246,
+        "churned_percentage": 78.84615384615384
+      },
+      {
+        "day": 16,
+        "active_users": 23,
+        "new_users": 10,
+        "new_users_percentage": 43.47826086956522,
+        "churned_users": 263,
+        "churned_percentage": 79.93920972644378
+      },
+      {
+        "day": 17,
+        "active_users": 23,
+        "new_users": 13,
+        "new_users_percentage": 56.52173913043478,
+        "churned_users": 277,
+        "churned_percentage": 81.71091445427729
+      },
+      {
+        "day": 18,
+        "active_users": 19,
+        "new_users": 10,
+        "new_users_percentage": 52.63157894736842,
+        "churned_users": 293,
+        "churned_percentage": 83.23863636363636
+      },
+      {
+        "day": 19,
+        "active_users": 20,
+        "new_users": 15,
+        "new_users_percentage": 75.0,
+        "churned_users": 302,
+        "churned_percentage": 83.42541436464089
+      },
+      {
+        "day": 20,
+        "active_users": 23,
+        "new_users": 11,
+        "new_users_percentage": 47.82608695652174,
+        "churned_users": 318,
+        "churned_percentage": 84.3501326259947
+      },
+      {
+        "day": 21,
+        "active_users": 54,
+        "new_users": 32,
+        "new_users_percentage": 59.25925925925925,
+        "churned_users": 336,
+        "churned_percentage": 86.5979381443299
+      },
+      {
+        "day": 22,
+        "active_users": 46,
+        "new_users": 23,
+        "new_users_percentage": 50.0,
+        "churned_users": 376,
+        "churned_percentage": 89.52380952380953
+      },
+      {
+        "day": 23,
+        "active_users": 34,
+        "new_users": 19,
+        "new_users_percentage": 55.88235294117647,
+        "churned_users": 407,
+        "churned_percentage": 91.87358916478556
+      },
+      {
+        "day": 24,
+        "active_users": 11,
+        "new_users": 4,
+        "new_users_percentage": 36.36363636363637,
+        "churned_users": 427,
+        "churned_percentage": 92.42424242424242
+      },
+      {
+        "day": 25,
+        "active_users": 30,
+        "new_users": 16,
+        "new_users_percentage": 53.333333333333336,
+        "churned_users": 436,
+        "churned_percentage": 93.56223175965665
+      },
+      {
+        "day": 26,
+        "active_users": 23,
+        "new_users": 15,
+        "new_users_percentage": 65.21739130434783,
+        "churned_users": 453,
+        "churned_percentage": 93.98340248962656
+      },
+      {
+        "day": 27,
+        "active_users": 15,
+        "new_users": 5,
+        "new_users_percentage": 33.33333333333333,
+        "churned_users": 471,
+        "churned_percentage": 94.76861167002012
+      },
+      {
+        "day": 28,
+        "active_users": 26,
+        "new_users": 14,
+        "new_users_percentage": 53.84615384615385,
+        "churned_users": 482,
+        "churned_percentage": 96.01593625498009
+      },
+      {
+        "day": 29,
+        "active_users": 22,
+        "new_users": 11,
+        "new_users_percentage": 50.0,
+        "churned_users": 503,
+        "churned_percentage": 97.48062015503875
+      },
+      {
+        "day": 30,
+        "active_users": 20,
+        "new_users": 7,
+        "new_users_percentage": 35.0,
+        "churned_users": 527,
+        "churned_percentage": 100.0
+      }
+    ],
+    "avg_new_users_percentage_after_day10": 53.387914177581266,
+    "avg_churn_percentage_after_day10": 85.67268060200266,
+    "total_unique_users": 534
+  },
+  "avg_interactions": {
+    "daily_interactions": {
+      "0": {
+        "total_interactions": 45,
+        "unique_users": 34,
+        "avg_per_user": 1.3235294117647058,
+        "median_per_user": 1.0,
+        "max_per_user": 9
+      },
+      "1": {
+        "total_interactions": 29,
+        "unique_users": 24,
+        "avg_per_user": 1.2083333333333333,
+        "median_per_user": 1.0,
+        "max_per_user": 2
+      },
+      "2": {
+        "total_interactions": 49,
+        "unique_users": 39,
+        "avg_per_user": 1.2564102564102564,
+        "median_per_user": 1.0,
+        "max_per_user": 5
+      },
+      "3": {
+        "total_interactions": 22,
+        "unique_users": 19,
+        "avg_per_user": 1.1578947368421053,
+        "median_per_user": 1.0,
+        "max_per_user": 2
+      },
+      "4": {
+        "total_interactions": 33,
+        "unique_users": 26,
+        "avg_per_user": 1.2692307692307692,
+        "median_per_user": 1.0,
+        "max_per_user": 6
+      },
+      "5": {
+        "total_interactions": 43,
+        "unique_users": 32,
+        "avg_per_user": 1.34375,
+        "median_per_user": 1.0,
+        "max_per_user": 4
+      },
+      "6": {
+        "total_interactions": 47,
+        "unique_users": 42,
+        "avg_per_user": 1.119047619047619,
+        "median_per_user": 1.0,
+        "max_per_user": 3
+      },
+      "7": {
+        "total_interactions": 41,
+        "unique_users": 29,
+        "avg_per_user": 1.4137931034482758,
+        "median_per_user": 1.0,
+        "max_per_user": 6
+      },
+      "8": {
+        "total_interactions": 86,
+        "unique_users": 54,
+        "avg_per_user": 1.5925925925925926,
+        "median_per_user": 1.0,
+        "max_per_user": 11
+      },
+      "9": {
+        "total_interactions": 29,
+        "unique_users": 18,
+        "avg_per_user": 1.6111111111111112,
+        "median_per_user": 1.0,
+        "max_per_user": 7
+      },
+      "10": {
+        "total_interactions": 12,
+        "unique_users": 11,
+        "avg_per_user": 1.0909090909090908,
+        "median_per_user": 1.0,
+        "max_per_user": 2
+      },
+      "11": {
+        "total_interactions": 43,
+        "unique_users": 33,
+        "avg_per_user": 1.303030303030303,
+        "median_per_user": 1.0,
+        "max_per_user": 6
+      },
+      "12": {
+        "total_interactions": 43,
+        "unique_users": 27,
+        "avg_per_user": 1.5925925925925926,
+        "median_per_user": 1.0,
+        "max_per_user": 7
+      },
+      "13": {
+        "total_interactions": 63,
+        "unique_users": 46,
+        "avg_per_user": 1.3695652173913044,
+        "median_per_user": 1.0,
+        "max_per_user": 5
+      },
+      "14": {
+        "total_interactions": 39,
+        "unique_users": 29,
+        "avg_per_user": 1.3448275862068966,
+        "median_per_user": 1.0,
+        "max_per_user": 7
+      },
+      "15": {
+        "total_interactions": 29,
+        "unique_users": 23,
+        "avg_per_user": 1.2608695652173914,
+        "median_per_user": 1.0,
+        "max_per_user": 6
+      },
+      "16": {
+        "total_interactions": 33,
+        "unique_users": 23,
+        "avg_per_user": 1.434782608695652,
+        "median_per_user": 1.0,
+        "max_per_user": 8
+      },
+      "17": {
+        "total_interactions": 31,
+        "unique_users": 19,
+        "avg_per_user": 1.631578947368421,
+        "median_per_user": 1.0,
+        "max_per_user": 6
+      },
+      "18": {
+        "total_interactions": 28,
+        "unique_users": 20,
+        "avg_per_user": 1.4,
+        "median_per_user": 1.0,
+        "max_per_user": 4
+      },
+      "19": {
+        "total_interactions": 34,
+        "unique_users": 23,
+        "avg_per_user": 1.4782608695652173,
+        "median_per_user": 1.0,
+        "max_per_user": 5
+      },
+      "20": {
+        "total_interactions": 67,
+        "unique_users": 54,
+        "avg_per_user": 1.2407407407407407,
+        "median_per_user": 1.0,
+        "max_per_user": 7
+      },
+      "21": {
+        "total_interactions": 60,
+        "unique_users": 46,
+        "avg_per_user": 1.3043478260869565,
+        "median_per_user": 1.0,
+        "max_per_user": 4
+      },
+      "22": {
+        "total_interactions": 43,
+        "unique_users": 34,
+        "avg_per_user": 1.2647058823529411,
+        "median_per_user": 1.0,
+        "max_per_user": 6
+      },
+      "23": {
+        "total_interactions": 16,
+        "unique_users": 11,
+        "avg_per_user": 1.4545454545454546,
+        "median_per_user": 1.0,
+        "max_per_user": 4
+      },
+      "24": {
+        "total_interactions": 39,
+        "unique_users": 30,
+        "avg_per_user": 1.3,
+        "median_per_user": 1.0,
+        "max_per_user": 5
+      },
+      "25": {
+        "total_interactions": 33,
+        "unique_users": 23,
+        "avg_per_user": 1.434782608695652,
+        "median_per_user": 1.0,
+        "max_per_user": 10
+      },
+      "26": {
+        "total_interactions": 25,
+        "unique_users": 15,
+        "avg_per_user": 1.6666666666666667,
+        "median_per_user": 1.0,
+        "max_per_user": 9
+      },
+      "27": {
+        "total_interactions": 33,
+        "unique_users": 26,
+        "avg_per_user": 1.2692307692307692,
+        "median_per_user": 1.0,
+        "max_per_user": 5
+      },
+      "28": {
+        "total_interactions": 31,
+        "unique_users": 22,
+        "avg_per_user": 1.4090909090909092,
+        "median_per_user": 1.0,
+        "max_per_user": 5
+      },
+      "29": {
+        "total_interactions": 27,
+        "unique_users": 20,
+        "avg_per_user": 1.35,
+        "median_per_user": 1.0,
+        "max_per_user": 4
+      }
+    },
+    "overall_avg_interactions_per_user_per_day": 1.3632073524055905,
+    "overall_median_interactions_per_user_per_day": 1.0,
+    "avg_unique_active_users_per_day": 28.4,
+    "median_unique_active_users_per_day": 26.0,
+    "max_unique_active_users_per_day": 54,
+    "min_unique_active_users_per_day": 11,
+    "unique_users_by_day": [
+      34,
+      24,
+      39,
+      19,
+      26,
+      32,
+      42,
+      29,
+      54,
+      18,
+      11,
+      33,
+      27,
+      46,
+      29,
+      23,
+      23,
+      19,
+      20,
+      23,
+      54,
+      46,
+      34,
+      11,
+      30,
+      23,
+      15,
+      26,
+      22,
+      20
+    ],
+    "avg_interactions_per_active_day": {
+      "mean": 1.1221437956012732,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 5.448275862068965
+    },
+    "active_days_per_user": {
+      "mean": 1.595505617977528,
+      "median": 1.0,
+      "min": 1,
+      "max": 29
+    },
+    "users_with_single_day_activity": 419,
+    "users_with_high_activity": 5,
+    "total_unique_users": 534,
+    "interactions_distribution": {
+      "counts": [
+        503,
+        16,
+        9,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bin_edges": [
+        1.0,
+        4.204081632653061,
+        7.408163265306122,
+        10.612244897959183,
+        13.816326530612244,
+        17.020408163265305,
+        20.224489795918366,
+        23.428571428571427,
+        26.632653061224488,
+        29.83673469387755,
+        33.04081632653061,
+        36.244897959183675,
+        39.44897959183673,
+        42.65306122448979,
+        45.857142857142854,
+        49.06122448979592,
+        52.265306122448976,
+        55.469387755102034,
+        58.6734693877551,
+        61.87755102040816,
+        65.08163265306122,
+        68.28571428571428,
+        71.48979591836735,
+        74.6938775510204,
+        77.89795918367346,
+        81.10204081632652,
+        84.30612244897958,
+        87.51020408163265,
+        90.71428571428571,
+        93.91836734693877,
+        97.12244897959184,
+        100.3265306122449,
+        103.53061224489795,
+        106.73469387755101,
+        109.93877551020407,
+        113.14285714285714,
+        116.3469387755102,
+        119.55102040816325,
+        122.75510204081633,
+        125.95918367346938,
+        129.16326530612244,
+        132.3673469387755,
+        135.57142857142856,
+        138.77551020408163,
+        141.9795918367347,
+        145.18367346938774,
+        148.3877551020408,
+        151.59183673469386,
+        154.79591836734693,
+        158.0
+      ]
+    },
+    "active_days_distribution": {
+      "counts": [
+        419,
+        58,
+        23,
+        14,
+        7,
+        3,
+        3,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bin_edges": [
+        1.0,
+        1.903225806451613,
+        2.806451612903226,
+        3.7096774193548385,
+        4.612903225806452,
+        5.516129032258064,
+        6.419354838709677,
+        7.32258064516129,
+        8.225806451612904,
+        9.129032258064516,
+        10.032258064516128,
+        10.935483870967742,
+        11.838709677419354,
+        12.741935483870968,
+        13.64516129032258,
+        14.548387096774194,
+        15.451612903225806,
+        16.354838709677416,
+        17.258064516129032,
+        18.161290322580644,
+        19.064516129032256,
+        19.967741935483872,
+        20.870967741935484,
+        21.774193548387096,
+        22.677419354838708,
+        23.58064516129032,
+        24.483870967741936,
+        25.387096774193548,
+        26.29032258064516,
+        27.193548387096772,
+        28.096774193548388,
+        29.0
+      ]
+    },
+    "avg_per_day_distribution": {
+      "counts": [
+        466,
+        11,
+        10,
+        3,
+        3,
+        31,
+        0,
+        2,
+        0,
+        1,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bin_edges": [
+        1.0,
+        1.1710875331564987,
+        1.3421750663129974,
+        1.513262599469496,
+        1.6843501326259946,
+        1.8554376657824934,
+        2.026525198938992,
+        2.1976127320954904,
+        2.3687002652519893,
+        2.5397877984084882,
+        2.7108753315649867,
+        2.881962864721485,
+        3.0530503978779837,
+        3.2241379310344827,
+        3.395225464190981,
+        3.56631299734748,
+        3.7374005305039786,
+        3.908488063660477,
+        4.0795755968169765,
+        4.250663129973475,
+        4.4217506631299734,
+        4.592838196286472,
+        4.76392572944297,
+        4.935013262599469,
+        5.106100795755967,
+        5.277188328912467,
+        5.448275862068965
+      ]
+    },
+    "unique_users_distribution": {
+      "counts": [
+        3,
+        3,
+        7,
+        4,
+        4,
+        3,
+        1,
+        1,
+        2,
+        2
+      ],
+      "bin_edges": [
+        11.0,
+        15.3,
+        19.6,
+        23.9,
+        28.2,
+        32.5,
+        36.8,
+        41.099999999999994,
+        45.4,
+        49.699999999999996,
+        54.0
+      ]
+    }
+  },
+  "post_distribution": {
+    "daily_counts": {
+      "0": {
+        "date": "2017-06-07",
+        "day_num": 1,
+        "posts": 23,
+        "comments": 22,
+        "total": 45,
+        "unique_users": 34,
+        "users_who_posted": 16,
+        "users_who_commented": 21,
+        "posts_per_user": 1.4375,
+        "comments_per_user": 1.0476190476190477,
+        "max_posts_by_user": 8,
+        "max_comments_by_user": 2
+      },
+      "1": {
+        "date": "2017-06-08",
+        "day_num": 2,
+        "posts": 16,
+        "comments": 13,
+        "total": 29,
+        "unique_users": 24,
+        "users_who_posted": 14,
+        "users_who_commented": 12,
+        "posts_per_user": 1.1428571428571428,
+        "comments_per_user": 1.0833333333333333,
+        "max_posts_by_user": 2,
+        "max_comments_by_user": 2
+      },
+      "2": {
+        "date": "2017-06-09",
+        "day_num": 3,
+        "posts": 13,
+        "comments": 36,
+        "total": 49,
+        "unique_users": 39,
+        "users_who_posted": 6,
+        "users_who_commented": 34,
+        "posts_per_user": 2.1666666666666665,
+        "comments_per_user": 1.0588235294117647,
+        "max_posts_by_user": 4,
+        "max_comments_by_user": 3
+      },
+      "3": {
+        "date": "2017-06-10",
+        "day_num": 4,
+        "posts": 11,
+        "comments": 11,
+        "total": 22,
+        "unique_users": 19,
+        "users_who_posted": 9,
+        "users_who_commented": 11,
+        "posts_per_user": 1.2222222222222223,
+        "comments_per_user": 1.0,
+        "max_posts_by_user": 2,
+        "max_comments_by_user": 1
+      },
+      "4": {
+        "date": "2017-06-11",
+        "day_num": 5,
+        "posts": 15,
+        "comments": 18,
+        "total": 33,
+        "unique_users": 26,
+        "users_who_posted": 10,
+        "users_who_commented": 17,
+        "posts_per_user": 1.5,
+        "comments_per_user": 1.0588235294117647,
+        "max_posts_by_user": 6,
+        "max_comments_by_user": 2
+      },
+      "5": {
+        "date": "2017-06-12",
+        "day_num": 6,
+        "posts": 16,
+        "comments": 27,
+        "total": 43,
+        "unique_users": 32,
+        "users_who_posted": 9,
+        "users_who_commented": 23,
+        "posts_per_user": 1.7777777777777777,
+        "comments_per_user": 1.173913043478261,
+        "max_posts_by_user": 4,
+        "max_comments_by_user": 3
+      },
+      "6": {
+        "date": "2017-06-13",
+        "day_num": 7,
+        "posts": 24,
+        "comments": 23,
+        "total": 47,
+        "unique_users": 42,
+        "users_who_posted": 20,
+        "users_who_commented": 22,
+        "posts_per_user": 1.2,
+        "comments_per_user": 1.0454545454545454,
+        "max_posts_by_user": 3,
+        "max_comments_by_user": 2
+      },
+      "7": {
+        "date": "2017-06-14",
+        "day_num": 8,
+        "posts": 21,
+        "comments": 20,
+        "total": 41,
+        "unique_users": 29,
+        "users_who_posted": 14,
+        "users_who_commented": 18,
+        "posts_per_user": 1.5,
+        "comments_per_user": 1.1111111111111112,
+        "max_posts_by_user": 5,
+        "max_comments_by_user": 2
+      },
+      "8": {
+        "date": "2017-06-15",
+        "day_num": 9,
+        "posts": 38,
+        "comments": 48,
+        "total": 86,
+        "unique_users": 54,
+        "users_who_posted": 18,
+        "users_who_commented": 40,
+        "posts_per_user": 2.111111111111111,
+        "comments_per_user": 1.2,
+        "max_posts_by_user": 9,
+        "max_comments_by_user": 3
+      },
+      "9": {
+        "date": "2017-06-16",
+        "day_num": 10,
+        "posts": 13,
+        "comments": 16,
+        "total": 29,
+        "unique_users": 18,
+        "users_who_posted": 8,
+        "users_who_commented": 13,
+        "posts_per_user": 1.625,
+        "comments_per_user": 1.2307692307692308,
+        "max_posts_by_user": 6,
+        "max_comments_by_user": 2
+      },
+      "10": {
+        "date": "2017-06-17",
+        "day_num": 11,
+        "posts": 8,
+        "comments": 4,
+        "total": 12,
+        "unique_users": 11,
+        "users_who_posted": 8,
+        "users_who_commented": 4,
+        "posts_per_user": 1.0,
+        "comments_per_user": 1.0,
+        "max_posts_by_user": 1,
+        "max_comments_by_user": 1
+      },
+      "11": {
+        "date": "2017-06-18",
+        "day_num": 12,
+        "posts": 24,
+        "comments": 19,
+        "total": 43,
+        "unique_users": 33,
+        "users_who_posted": 16,
+        "users_who_commented": 17,
+        "posts_per_user": 1.5,
+        "comments_per_user": 1.1176470588235294,
+        "max_posts_by_user": 6,
+        "max_comments_by_user": 2
+      },
+      "12": {
+        "date": "2017-06-19",
+        "day_num": 13,
+        "posts": 24,
+        "comments": 19,
+        "total": 43,
+        "unique_users": 27,
+        "users_who_posted": 17,
+        "users_who_commented": 15,
+        "posts_per_user": 1.411764705882353,
+        "comments_per_user": 1.2666666666666666,
+        "max_posts_by_user": 7,
+        "max_comments_by_user": 3
+      },
+      "13": {
+        "date": "2017-06-20",
+        "day_num": 14,
+        "posts": 25,
+        "comments": 38,
+        "total": 63,
+        "unique_users": 46,
+        "users_who_posted": 18,
+        "users_who_commented": 32,
+        "posts_per_user": 1.3888888888888888,
+        "comments_per_user": 1.1875,
+        "max_posts_by_user": 5,
+        "max_comments_by_user": 4
+      },
+      "14": {
+        "date": "2017-06-21",
+        "day_num": 15,
+        "posts": 20,
+        "comments": 19,
+        "total": 39,
+        "unique_users": 29,
+        "users_who_posted": 13,
+        "users_who_commented": 18,
+        "posts_per_user": 1.5384615384615385,
+        "comments_per_user": 1.0555555555555556,
+        "max_posts_by_user": 6,
+        "max_comments_by_user": 2
+      },
+      "15": {
+        "date": "2017-06-22",
+        "day_num": 16,
+        "posts": 16,
+        "comments": 13,
+        "total": 29,
+        "unique_users": 23,
+        "users_who_posted": 11,
+        "users_who_commented": 12,
+        "posts_per_user": 1.4545454545454546,
+        "comments_per_user": 1.0833333333333333,
+        "max_posts_by_user": 6,
+        "max_comments_by_user": 2
+      },
+      "16": {
+        "date": "2017-06-23",
+        "day_num": 17,
+        "posts": 20,
+        "comments": 13,
+        "total": 33,
+        "unique_users": 23,
+        "users_who_posted": 12,
+        "users_who_commented": 11,
+        "posts_per_user": 1.6666666666666667,
+        "comments_per_user": 1.1818181818181819,
+        "max_posts_by_user": 8,
+        "max_comments_by_user": 2
+      },
+      "17": {
+        "date": "2017-06-24",
+        "day_num": 18,
+        "posts": 18,
+        "comments": 13,
+        "total": 31,
+        "unique_users": 19,
+        "users_who_posted": 12,
+        "users_who_commented": 12,
+        "posts_per_user": 1.5,
+        "comments_per_user": 1.0833333333333333,
+        "max_posts_by_user": 5,
+        "max_comments_by_user": 2
+      },
+      "18": {
+        "date": "2017-06-25",
+        "day_num": 19,
+        "posts": 17,
+        "comments": 11,
+        "total": 28,
+        "unique_users": 20,
+        "users_who_posted": 11,
+        "users_who_commented": 10,
+        "posts_per_user": 1.5454545454545454,
+        "comments_per_user": 1.1,
+        "max_posts_by_user": 4,
+        "max_comments_by_user": 2
+      },
+      "19": {
+        "date": "2017-06-26",
+        "day_num": 20,
+        "posts": 24,
+        "comments": 10,
+        "total": 34,
+        "unique_users": 23,
+        "users_who_posted": 19,
+        "users_who_commented": 7,
+        "posts_per_user": 1.263157894736842,
+        "comments_per_user": 1.4285714285714286,
+        "max_posts_by_user": 3,
+        "max_comments_by_user": 2
+      },
+      "20": {
+        "date": "2017-06-27",
+        "day_num": 21,
+        "posts": 38,
+        "comments": 29,
+        "total": 67,
+        "unique_users": 54,
+        "users_who_posted": 28,
+        "users_who_commented": 28,
+        "posts_per_user": 1.3571428571428572,
+        "comments_per_user": 1.0357142857142858,
+        "max_posts_by_user": 7,
+        "max_comments_by_user": 2
+      },
+      "21": {
+        "date": "2017-06-28",
+        "day_num": 22,
+        "posts": 25,
+        "comments": 35,
+        "total": 60,
+        "unique_users": 46,
+        "users_who_posted": 20,
+        "users_who_commented": 30,
+        "posts_per_user": 1.25,
+        "comments_per_user": 1.1666666666666667,
+        "max_posts_by_user": 4,
+        "max_comments_by_user": 2
+      },
+      "22": {
+        "date": "2017-06-29",
+        "day_num": 23,
+        "posts": 19,
+        "comments": 24,
+        "total": 43,
+        "unique_users": 34,
+        "users_who_posted": 13,
+        "users_who_commented": 22,
+        "posts_per_user": 1.4615384615384615,
+        "comments_per_user": 1.0909090909090908,
+        "max_posts_by_user": 6,
+        "max_comments_by_user": 2
+      },
+      "23": {
+        "date": "2017-06-30",
+        "day_num": 24,
+        "posts": 12,
+        "comments": 4,
+        "total": 16,
+        "unique_users": 11,
+        "users_who_posted": 7,
+        "users_who_commented": 4,
+        "posts_per_user": 1.7142857142857142,
+        "comments_per_user": 1.0,
+        "max_posts_by_user": 4,
+        "max_comments_by_user": 1
+      },
+      "24": {
+        "date": "2017-07-01",
+        "day_num": 25,
+        "posts": 18,
+        "comments": 21,
+        "total": 39,
+        "unique_users": 30,
+        "users_who_posted": 11,
+        "users_who_commented": 19,
+        "posts_per_user": 1.6363636363636365,
+        "comments_per_user": 1.105263157894737,
+        "max_posts_by_user": 5,
+        "max_comments_by_user": 3
+      },
+      "25": {
+        "date": "2017-07-02",
+        "day_num": 26,
+        "posts": 20,
+        "comments": 13,
+        "total": 33,
+        "unique_users": 23,
+        "users_who_posted": 11,
+        "users_who_commented": 13,
+        "posts_per_user": 1.8181818181818181,
+        "comments_per_user": 1.0,
+        "max_posts_by_user": 10,
+        "max_comments_by_user": 1
+      },
+      "26": {
+        "date": "2017-07-03",
+        "day_num": 27,
+        "posts": 19,
+        "comments": 6,
+        "total": 25,
+        "unique_users": 15,
+        "users_who_posted": 10,
+        "users_who_commented": 6,
+        "posts_per_user": 1.9,
+        "comments_per_user": 1.0,
+        "max_posts_by_user": 9,
+        "max_comments_by_user": 1
+      },
+      "27": {
+        "date": "2017-07-04",
+        "day_num": 28,
+        "posts": 16,
+        "comments": 17,
+        "total": 33,
+        "unique_users": 26,
+        "users_who_posted": 12,
+        "users_who_commented": 16,
+        "posts_per_user": 1.3333333333333333,
+        "comments_per_user": 1.0625,
+        "max_posts_by_user": 5,
+        "max_comments_by_user": 2
+      },
+      "28": {
+        "date": "2017-07-05",
+        "day_num": 29,
+        "posts": 19,
+        "comments": 12,
+        "total": 31,
+        "unique_users": 22,
+        "users_who_posted": 13,
+        "users_who_commented": 10,
+        "posts_per_user": 1.4615384615384615,
+        "comments_per_user": 1.2,
+        "max_posts_by_user": 5,
+        "max_comments_by_user": 3
+      },
+      "29": {
+        "date": "2017-07-06",
+        "day_num": 30,
+        "posts": 15,
+        "comments": 12,
+        "total": 27,
+        "unique_users": 20,
+        "users_who_posted": 12,
+        "users_who_commented": 11,
+        "posts_per_user": 1.25,
+        "comments_per_user": 1.0909090909090908,
+        "max_posts_by_user": 4,
+        "max_comments_by_user": 2
+      }
+    },
+    "total_posts": 587,
+    "total_comments": 566,
+    "post_comment_ratio": 0.9642248722316865,
+    "avg_posts_per_day": 19.566666666666666,
+    "avg_comments_per_day": 18.866666666666667,
+    "max_posts_in_a_day": 38,
+    "max_comments_in_a_day": 48,
+    "users_who_posted": 217,
+    "users_who_commented": 363,
+    "avg_posts_per_user": 2.705069124423963,
+    "avg_comments_per_user": 1.559228650137741,
+    "max_posts_by_user": 151,
+    "max_comments_by_user": 10,
+    "posts_distribution": {
+      "counts": [
+        1,
+        4,
+        6,
+        6,
+        4,
+        7,
+        0,
+        0,
+        0,
+        2
+      ],
+      "bin_edges": [
+        8.0,
+        11.0,
+        14.0,
+        17.0,
+        20.0,
+        23.0,
+        26.0,
+        29.0,
+        32.0,
+        35.0,
+        38.0
+      ]
+    },
+    "comments_distribution": {
+      "counts": [
+        3,
+        5,
+        7,
+        6,
+        3,
+        2,
+        0,
+        3,
+        0,
+        1
+      ],
+      "bin_edges": [
+        4.0,
+        8.4,
+        12.8,
+        17.200000000000003,
+        21.6,
+        26.0,
+        30.400000000000002,
+        34.800000000000004,
+        39.2,
+        43.6,
+        48.0
+      ]
+    },
+    "posts_per_user_distribution": {
+      "counts": [
+        211,
+        3,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bin_edges": [
+        1.0,
+        10.375,
+        19.75,
+        29.125,
+        38.5,
+        47.875,
+        57.25,
+        66.625,
+        76.0,
+        85.375,
+        94.75,
+        104.125,
+        113.5,
+        122.875,
+        132.25,
+        141.625,
+        151.0
+      ]
+    },
+    "comments_per_user_distribution": {
+      "counts": [
+        271,
+        49,
+        0,
+        17,
+        12,
+        0,
+        3,
+        4,
+        0,
+        3,
+        0,
+        0,
+        2,
+        2
+      ],
+      "bin_edges": [
+        1.0,
+        1.6428571428571428,
+        2.2857142857142856,
+        2.928571428571429,
+        3.5714285714285716,
+        4.214285714285714,
+        4.857142857142858,
+        5.5,
+        6.142857142857143,
+        6.7857142857142865,
+        7.428571428571429,
+        8.071428571428573,
+        8.714285714285715,
+        9.357142857142858,
+        10.0
+      ]
+    }
+  },
+  "toxicity": {
+    "has_toxicity_data": true,
+    "toxicity_coverage_pct": 100.0,
+    "records_with_toxicity": 1153,
+    "total_records": 1153,
+    "toxicity_stats": {
+      "mean": 0.10600203697663366,
+      "median": 0.0011836562771350145,
+      "min": 0.0005647113430313766,
+      "max": 0.9896591305732727,
+      "std": 0.26494288739175237
+    },
+    "toxicity_distribution": {
+      "counts": [
+        949,
+        24,
+        16,
+        8,
+        8,
+        7,
+        9,
+        1,
+        8,
+        4,
+        4,
+        6,
+        5,
+        6,
+        9,
+        5,
+        7,
+        17,
+        16,
+        44
+      ],
+      "counts_pct": [
+        82.30702515177796,
+        2.0815264527320037,
+        1.3876843018213356,
+        0.6938421509106678,
+        0.6938421509106678,
+        0.6071118820468344,
+        0.7805724197745013,
+        0.08673026886383348,
+        0.6938421509106678,
+        0.3469210754553339,
+        0.3469210754553339,
+        0.5203816131830009,
+        0.43365134431916735,
+        0.5203816131830009,
+        0.7805724197745013,
+        0.43365134431916735,
+        0.6071118820468344,
+        1.4744145706851692,
+        1.3876843018213356,
+        3.8161318300086733
+      ],
+      "bin_edges": [
+        0.0,
+        0.05,
+        0.1,
+        0.15000000000000002,
+        0.2,
+        0.25,
+        0.30000000000000004,
+        0.35000000000000003,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6000000000000001,
+        0.65,
+        0.7000000000000001,
+        0.75,
+        0.8,
+        0.8500000000000001,
+        0.9,
+        0.9500000000000001,
+        1.0
+      ]
+    },
+    "interaction_toxicity": {
+      "posts": {
+        "count": 587,
+        "mean": 0.01932945063185372,
+        "median": 0.0007851543487049639,
+        "distribution": [
+          556,
+          11,
+          3,
+          1,
+          2,
+          1,
+          3,
+          0,
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "comments": {
+        "count": 566,
+        "mean": 0.19589039065929412,
+        "median": 0.0028877026634290814,
+        "distribution": [
+          393,
+          13,
+          13,
+          7,
+          6,
+          6,
+          6,
+          1,
+          7,
+          4,
+          3,
+          5,
+          3,
+          5,
+          8,
+          4,
+          7,
+          16,
+          16,
+          43
+        ]
+      }
+    },
+    "high_toxicity_threshold": 0.5414541482925411,
+    "very_high_toxicity_threshold": 0.9073665976524352,
+    "high_toxicity_counts": {
+      "posts": 8,
+      "comments": 108,
+      "total": 116,
+      "pct_of_posts": 1.362862010221465,
+      "pct_of_comments": 19.081272084805654,
+      "pct_of_all": 10.060711188204683
+    },
+    "very_high_toxicity_counts": {
+      "posts": 1,
+      "comments": 57,
+      "total": 58,
+      "pct_of_posts": 0.17035775127768313,
+      "pct_of_comments": 10.070671378091872,
+      "pct_of_all": 5.030355594102342
+    },
+    "user_toxicity": {
+      "high_toxicity_users_count": 0,
+      "high_toxicity_users_pct": 0.0,
+      "user_toxicity_distribution": {
+        "counts": [
+          17,
+          6,
+          1,
+          0,
+          2,
+          3,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "bin_edges": [
+          0.0,
+          0.05,
+          0.1,
+          0.15000000000000002,
+          0.2,
+          0.25,
+          0.30000000000000004,
+          0.35000000000000003,
+          0.4,
+          0.45,
+          0.5,
+          0.55,
+          0.6000000000000001,
+          0.65,
+          0.7000000000000001,
+          0.75,
+          0.8,
+          0.8500000000000001,
+          0.9,
+          0.9500000000000001,
+          1.0
+        ]
+      }
+    },
+    "daily_toxicity": {
+      "0": {
+        "date": "2017-06-07",
+        "day_num": 1,
+        "mean_toxicity": 0.08961465292765448,
+        "median_toxicity": 0.0012573759304359555,
+        "high_toxicity_count": 3,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 45
+      },
+      "1": {
+        "date": "2017-06-08",
+        "day_num": 2,
+        "mean_toxicity": 0.10794904932243235,
+        "median_toxicity": 0.0009300209349021316,
+        "high_toxicity_count": 3,
+        "very_high_toxicity_count": 0,
+        "total_interactions": 29
+      },
+      "2": {
+        "date": "2017-06-09",
+        "day_num": 3,
+        "mean_toxicity": 0.22041854100320868,
+        "median_toxicity": 0.006701031234115362,
+        "high_toxicity_count": 11,
+        "very_high_toxicity_count": 5,
+        "total_interactions": 49
+      },
+      "3": {
+        "date": "2017-06-10",
+        "day_num": 4,
+        "mean_toxicity": 0.119378402416425,
+        "median_toxicity": 0.0022204467095434666,
+        "high_toxicity_count": 2,
+        "very_high_toxicity_count": 2,
+        "total_interactions": 22
+      },
+      "4": {
+        "date": "2017-06-11",
+        "day_num": 5,
+        "mean_toxicity": 0.11999645460728613,
+        "median_toxicity": 0.001277941046282649,
+        "high_toxicity_count": 5,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 33
+      },
+      "5": {
+        "date": "2017-06-12",
+        "day_num": 6,
+        "mean_toxicity": 0.07661051111604456,
+        "median_toxicity": 0.001134695252403617,
+        "high_toxicity_count": 2,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 43
+      },
+      "6": {
+        "date": "2017-06-13",
+        "day_num": 7,
+        "mean_toxicity": 0.12459034053361083,
+        "median_toxicity": 0.0009401328861713409,
+        "high_toxicity_count": 6,
+        "very_high_toxicity_count": 4,
+        "total_interactions": 47
+      },
+      "7": {
+        "date": "2017-06-14",
+        "day_num": 8,
+        "mean_toxicity": 0.11627870005918894,
+        "median_toxicity": 0.001672382466495037,
+        "high_toxicity_count": 5,
+        "very_high_toxicity_count": 3,
+        "total_interactions": 41
+      },
+      "8": {
+        "date": "2017-06-15",
+        "day_num": 9,
+        "mean_toxicity": 0.10794540449874042,
+        "median_toxicity": 0.0014112343196757138,
+        "high_toxicity_count": 10,
+        "very_high_toxicity_count": 3,
+        "total_interactions": 86
+      },
+      "9": {
+        "date": "2017-06-16",
+        "day_num": 10,
+        "mean_toxicity": 0.12949828036001015,
+        "median_toxicity": 0.0015307610156014562,
+        "high_toxicity_count": 4,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 29
+      },
+      "10": {
+        "date": "2017-06-17",
+        "day_num": 11,
+        "mean_toxicity": 0.08370942348847166,
+        "median_toxicity": 0.0013198369997553527,
+        "high_toxicity_count": 1,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 12
+      },
+      "11": {
+        "date": "2017-06-18",
+        "day_num": 12,
+        "mean_toxicity": 0.12363816049426447,
+        "median_toxicity": 0.000993233290500939,
+        "high_toxicity_count": 5,
+        "very_high_toxicity_count": 2,
+        "total_interactions": 43
+      },
+      "12": {
+        "date": "2017-06-19",
+        "day_num": 13,
+        "mean_toxicity": 0.03546585162646722,
+        "median_toxicity": 0.0009919642470777035,
+        "high_toxicity_count": 1,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 43
+      },
+      "13": {
+        "date": "2017-06-20",
+        "day_num": 14,
+        "mean_toxicity": 0.09319050005999291,
+        "median_toxicity": 0.001126870047301054,
+        "high_toxicity_count": 5,
+        "very_high_toxicity_count": 2,
+        "total_interactions": 63
+      },
+      "14": {
+        "date": "2017-06-21",
+        "day_num": 15,
+        "mean_toxicity": 0.1019957580540974,
+        "median_toxicity": 0.0010843203635886312,
+        "high_toxicity_count": 4,
+        "very_high_toxicity_count": 3,
+        "total_interactions": 39
+      },
+      "15": {
+        "date": "2017-06-22",
+        "day_num": 16,
+        "mean_toxicity": 0.13385847066970671,
+        "median_toxicity": 0.0019416507566347718,
+        "high_toxicity_count": 3,
+        "very_high_toxicity_count": 3,
+        "total_interactions": 29
+      },
+      "16": {
+        "date": "2017-06-23",
+        "day_num": 17,
+        "mean_toxicity": 0.07366563112538477,
+        "median_toxicity": 0.0008431458845734596,
+        "high_toxicity_count": 3,
+        "very_high_toxicity_count": 0,
+        "total_interactions": 33
+      },
+      "17": {
+        "date": "2017-06-24",
+        "day_num": 18,
+        "mean_toxicity": 0.0785208610524874,
+        "median_toxicity": 0.0014574870001524687,
+        "high_toxicity_count": 2,
+        "very_high_toxicity_count": 2,
+        "total_interactions": 31
+      },
+      "18": {
+        "date": "2017-06-25",
+        "day_num": 19,
+        "mean_toxicity": 0.09822156632643393,
+        "median_toxicity": 0.0012082834145985544,
+        "high_toxicity_count": 3,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 28
+      },
+      "19": {
+        "date": "2017-06-26",
+        "day_num": 20,
+        "mean_toxicity": 0.06829694063943702,
+        "median_toxicity": 0.0009886795887723565,
+        "high_toxicity_count": 2,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 34
+      },
+      "20": {
+        "date": "2017-06-27",
+        "day_num": 21,
+        "mean_toxicity": 0.09468126936238815,
+        "median_toxicity": 0.0011678950395435095,
+        "high_toxicity_count": 5,
+        "very_high_toxicity_count": 4,
+        "total_interactions": 67
+      },
+      "21": {
+        "date": "2017-06-28",
+        "day_num": 22,
+        "mean_toxicity": 0.12416469965925596,
+        "median_toxicity": 0.0016217483207583427,
+        "high_toxicity_count": 8,
+        "very_high_toxicity_count": 4,
+        "total_interactions": 60
+      },
+      "22": {
+        "date": "2017-06-29",
+        "day_num": 23,
+        "mean_toxicity": 0.10641126479644891,
+        "median_toxicity": 0.0013610447058454156,
+        "high_toxicity_count": 4,
+        "very_high_toxicity_count": 2,
+        "total_interactions": 43
+      },
+      "23": {
+        "date": "2017-06-30",
+        "day_num": 24,
+        "mean_toxicity": 0.05343187728794874,
+        "median_toxicity": 0.0008423015533480793,
+        "high_toxicity_count": 1,
+        "very_high_toxicity_count": 0,
+        "total_interactions": 16
+      },
+      "24": {
+        "date": "2017-07-01",
+        "day_num": 25,
+        "mean_toxicity": 0.23890691175489712,
+        "median_toxicity": 0.009798355400562286,
+        "high_toxicity_count": 8,
+        "very_high_toxicity_count": 6,
+        "total_interactions": 39
+      },
+      "25": {
+        "date": "2017-07-02",
+        "day_num": 26,
+        "mean_toxicity": 0.022307159015767727,
+        "median_toxicity": 0.0007889967528171837,
+        "high_toxicity_count": 1,
+        "very_high_toxicity_count": 0,
+        "total_interactions": 33
+      },
+      "26": {
+        "date": "2017-07-03",
+        "day_num": 27,
+        "mean_toxicity": 0.041818457734771074,
+        "median_toxicity": 0.000733311811927706,
+        "high_toxicity_count": 1,
+        "very_high_toxicity_count": 0,
+        "total_interactions": 25
+      },
+      "27": {
+        "date": "2017-07-04",
+        "day_num": 28,
+        "mean_toxicity": 0.14352709354451773,
+        "median_toxicity": 0.0012015993706882,
+        "high_toxicity_count": 4,
+        "very_high_toxicity_count": 3,
+        "total_interactions": 33
+      },
+      "28": {
+        "date": "2017-07-05",
+        "day_num": 29,
+        "mean_toxicity": 0.08036743453891587,
+        "median_toxicity": 0.0009927749633789062,
+        "high_toxicity_count": 2,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 31
+      },
+      "29": {
+        "date": "2017-07-06",
+        "day_num": 30,
+        "mean_toxicity": 0.06108399700261308,
+        "median_toxicity": 0.0022054342553019524,
+        "high_toxicity_count": 2,
+        "very_high_toxicity_count": 1,
+        "total_interactions": 27
+      }
+    }
+  },
+  "thread_length": {
+    "success": true,
+    "thread_count": 587,
+    "avg_thread_length": 1.9540034071550256,
+    "median_thread_length": 1.0,
+    "max_thread_length": 20,
+    "percentiles": {
+      "p50": 1.0,
+      "p75": 2.0,
+      "p90": 3.0,
+      "p95": 5.0,
+      "p99": 12.279999999999973
+    },
+    "thread_categories": {
+      "no_comments": 369,
+      "few_comments": 190,
+      "many_comments": 28,
+      "very_many_comments": 0,
+      "no_comments_pct": 62.862010221465084,
+      "few_comments_pct": 32.36797274275979,
+      "many_comments_pct": 4.770017035775128,
+      "very_many_comments_pct": 0.0
+    },
+    "thread_length_distribution": {
+      "counts": [
+        369,
+        128,
+        37,
+        14,
+        11,
+        3,
+        2,
+        5,
+        4,
+        2,
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "bin_edges": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    "unmapped_comments": 6
+  },
+  "thread_activity": {
+    "success": true,
+    "thread_count": 587,
+    "mapped_threads": 587,
+    "unmapped_comments": 6,
+    "avg_active_days": 1.1550255536626917,
+    "median_active_days": 1.0,
+    "max_active_days": 3,
+    "min_active_days": 1,
+    "percentiles": {
+      "active_days": {
+        "p50": 1.0,
+        "p75": 1.0,
+        "p90": 2.0,
+        "p95": 2.0,
+        "p99": 2.0
+      },
+      "span_days": {
+        "p50": 1.0,
+        "p75": 1.0,
+        "p90": 2.0,
+        "p95": 2.0,
+        "p99": 4.139999999999986
+      }
+    },
+    "avg_span_days": 1.243611584327087,
+    "median_span_days": 1.0,
+    "avg_activity_density": 0.9902539018808184,
+    "thread_categories": {
+      "one_day_only": 501,
+      "short_duration": 86,
+      "medium_duration": 0,
+      "long_duration": 0,
+      "one_day_pct": 85.34923339011925,
+      "short_duration_pct": 14.65076660988075,
+      "medium_duration_pct": 0.0,
+      "long_duration_pct": 0.0
+    },
+    "active_days_distribution": {
+      "counts": [
+        501,
+        81,
+        5
+      ],
+      "bin_edges": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "avg_unique_users_per_sample": 49451.7,
+  "min_unique_users": 42267,
+  "max_unique_users": 59331,
+  "total_unique_users_with_duplicates": 494517,
+  "avg_new_users_percentage": 53.56162268571036,
+  "avg_churn_percentage": 80.38383534592963,
+  "avg_interactions_per_user_per_day": 1.7054702620192532,
+  "avg_unique_active_users_per_day": 2698.1866666666665,
+  "avg_post_comment_ratio": 11.048540629908448,
+  "avg_toxicity": 0.13043229462908895,
+  "avg_thread_length": 2.91167858379234,
+  "avg_thread_active_days": 1.0741454368858487,
+  "sample_count": 10,
+  "samples_with_valid_data": 10,
+  "interaction_stats_by_sample": [
+    {
+      "sample_id": 1,
+      "avg_per_user_per_day": 1.6904905968663555,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 2712.233333333333,
+      "median_unique_active_users": 2547.5
+    },
+    {
+      "sample_id": 2,
+      "avg_per_user_per_day": 1.7054025297774478,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 2970.766666666667,
+      "median_unique_active_users": 2611.0
+    },
+    {
+      "sample_id": 3,
+      "avg_per_user_per_day": 1.76095020955404,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 2778.133333333333,
+      "median_unique_active_users": 2616.5
+    },
+    {
+      "sample_id": 4,
+      "avg_per_user_per_day": 1.713484571867473,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 3033.8333333333335,
+      "median_unique_active_users": 3022.5
+    },
+    {
+      "sample_id": 5,
+      "avg_per_user_per_day": 1.6899143754575021,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 2515.4,
+      "median_unique_active_users": 2230.0
+    },
+    {
+      "sample_id": 6,
+      "avg_per_user_per_day": 1.6946534212317947,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 2246.9,
+      "median_unique_active_users": 2088.5
+    },
+    {
+      "sample_id": 7,
+      "avg_per_user_per_day": 1.72781051790285,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 2658.8,
+      "median_unique_active_users": 2492.0
+    },
+    {
+      "sample_id": 8,
+      "avg_per_user_per_day": 1.681928945925833,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 2318.633333333333,
+      "median_unique_active_users": 2190.5
+    },
+    {
+      "sample_id": 9,
+      "avg_per_user_per_day": 1.7071160556500002,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 3177.766666666667,
+      "median_unique_active_users": 3063.5
+    },
+    {
+      "sample_id": 10,
+      "avg_per_user_per_day": 1.6829513959592357,
+      "median_per_user_per_day": 1.0,
+      "avg_unique_active_users": 2569.4,
+      "median_unique_active_users": 2568.5
+    }
+  ],
+  "post_comment_ratios_by_sample": [
+    {
+      "sample_id": 1,
+      "posts": 9887,
+      "comments": 128303,
+      "ratio": 12.976939415393952
+    },
+    {
+      "sample_id": 2,
+      "posts": 11446,
+      "comments": 141587,
+      "ratio": 12.369998252664686
+    },
+    {
+      "sample_id": 3,
+      "posts": 12195,
+      "comments": 134972,
+      "ratio": 11.067814678146782
+    },
+    {
+      "sample_id": 4,
+      "posts": 13157,
+      "comments": 143961,
+      "ratio": 10.94178004104279
+    },
+    {
+      "sample_id": 5,
+      "posts": 11598,
+      "comments": 116443,
+      "ratio": 10.039920675978617
+    },
+    {
+      "sample_id": 6,
+      "posts": 11957,
+      "comments": 101797,
+      "ratio": 8.51359036547629
+    },
+    {
+      "sample_id": 7,
+      "posts": 12353,
+      "comments": 125676,
+      "ratio": 10.173722982271514
+    },
+    {
+      "sample_id": 8,
+      "posts": 10763,
+      "comments": 109258,
+      "ratio": 10.151258942673975
+    },
+    {
+      "sample_id": 9,
+      "posts": 10927,
+      "comments": 152164,
+      "ratio": 13.925505628260273
+    },
+    {
+      "sample_id": 10,
+      "posts": 11429,
+      "comments": 118003,
+      "ratio": 10.324875317175605
+    }
+  ],
+  "toxicity_stats_by_sample": [
+    {
+      "sample_id": 1,
+      "mean": 0.12500755226232307,
+      "median": 0.002065658918581903,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 2,
+      "mean": 0.11172718807462811,
+      "median": 0.0018016460817307234,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 3,
+      "mean": 0.11999742834324209,
+      "median": 0.0021016481332480907,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 4,
+      "mean": 0.1192427036060503,
+      "median": 0.002045481582172215,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 5,
+      "mean": 0.13475777795282148,
+      "median": 0.0022962824441492558,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 6,
+      "mean": 0.1264053160727371,
+      "median": 0.0020756747107952833,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 7,
+      "mean": 0.12525872374119446,
+      "median": 0.0020260533783584833,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 8,
+      "mean": 0.15153278057321729,
+      "median": 0.0027084690518677235,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 9,
+      "mean": 0.15584251031671312,
+      "median": 0.003105426672846079,
+      "coverage": 100.0
+    },
+    {
+      "sample_id": 10,
+      "mean": 0.13455096534796224,
+      "median": 0.002518968773074448,
+      "coverage": 100.0
+    }
+  ],
+  "thread_length_stats_by_sample": [
+    {
+      "sample_id": 1,
+      "avg_length": 3.1787195306968745,
+      "median_length": 1.0,
+      "max_length": 927
+    },
+    {
+      "sample_id": 2,
+      "avg_length": 3.02245325878036,
+      "median_length": 1.0,
+      "max_length": 1735
+    },
+    {
+      "sample_id": 3,
+      "avg_length": 2.705781057810578,
+      "median_length": 1.0,
+      "max_length": 1304
+    },
+    {
+      "sample_id": 4,
+      "avg_length": 2.7314737402143345,
+      "median_length": 1.0,
+      "max_length": 598
+    },
+    {
+      "sample_id": 5,
+      "avg_length": 2.776599413692016,
+      "median_length": 1.0,
+      "max_length": 741
+    },
+    {
+      "sample_id": 6,
+      "avg_length": 2.628083967550389,
+      "median_length": 1.0,
+      "max_length": 2017
+    },
+    {
+      "sample_id": 7,
+      "avg_length": 2.757791629563669,
+      "median_length": 1.0,
+      "max_length": 1620
+    },
+    {
+      "sample_id": 8,
+      "avg_length": 2.814456935798569,
+      "median_length": 1.0,
+      "max_length": 882
+    },
+    {
+      "sample_id": 9,
+      "avg_length": 3.449803239681523,
+      "median_length": 1.0,
+      "max_length": 965
+    },
+    {
+      "sample_id": 10,
+      "avg_length": 3.0516230641350948,
+      "median_length": 1.0,
+      "max_length": 1033
+    }
+  ],
+  "thread_activity_stats_by_sample": [
+    {
+      "sample_id": 1,
+      "avg_active_days": 1.081318903610802,
+      "median_active_days": 1.0,
+      "max_active_days": 6
+    },
+    {
+      "sample_id": 2,
+      "avg_active_days": 1.0816005591473004,
+      "median_active_days": 1.0,
+      "max_active_days": 7
+    },
+    {
+      "sample_id": 3,
+      "avg_active_days": 1.0628946289462895,
+      "median_active_days": 1.0,
+      "max_active_days": 6
+    },
+    {
+      "sample_id": 4,
+      "avg_active_days": 1.0787413544121,
+      "median_active_days": 1.0,
+      "max_active_days": 7
+    },
+    {
+      "sample_id": 5,
+      "avg_active_days": 1.0789791343335058,
+      "median_active_days": 1.0,
+      "max_active_days": 6
+    },
+    {
+      "sample_id": 6,
+      "avg_active_days": 1.0598812411139917,
+      "median_active_days": 1.0,
+      "max_active_days": 7
+    },
+    {
+      "sample_id": 7,
+      "avg_active_days": 1.06257589249575,
+      "median_active_days": 1.0,
+      "max_active_days": 7
+    },
+    {
+      "sample_id": 8,
+      "avg_active_days": 1.065873826999907,
+      "median_active_days": 1.0,
+      "max_active_days": 7
+    },
+    {
+      "sample_id": 9,
+      "avg_active_days": 1.08611695799396,
+      "median_active_days": 1.0,
+      "max_active_days": 16
+    },
+    {
+      "sample_id": 10,
+      "avg_active_days": 1.0834718698048824,
+      "median_active_days": 1.0,
+      "max_active_days": 9
+    }
+  ]
+}

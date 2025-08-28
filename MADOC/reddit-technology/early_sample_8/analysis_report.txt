@@ -1,0 +1,139 @@
+================================================================================
+Reddit Technology Subreddit Analysis Results
+================================================================================
+
+Sample Period: 2017-09-28 to 2017-10-28
+Total Records: 120,021
+
+===== ACTIVE USERS =====
+Unique Users: 43,551
+Low Activity Users (1-2 interactions): 32,734 (75.2%)
+Medium Activity Users (3-10 interactions): 9,193 (21.1%)
+High Activity Users (>10 interactions): 1,624 (3.7%)
+One-Day-Only Users: 33,267 (76.4%)
+Average Interactions per User: 2.76
+Median Interactions per User: 1.00
+Average Activity Span: 3.26 days
+
+===== USER DYNAMICS =====
+Average New Users Percentage (days 10+): 56.21%
+Average Churn Percentage (days 10+): 78.91%
+Total Unique Users: 43,551
+
+===== INTERACTIONS PER USER =====
+Overall Average Interactions per User per Day: 1.68
+Overall Median Interactions per User per Day: 1.00
+
+===== UNIQUE ACTIVE USERS PER DAY =====
+Average Unique Active Users per Day: 2318.63
+Median Unique Active Users per Day: 2190.50
+Maximum Unique Active Users in a Day: 6369.00
+Minimum Unique Active Users in a Day: 1061.00
+
+Average Interactions on Active Days: 1.54
+Median Interactions on Active Days: 1.00
+Maximum Interactions on Active Days: 62.00
+Average Active Days per User: 1.60
+Median Active Days per User: 1.00
+Maximum Active Days per User: 30.00
+Users with Single Day Activity: 32,053
+Users with High Activity (>10 days): 292
+
+===== POSTS AND COMMENTS =====
+Total Posts: 10,763
+Total Comments: 109,258
+Post-Comment Ratio: 1:10.15
+Average Posts per Day: 358.77
+Average Comments per Day: 3641.93
+Maximum Posts in a Day: 503
+Maximum Comments in a Day: 14,860
+Unique Users Who Posted: 3,890
+Unique Users Who Commented: 40,228
+Average Posts per User: 2.77
+Average Comments per User: 2.72
+Maximum Posts by a Single User: 190
+Maximum Comments by a Single User: 258
+
+===== TOXICITY ANALYSIS =====
+Toxicity Coverage: 100.00% (120,021 out of 120,021 records)
+Mean Toxicity Score: 0.1515
+Median Toxicity Score: 0.0027
+Min Toxicity Score: 0.0006
+Max Toxicity Score: 0.9921
+Standard Deviation: 0.3000
+
+Toxicity by Interaction Type:
+  Posts: Mean 0.0051, Median 0.0007, Count 10,763
+  Comments: Mean 0.1660, Median 0.0037, Count 109,258
+
+High Toxicity Content:
+  High Toxicity Threshold: 0.7887
+  High Toxicity Posts: 17 (0.16%)
+  High Toxicity Comments: 11,986 (10.97%)
+  Total High Toxicity: 12,003 (10.00%)
+
+  Very High Toxicity Threshold: 0.9453
+  Very High Toxicity Posts: 7 (0.07%)
+  Very High Toxicity Comments: 5,995 (5.49%)
+  Total Very High Toxicity: 6,002 (5.00%)
+
+User Toxicity Metrics:
+  Users with Consistently High Toxicity: 10 (0.02%)
+
+===== THREAD LENGTH ANALYSIS =====
+Total Threads: 10,763
+Average Thread Length: 2.81 interactions
+Median Thread Length: 1.00 interactions
+Maximum Thread Length: 882 interactions
+
+Thread Length Percentiles:
+  p50: 1.0 interactions
+  p75: 1.0 interactions
+  p90: 3.0 interactions
+  p95: 5.0 interactions
+  p99: 23.0 interactions
+
+Thread Categories:
+  Posts with no comments: 8,606 (79.96%)
+  Short threads (2-5): 1,638 (15.22%)
+  Medium threads (6-20): 399 (3.71%)
+  Long threads (>20): 120 (1.11%)
+
+===== THREAD ACTIVITY ANALYSIS =====
+Threads Analyzed: 10,763
+Average Active Days per Thread: 1.07 days
+Median Active Days per Thread: 1.00 days
+Maximum Active Days for a Thread: 7 days
+Average Thread Lifespan: 1.08 days
+Median Thread Lifespan: 1.00 days
+Average Activity Density: 1.00
+
+Active Days Percentiles:
+  p50: 1.0 days
+  p75: 1.0 days
+  p90: 1.0 days
+  p95: 2.0 days
+  p99: 2.0 days
+
+Thread Duration Categories:
+  One-day only: 10,123 (94.05%)
+  Short duration (2-3 days): 629 (5.84%)
+  Medium duration (4-7 days): 11 (0.10%)
+  Long duration (>7 days): 0 (0.00%)
+
+================================================================================
+KEY METRICS SUMMARY
+------------------------------
+Total Unique Users: 43,551
+Avg. Unique Active Users per Day: 2318.63
+Avg. Interactions per User per Day: 1.68
+Total Posts: 10,763
+Total Comments: 109,258
+Post-Comment Ratio: 1:10.15
+Avg. Thread Length: 2.81 interactions
+Avg. Thread Active Days: 1.07 days
+Avg. Toxicity Score: 0.1515
+Toxicity Coverage: 100.00%
+================================================================================
+Report generated at: 2025-08-16 17:39:17
+================================================================================

@@ -1,0 +1,85 @@
+
+------------------------------------------------------------
+Network Analysis with Core-Periphery Detection for Simulation: Sample_8
+------------------------------------------------------------
+
+Date: 2025-08-12 17:00:22
+Input data: /home/socio/ysocial-simulations/MADOC/reddit-technology/sample_8/technology_sample_8.parquet
+[1/5] Loading posts data...
+  - Loaded 19840 posts
+[2/5] Building network...
+  - Added 13349 nodes (users)
+  - Created 18559 edges (comments)
+  - Normalizing edge weights...
+[3/5] Calculating network statistics...
+215 0.0001839639244751715
+[4/5] Running core-periphery detection using stochastic block model...
+  - Initializing HubSpokeCorePeriphery model...
+  - Inferring core-periphery structure...
+  - Extracting core-periphery labels...
+  - Performing model selection...
+  - Minimum description length (MDL): 117351.5286
+  - Core size: 59 nodes
+  - Periphery size: 14146 nodes
+  - Saving core-periphery membership to CSV...
+[5/5] Creating network visualizations...
+  - Visualizing core-periphery structure...
+  - Extracting largest connected component for visualization...
+  - Limited visualization to top 500 nodes by weighted degree
+  - Visualizing network with 500 nodes and 2043 edges
+  - Computing network layout...
+  - Core: 59 nodes, Periphery: 441 nodes
+  - Extracting largest connected component for visualization...
+  - Limited visualization to top 500 nodes by weighted degree
+  - Visualizing network with 500 nodes and 2043 edges
+  - Detecting communities...
+  - Computing network layout...
+  - Detected 21 communities
+  - Creating full network visualization with core-periphery coloring...
+  - Core: 59 nodes, Periphery: 14146 nodes
+  - Computing k-core decomposition for layout...
+  - Network has cores from 1 to 6
+  - Computing network layout for full visualization with increased repulsion...
+  - Drawing edges...
+  - Drawing core nodes...
+  - Drawing periphery nodes...
+  - Creating degree distribution plots...
+
+Network Analysis with Core-Periphery Detection Complete!
+
+Network Statistics:
+- Num Nodes: 14205
+- Num Edges: 18559
+- Is Directed: False
+- Is Connected: False
+- Avg Degree: 2.613023583245336
+- Avg Weighted Degree: 0.12504559854084668
+- Avg Clustering: 0.00031744861944883767
+- Num Components: 215
+- Density: 0.0001839639244751715
+- Largest Component Size: 13853
+- Largest Component Ratio: 0.9752199929602253
+
+Core-Periphery Detection Results:
+- Minimum Description Length (MDL): 117351.5286
+- Core Size: 59 nodes (0.42% of network)
+- Periphery Size: 14146 nodes (99.58% of network)
+
+Top 10 Core Nodes by Weighted Degree:
+- User 410bfd81-ee41-5213-a7e4-34869d935ecb: 183.2727
+- User 410f9cfa-ccc9-551b-98ea-987ab30b5d71: 49.0000
+- User 7a922692-b1b7-55c7-b4b4-16a63386e00b: 44.5909
+- User 9e738873-8dc6-54de-8ef8-10eba2a52501: 43.3182
+- User d34df4a0-736a-5309-af62-ef59d0fbf1de: 27.1364
+- User 8da610b9-cc6b-507e-8429-6264a69b73a5: 22.6364
+- User f10177f8-9821-58ee-98d6-2d03b527460d: 20.5909
+- User 0ba9af7e-622a-5abb-90cc-96e629471251: 16.2727
+- User 3f988fca-4a5c-5a69-a9ee-aa86bd7735d5: 14.5455
+- User ab2dc0cf-ea87-5bc8-ad4b-357fd5779bbe: 13.3182
+
+Core-periphery membership exported to: /home/socio/ysocial-simulations/MADOC/reddit-technology/sample_8/core_periphery_membership.csv
+Core-periphery visualization saved to: /home/socio/ysocial-simulations/MADOC/reddit-technology/sample_8/core_periphery_visualization.png
+Network visualization saved to: /home/socio/ysocial-simulations/MADOC/reddit-technology/sample_8/network_visualization.png
+Full network visualization saved to: /home/socio/ysocial-simulations/MADOC/reddit-technology/sample_8/core-periphery-full-network.png
+Degree distribution plots saved to: /home/socio/ysocial-simulations/MADOC/reddit-technology/sample_8/degree_distribution.png (and others)
+Network statistics saved to: /home/socio/ysocial-simulations/MADOC/reddit-technology/sample_8/network_stats_cp.txt

@@ -1,0 +1,76 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.*
+
+# Build / packaging
+.Python
+build/
+dist/
+downloads/
+*.egg-info/
+.eggs/
+wheels/
+
+# Test / coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage*
+.hypothesis/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Project data and heavy outputs
+archives/
+reports/
+topic_comparison_results/
+
+# Ignore full simulation outputs but keep configs
+simulation*/**
+!simulation*/config/
+!simulation*/config/*.json
+!simulation*/config/*.txt
+
+# Ignore reddit-simulation outputs but keep configs
+reddit-simulation/**
+!reddit-simulation/config/
+!reddit-simulation/config/*.json
+!reddit-simulation/config/*.txt
+
+# Voat comparison outputs
+voat-comparison/**
+
+# MADOC: keep samples, ignore known large artifacts
+MADOC/*/backup/
+MADOC/*/*_madoc.parquet
+MADOC/*/external_urls.csv
+
+# Python bytecode within scripts
+scripts/__pycache__/
+
+# Misc
+*.tmp
+*.bak
+*.swp
+*.swo

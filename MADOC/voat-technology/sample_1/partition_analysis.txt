@@ -1,0 +1,22 @@
+Enhanced Core-Periphery Analysis Results
+==================================================
+
+Best Partition Quality Metrics:
+- Core Density: 0.1571
+- Periphery Density: 0.0024
+- Core-Periphery Density: 0.0362
+- Modularity: -0.0945
+- Assortativity: nan
+- Core Avg Degree: 18.14
+- Periphery Avg Degree: 1.76
+- MDL Score: 3019.60
+- Composite Score: 0.0889
+
+Alternative Best Partitions:
+- Best by MDL: Core=22, MDL=3018.28
+- Best by Core Density: Core=21, Density=0.157
+- Best by Modularity: Core=21, Modularity=-0.095
+
+Core Size Statistics:
+- Range: 21 - 23 nodes
+- Mean: 22.5 ± 0.8 nodes
