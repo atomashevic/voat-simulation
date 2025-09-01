@@ -85,3 +85,8 @@ scripts/reddit_end_parent_check.py
 scripts/reddit_real_reputation.py
 scripts/reddit_reputation.py
 scripts/reddit_samples.py
+
+scripts/Untitled.ipynb
+scripts/.ipynb_checkpoints
+scripts/__pycache__
+scripts/archive/

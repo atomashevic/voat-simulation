@@ -9,8 +9,10 @@ import argparse
 import os
 from openai import OpenAI
 
-# Set OpenAI API key
-os.environ["OPENAI_API_KEY"] = "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"
+# Get OpenAI API key from environment variable
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise ValueError("OPENAI_API_KEY environment variable is required but not set")
 
 def load_tweets(db_path):
     """Load tweets from SQLite database"""
