@@ -10,9 +10,9 @@ Goals:
 
 Usage (recommended):
   python scripts/topic_compare_basic.py \
-    --sim-csv simulation3/posts_clean.csv --sim-text-col full_text \
+    --sim-csv simulation/posts_clean.csv --sim-text-col full_text \
     --voat-parquet MADOC/voat-technology/voat_technology_madoc.parquet --voat-text-col content \
-    --outdir simulation3/topic_compare_basic --save-heatmap
+    --outdir simulation/topic_compare_basic --save-heatmap
 
 Outputs (in --outdir):
   - topic_info_sim.csv, topic_info_voat.csv
@@ -274,11 +274,11 @@ def fit_with_fallback(model, texts: List[str], extra_stopwords: Optional[List[st
 
 def run(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(description="Basic topic comparison between Simulation (clean) and Voat parquet")
-    p.add_argument("--sim-csv", type=Path, default=Path("simulation3/posts_clean.csv"))
+    p.add_argument("--sim-csv", type=Path, default=Path("simulation/posts_clean.csv"))
     p.add_argument("--sim-text-col", type=str, default="full_text")
     p.add_argument("--voat-parquet", type=Path, default=Path("MADOC/voat-technology/voat_technology_madoc.parquet"))
     p.add_argument("--voat-text-col", type=str, default="content")
-    p.add_argument("--outdir", type=Path, default=Path("simulation3/topic_compare_basic"))
+    p.add_argument("--outdir", type=Path, default=Path("simulation/topic_compare_basic"))
     p.add_argument("--min-doc-chars", type=int, default=25)
     p.add_argument("--max-docs", type=int, default=None)
     p.add_argument("--min-topic-size", type=int, default=15)

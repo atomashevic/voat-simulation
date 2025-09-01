@@ -1,19 +1,19 @@
 """
-visualize_simulation2_additional.py
+visualize_simulation_additional.py
 
 Create additional network visualizations for Simulation-2 results, using the
 outputs produced by core-periphery-enhanced-voat.py. It rebuilds the interaction
 network from posts.csv and uses enhanced_core_periphery_membership.csv (if
 available) for core-periphery labels and reference metrics.
 
-Generates four plots saved into the simulation2 folder:
+Generates four plots saved into the simulation folder:
   1) Full network: nodes scaled by degree, transparent rendering
   2) Largest component: nodes colored by weighted degree (uniform size)
   3) Largest component: nodes colored by k-core, nodes sized by weighted degree
   4) Largest component: nodes colored by core-periphery, nodes sized by weighted degree
 
 Usage:
-  python scripts/visualize_simulation2_additional.py --sim-dir simulation2
+  python scripts/visualize_simulation_additional.py --sim-dir simulation
 
 Notes:
   - Weighted degree is computed from normalized edge weights (sum of weights).
@@ -455,7 +455,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--sim-dir",
         type=str,
-        default="simulation3",
+        default="simulation",
         help="Path to simulation results directory containing posts.csv",
     )
     parser.add_argument(

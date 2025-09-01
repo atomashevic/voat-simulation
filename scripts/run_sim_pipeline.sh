@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Runs the main analysis pipeline for a simulation directory (simulation2 or simulation3).
+# Runs the main analysis pipeline for a simulation directory (simulation).
 # Usage:
-#   bash scripts/run_sim_pipeline.sh simulation2
-#   bash scripts/run_sim_pipeline.sh simulation3
+#   bash scripts/run_sim_pipeline.sh simulation
 
 # Initialize pyenv in non-interactive shell and activate 'ysocial' if available
 if command -v pyenv >/dev/null 2>&1; then
@@ -24,7 +23,7 @@ fi
 
 SIM_DIR=${1:-}
 if [[ -z "${SIM_DIR}" ]]; then
-  echo "Usage: $0 <simulation_dir> (e.g., simulation2 or simulation3)" >&2
+  echo "Usage: $0 <simulation_dir> (e.g., simulation)" >&2
   exit 1
 fi
 
@@ -45,7 +44,7 @@ fi
 PY=${PYTHON:-python3}
 
 echo "[1/8] Visualize simulation"
-${PY} scripts/visualize_simulation2_additional.py --sim-dir "${SIM_DIR}" || echo "visualize_simulation2_additional.py failed" >&2
+${PY} scripts/visualize_simulation_additional.py --sim-dir "${SIM_DIR}" || echo "visualize_simulation_additional.py failed" >&2
 
 echo "[2/8] Additional plots"
 if [[ -f "${USERS_CSV}" ]]; then
@@ -55,12 +54,12 @@ else
 fi
 
 echo "[3/8] Comparative network analysis (Voat)"
-# The current comparator script looks under 'simulation3' and MADOC/voat-technology
-# Guard to run only when SIM_DIR is simulation3 and Voat data directory exists.
-if [[ "${SIM_DIR}" == "simulation3" && -d "MADOC/voat-technology" ]]; then
+# The current comparator script looks under 'simulation' and MADOC/voat-technology
+# Guard to run only when SIM_DIR is simulation and Voat data directory exists.
+if [[ "${SIM_DIR}" == "simulation" && -d "MADOC/voat-technology" ]]; then
   ${PY} scripts/comparative_network_analysis_voat.py || echo "comparative_network_analysis_voat.py failed" >&2
 else
-  echo "Skipping comparative_network_analysis_voat.py (requires SIM_DIR=simulation3 and MADOC/voat-technology)"
+  echo "Skipping comparative_network_analysis_voat.py (requires SIM_DIR=simulation and MADOC/voat-technology)"
 fi
 
 echo "[4/8] Convergence entropy"

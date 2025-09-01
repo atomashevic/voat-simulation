@@ -3,12 +3,12 @@ Run simple association tests between user attributes and core–periphery member
 
 Usage:
   PYENV_VERSION=ysocial python scripts/core_periphery_user_attribute_tests.py \
-    --users simulation2/users.csv \
-    --membership simulation2/enhanced_core_periphery_membership.csv \
-    --outdir simulation2
+    --users simulation/users.csv \
+    --membership simulation/enhanced_core_periphery_membership.csv \
+    --outdir simulation
 
 Notes:
-  - Joins on membership `user_id` to users `id` (simulation2 convention).
+  - Joins on membership `user_id` to users `id` (simulation convention).
   - For MADOC samples, membership uses GUIDs from parquet posts; there is no
     users.csv with attributes in this repo, so only network features exist.
   - Outputs CSV summaries with test statistics and p-values.
@@ -101,12 +101,12 @@ def main(users_csv: Path, membership_csv: Path, outdir: Path):
     membership = pd.read_csv(membership_csv)
 
     # Determine join key compatibility
-    # Simulation2: membership.user_id are numeric ids (integers)
+    # Simulation: membership.user_id are numeric ids (integers)
     # MADOC: membership.user_id are GUID strings; join to users.csv not possible here
     left = membership.copy()
     right = users.copy()
 
-    # Try numeric join first (simulation2)
+    # Try numeric join first (simulation)
     left["user_id_num"] = pd.to_numeric(left["user_id"], errors="coerce")
     right["id_num"] = pd.to_numeric(right.get("id"), errors="coerce")
 
@@ -202,6 +202,48 @@ def main(users_csv: Path, membership_csv: Path, outdir: Path):
     if not chi_df.empty:
         chi_df.to_csv(outdir / "core_membership_chi2.csv", index=False)
 
+    # Crosstab: core membership vs political leaning
+    if "leaning" in df.columns:
+        raw_ct = pd.crosstab(df["leaning"], df["is_core"], dropna=False)
+        
+        # Simple approach: just rename columns to avoid any boolean indexing issues
+        col_mapping = {}
+        for col in raw_ct.columns:
+            if col in [False, 0, "false", "0", "periphery", "non-core", "non_core"]:
+                col_mapping[col] = "periphery"
+            elif col in [True, 1, "true", "1", "core"]:
+                col_mapping[col] = "core"
+            else:
+                # Unknown column, keep as is but convert to string
+                col_mapping[col] = str(col)
+        
+        # Rename columns
+        leaning_ct = raw_ct.rename(columns=col_mapping)
+        
+        # Ensure we have both periphery and core columns
+        if "periphery" not in leaning_ct.columns:
+            leaning_ct["periphery"] = 0
+        if "core" not in leaning_ct.columns:
+            leaning_ct["core"] = 0
+            
+        # Keep only periphery and core columns, in that order
+        leaning_ct = leaning_ct[["periphery", "core"]]
+        
+        leaning_ct.to_csv(outdir / "core_membership_vs_leaning_crosstab.csv")
+        
+        # Row percentages (proportion within leaning category)
+        row_totals = leaning_ct.sum(axis=1)
+        row_totals = row_totals.replace(0, np.nan)  # Avoid division by zero
+        pct = leaning_ct.div(row_totals, axis=0) * 100
+        pct.columns = ["periphery_pct", "core_pct"]
+        
+        leaning_ct_with_pct = pd.concat([leaning_ct, pct], axis=1)
+        leaning_ct_with_pct.to_csv(
+            outdir / "core_membership_vs_leaning_crosstab_with_pct.csv"
+        )
+        print("\nCore membership vs political leaning (counts and row %):")
+        print(leaning_ct_with_pct.to_string())
+
     # Combined summary
     parts = []
     if not t_df.empty:
@@ -228,13 +270,12 @@ def main(users_csv: Path, membership_csv: Path, outdir: Path):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--users", type=Path, default=Path("simulation2/users.csv"))
+    ap.add_argument("--users", type=Path, default=Path("simulation/users.csv"))
     ap.add_argument(
         "--membership",
         type=Path,
-        default=Path("simulation2/enhanced_core_periphery_membership.csv"),
+        default=Path("simulation/enhanced_core_periphery_membership.csv"),
     )
-    ap.add_argument("--outdir", type=Path, default=Path("simulation2"))
+    ap.add_argument("--outdir", type=Path, default=Path("simulation"))
     args = ap.parse_args()
     main(args.users, args.membership, args.outdir)
-

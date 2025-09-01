@@ -7,14 +7,14 @@ set -uo pipefail
 #   scripts/zip_simulation_figures.sh [SIM_DIR] [OUTPUT_ZIP]
 #
 # Defaults:
-#   SIM_DIR     = simulation3
+#   SIM_DIR     = simulation
 #   OUTPUT_ZIP  = archives/<sim_basename>_figures.zip
 #
 # The script attempts to identify figures based on the project’s descriptions
 # and typical output filenames, copying them into a staging "figures" folder
 # with canonical names before zipping. Missing figures are skipped with a warning.
 
-SIM_DIR=${1:-simulation3}
+SIM_DIR=${1:-simulation}
 SIM_DIR=${SIM_DIR%/}
 
 if [[ ! -d "$SIM_DIR" ]]; then

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sample 20 toxic simulation2 comments and find most similar Voat comments (full MADOC parquet)
+Sample 20 toxic simulation comments and find most similar Voat comments (full MADOC parquet)
 using embedding-based similarity only. Writes a readable text report.
 
 Approaches implemented:
@@ -69,9 +69,9 @@ def load_sim2_comments(posts_csv: Path, tox_csv: Path, tox_threshold: float, n_s
     exp_posts_cols = {"id", "tweet"}
     exp_tox_cols = {"id", "toxicity", "is_comment"}
     if not exp_posts_cols.issubset(posts.columns):
-        raise ValueError(f"simulation2 posts.csv must have columns {exp_posts_cols}")
+        raise ValueError(f"simulation posts.csv must have columns {exp_posts_cols}")
     if not exp_tox_cols.issubset(tox.columns):
-        raise ValueError(f"simulation2 toxigen.csv must have columns {exp_tox_cols}")
+        raise ValueError(f"simulation toxigen.csv must have columns {exp_tox_cols}")
     df = posts.merge(tox[list(exp_tox_cols)], on="id", how="left")
     df = df[(df["is_comment"] == True) & (df["toxicity"] >= tox_threshold)].copy()
     df["tweet"] = df["tweet"].astype(str).map(clean_text)
@@ -129,7 +129,7 @@ def l2_normalize(a: np.ndarray, axis: int = 1, eps: float = 1e-12) -> np.ndarray
 def write_report(out_path: Path, sim_df: pd.DataFrame, voat_df: pd.DataFrame, approaches: Dict[str, Tuple[List[int], List[float]]]) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     lines: List[str] = []
-    lines.append("Simulation2 toxic comments → closest Voat comments (per approach)\n")
+    lines.append("Simulation toxic comments → closest Voat comments (per approach)\n")
     lines.append(f"Sample size: {len(sim_df)}\n")
     for qi, srow in sim_df.iterrows():
         lines.append(f"=== Query {qi+1} | sim2 id {srow['id']} | toxicity {float(srow['toxicity']):.3f} ===")
@@ -148,9 +148,9 @@ def write_report(out_path: Path, sim_df: pd.DataFrame, voat_df: pd.DataFrame, ap
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    ap = argparse.ArgumentParser(description="Find similar Voat comments for sampled toxic simulation2 comments using embedding similarity")
-    ap.add_argument("--sim2-posts", type=Path, default=Path("simulation2/posts.csv"))
-    ap.add_argument("--sim2-tox", type=Path, default=Path("simulation2/toxigen.csv"))
+    ap = argparse.ArgumentParser(description="Find similar Voat comments for sampled toxic simulation comments using embedding similarity")
+    ap.add_argument("--sim2-posts", type=Path, default=Path("simulation/posts.csv"))
+    ap.add_argument("--sim2-tox", type=Path, default=Path("simulation/toxigen.csv"))
     ap.add_argument("--madoc-parquet", type=Path, default=Path("MADOC/voat-technology/voat_technology_madoc.parquet"))
     ap.add_argument("--tox-threshold", type=float, default=0.4)
     ap.add_argument("--n-sample", type=int, default=20)
@@ -167,7 +167,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     # Load datasets
     sim_df = load_sim2_comments(args.sim2_posts, args.sim2_tox, args.tox_threshold, args.n_sample, args.seed)
     if sim_df.empty:
-        print("No simulation2 comments found above threshold.", file=sys.stderr)
+        print("No simulation comments found above threshold.", file=sys.stderr)
         return 1
     voat_df = load_voat_comments(args.madoc_parquet)
     if voat_df.empty:

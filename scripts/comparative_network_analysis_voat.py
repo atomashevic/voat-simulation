@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-Comparative Network Analysis: Simulation2 vs Voat Samples
+Comparative Network Analysis: Simulation vs Voat Samples
 
 This script compares the network structure and core-periphery characteristics
-of simulation2 with Voat technology samples, focusing on finding similarities
+of simulation with Voat technology samples, focusing on finding similarities
 alongside obvious differences.
 
 Usage:
     python scripts/comparative_network_analysis_voat.py
 
 Output:
-    - All outputs are now saved under simulation3/voat-comparison/
-      - Comparative visualizations: simulation3/voat-comparison/plots/
-      - CSV summaries: simulation3/voat-comparison/
-      - Text report: simulation3/voat-comparison/similarity_report.txt
+    - All outputs are now saved under simulation/voat-comparison/
+      - Comparative visualizations: simulation/voat-comparison/plots/
+      - CSV summaries: simulation/voat-comparison/
+      - Text report: simulation/voat-comparison/similarity_report.txt
 """
 
 import pandas as pd
@@ -36,7 +36,7 @@ sns.set_palette("husl")
 
 class VoatNetworkComparator:
     """
-    Main class for comparing network structures between simulation2 and Voat samples.
+    Main class for comparing network structures between simulation and Voat samples.
     """
     
     def __init__(self, base_path="."):
@@ -47,10 +47,10 @@ class VoatNetworkComparator:
             base_path: Base directory path (default: current directory)
         """
         self.base_path = Path(base_path)
-        self.simulation2_path = self.base_path / "simulation3"
+        self.simulation2_path = self.base_path / "simulation"
         self.voat_path = self.base_path / "MADOC" / "voat-technology" 
         # Save all outputs under the simulation directory for easier packaging
-        self.output_path = (self.base_path / "simulation3" / "voat-comparison")
+        self.output_path = (self.base_path / "simulation" / "voat-comparison")
         self.output_path.mkdir(parents=True, exist_ok=True)
         
         # Storage for loaded data
@@ -70,8 +70,8 @@ class VoatNetworkComparator:
             return f"Voat Sample ({sample_name})"
         
     def load_simulation2_data(self):
-        """Load all relevant data from simulation2."""
-        print("Loading simulation2 data...")
+        """Load all relevant data from simulation."""
+        print("Loading simulation data...")
         
         # Load core-periphery membership
         cp_file_enh = self.simulation2_path / 'enhanced_core_periphery_membership.csv'
@@ -91,7 +91,7 @@ class VoatNetworkComparator:
         if stats_file.exists():
             self.simulation2_data['network_stats'] = self._parse_network_stats(stats_file)
             
-        print(f"  - Loaded simulation2 data: {len(self.simulation2_data)} datasets")
+        print(f"  - Loaded simulation data: {len(self.simulation2_data)} datasets")
         
     def load_voat_samples(self):
         """Load data from all Voat samples."""
@@ -201,7 +201,7 @@ class VoatNetworkComparator:
         return stats
     
     def calculate_network_similarities(self):
-        """Calculate similarity metrics between simulation2 and Voat samples."""
+        """Calculate similarity metrics between simulation and Voat samples."""
         print("Calculating network similarities...")
         
         if not self.simulation2_data or not self.voat_samples:
@@ -256,7 +256,7 @@ class VoatNetworkComparator:
         Compare core-periphery structures between datasets.
         
         Args:
-            sim1_cp: simulation2 core-periphery DataFrame
+            sim1_cp: simulation core-periphery DataFrame
             voat_cp: Voat sample core-periphery DataFrame
             
         Returns:
@@ -347,7 +347,7 @@ class VoatNetworkComparator:
         sample_names = []
         colors = []
         
-        # Add simulation2
+        # Add simulation
         sim1_stats = self.simulation2_data.get('network_stats', {})
         core_percentages.append(sim1_stats.get('Core Percentage', 0))
         sample_names.append(self.sim_label)
@@ -387,7 +387,7 @@ class VoatNetworkComparator:
         sample_names = []
         colors = []
         
-        # Add simulation2
+        # Add simulation
         sim1_stats = self.simulation2_data.get('network_stats', {})
         densities.append(sim1_stats.get('Density', 0))
         sample_names.append(self.sim_label)
@@ -471,7 +471,7 @@ class VoatNetworkComparator:
         
     def _plot_degree_distributions_separate(self, plot_dir):
         """Create separate degree distribution plots."""
-        # Get simulation2 degree data
+        # Get simulation degree data
         sim1_cp = self.simulation2_data.get('core_periphery')
         if sim1_cp is None:
             return
@@ -567,7 +567,7 @@ class VoatNetworkComparator:
         # Overall weighted degree distribution
         fig, ax = plt.subplots(figsize=(10, 6))
         ax.hist(sim1_weighted, bins=50, alpha=0.7, color='red',
-               label='Simulation2', density=True, linewidth=2)
+               label='Simulation', density=True, linewidth=2)
         
         for i, (sample_name, sample_data) in enumerate(self.voat_samples.items()):
             voat_cp = sample_data.get('core_periphery')
@@ -625,9 +625,9 @@ class VoatNetworkComparator:
         kcore_data = []
         sample_names = []
         
-        # Add simulation2 (placeholder k-core estimate)
-        kcore_data.append(10)  # Max k-core for simulation2
-        sample_names.append('Simulation2')
+        # Add simulation (placeholder k-core estimate)
+        kcore_data.append(10)  # Max k-core for simulation
+        sample_names.append('Simulation')
         
         # Add Voat samples (cores 1-6 based on earlier analysis)
         for sample_name in self.voat_samples.keys():
@@ -655,13 +655,13 @@ class VoatNetworkComparator:
         plt.close()
 
     def _plot_post_distribution_kde(self, plot_dir: Path, sample_name: str = "sample_1") -> None:
-        """Overlay KDEs of posts-per-user distributions: Simulation2 vs a Voat sample.
+        """Overlay KDEs of posts-per-user distributions: Simulation vs a Voat sample.
 
         Style matches simulation1/plots/comparative_kde.png (filled KDE overlays).
         Uses log1p transform for stability with heavy-tailed counts.
         """
         try:
-            # Simulation2 posts-per-user
+            # Simulation posts-per-user
             sim_posts_csv = self.simulation2_path / "posts.csv"
             if not sim_posts_csv.exists():
                 print(f"  - Skipping post KDE: {sim_posts_csv} not found")
@@ -702,12 +702,12 @@ class VoatNetworkComparator:
             print(f"  - Post distribution KDE failed: {e}")
 
     def _plot_toxicity_kde(self, plot_dir: Path, sample_name: str = "sample_1") -> None:
-        """Overlay KDEs of overall toxicity distributions: Simulation2 vs a Voat sample.
+        """Overlay KDEs of overall toxicity distributions: Simulation vs a Voat sample.
 
         Style matches simulation1/plots/comparative_kde.png (filled KDE overlays).
         """
         try:
-            # Simulation2 toxicity
+            # Simulation toxicity
             sim_tox_csv = self.simulation2_path / "toxigen.csv"
             if not sim_tox_csv.exists():
                 print(f"  - Skipping toxicity KDE: {sim_tox_csv} not found")
@@ -772,9 +772,9 @@ class VoatNetworkComparator:
         
         summary_data = []
         
-        # Add simulation2
+        # Add simulation
         sim1_stats = self.simulation2_data.get('network_stats', {})
-        row = {'Dataset': 'Simulation2'}
+        row = {'Dataset': 'Simulation'}
         for metric in metrics_to_export:
             row[metric] = sim1_stats.get(metric, None)
         summary_data.append(row)
@@ -817,12 +817,12 @@ class VoatNetworkComparator:
         """Export user-level comparison data."""
         user_data = []
         
-        # Simulation2 users
+        # Simulation users
         if 'core_periphery' in self.simulation2_data:
             sim1_cp = self.simulation2_data['core_periphery']
             for _, user in sim1_cp.iterrows():
                 user_data.append({
-                    'Dataset': 'Simulation2',
+                        'Dataset': 'Simulation',
                     'User_ID': user['user_id'],
                     'Degree': user['degree'],
                     'Weighted_Degree': user.get('weighted_degree', None),
@@ -854,7 +854,7 @@ class VoatNetworkComparator:
         print("  - Creating core-periphery network visualizations...")
         
         # Load posts data to reconstruct networks
-        self._create_network_visualization('Simulation2', self.simulation2_path / "posts.csv", 
+        self._create_network_visualization('Simulation', self.simulation2_path / "posts.csv", 
                                          self.simulation2_data, plot_dir)
         
         # Create visualizations for a subset of Voat samples to avoid too many plots
@@ -1102,7 +1102,7 @@ class VoatNetworkComparator:
 
             f.write("=" * 80 + "\n")
             f.write("COMPARATIVE NETWORK ANALYSIS REPORT\n")
-            f.write("Simulation2 vs Voat Technology Samples\n")
+            f.write("Simulation vs Voat Technology Samples\n")
             f.write("=" * 80 + "\n\n")
             
             # Executive Summary
@@ -1129,7 +1129,7 @@ class VoatNetworkComparator:
             f.write("-" * 35 + "\n")
             
             sim1_stats = self.simulation2_data.get('network_stats', {})
-            f.write(f"Simulation2 Network:\n")
+            f.write(f"Simulation Network:\n")
             f.write(f"  - Nodes: {sim1_stats.get('Num Nodes', 'N/A')}\n")
             f.write(f"  - Edges: {sim1_stats.get('Num Edges', 'N/A')}\n")
             f.write(f"  - Average Degree: {_fmt(sim1_stats.get('Avg Degree', None), '.3f')}\n")
@@ -1163,7 +1163,7 @@ class VoatNetworkComparator:
             core_voat = (float(np.mean(voat_metrics['Core Percentage']))
                          if 'Core Percentage' in voat_metrics and len(voat_metrics['Core Percentage']) > 0 else None)
             core_line = (
-                f"  - Simulation2 has {format(core_sim, '.1f')}% core nodes vs Voat's ~{format(core_voat, '.1f')}% average\n"
+                f"  - Simulation has {format(core_sim, '.1f')}% core nodes vs Voat's ~{format(core_voat, '.1f')}% average\n"
                 if (core_sim is not None and core_voat is not None)
                 else "  - Core node percentage comparison: N/A (insufficient data)\n"
             )
@@ -1173,7 +1173,7 @@ class VoatNetworkComparator:
             dens_voat_mean = (float(np.mean(voat_metrics['Density']))
                               if 'Density' in voat_metrics and len(voat_metrics['Density']) > 0 else None)
             if dens_sim is not None and dens_voat_mean and dens_voat_mean > 0:
-                f.write(f"  - Simulation2 density is ~{dens_sim / dens_voat_mean:.1f}x higher than Voat samples\n")
+                f.write(f"  - Simulation density is ~{dens_sim / dens_voat_mean:.1f}x higher than Voat samples\n")
             else:
                 f.write("  - Density ratio: N/A (insufficient data)\n")
 
@@ -1181,7 +1181,7 @@ class VoatNetworkComparator:
             deg_voat_mean = (float(np.mean(voat_metrics['Avg Degree']))
                              if 'Avg Degree' in voat_metrics and len(voat_metrics['Avg Degree']) > 0 else None)
             if deg_sim is not None and deg_voat_mean and deg_voat_mean > 0:
-                f.write(f"  - Simulation2 average degree is ~{deg_sim / deg_voat_mean:.1f}x higher\n\n")
+                f.write(f"  - Simulation average degree is ~{deg_sim / deg_voat_mean:.1f}x higher\n\n")
             else:
                 f.write("  - Average degree ratio: N/A (insufficient data)\n\n")
             
@@ -1195,7 +1195,7 @@ class VoatNetworkComparator:
             # Recommendations
             f.write("RECOMMENDATIONS\n")
             f.write("-" * 15 + "\n")
-            f.write("1. Simulation2 successfully replicates core-periphery structure of Voat\n")
+            f.write("1. Simulation successfully replicates core-periphery structure of Voat\n")
             f.write("2. Consider adjusting simulation parameters to reduce network density\n")
             f.write("3. Core formation mechanisms appear realistic despite size differences\n")
             f.write("4. User behavior patterns show structural similarities to real data\n")
@@ -1205,7 +1205,7 @@ class VoatNetworkComparator:
     def run_full_analysis(self):
         """Run the complete comparative analysis pipeline."""
         print("\n" + "="*60)
-        print("COMPARATIVE NETWORK ANALYSIS: SIMULATION2 VS VOAT")
+        print("COMPARATIVE NETWORK ANALYSIS: SIMULATION VS VOAT")
         print("="*60)
         
         try:

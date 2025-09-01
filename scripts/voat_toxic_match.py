@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Find top toxic posts/comments in Voat sample_1 and their closest matches in simulation2
-based on MiniLM embeddings, subject to a toxicity floor in simulation2.
+Find top toxic posts/comments in Voat sample_1 and their closest matches in simulation
+based on MiniLM embeddings, subject to a toxicity floor in simulation.
 
 Outputs a readable text report with 20 examples and similarity metrics.
 
@@ -10,8 +10,8 @@ Usage (GPU, defaults):
 
 Key defaults:
 - MADOC sample: MADOC/voat-technology/sample_1/voat_sample_1.parquet (columns: content, toxicity_toxigen)
-- Simulation2: simulation2/posts.csv (tweet text) + simulation2/toxigen.csv (toxicity)
-- Select top 20 Voat items by toxicity, then find best simulation2 match with toxicity >= 0.1
+- Simulation: simulation/posts.csv (tweet text) + simulation/toxigen.csv (toxicity)
+- Select top 20 Voat items by toxicity, then find best simulation match with toxicity >= 0.1
 """
 
 from __future__ import annotations
@@ -56,15 +56,15 @@ def load_voat_top_toxic(parquet_path: Path, topn: int) -> pd.DataFrame:
 
 def load_sim2_candidates(posts_csv: Path, tox_csv: Path, tox_threshold: float) -> pd.DataFrame:
     if not posts_csv.exists():
-        raise FileNotFoundError(f"simulation2 posts not found: {posts_csv}")
+        raise FileNotFoundError(f"simulation posts not found: {posts_csv}")
     if not tox_csv.exists():
-        raise FileNotFoundError(f"simulation2 toxigen not found: {tox_csv}")
+        raise FileNotFoundError(f"simulation toxigen not found: {tox_csv}")
     posts = pd.read_csv(posts_csv)
     tox = pd.read_csv(tox_csv)
     if "id" not in posts.columns or "tweet" not in posts.columns:
-        raise ValueError("Expected columns 'id' and 'tweet' in simulation2 posts.csv")
+        raise ValueError("Expected columns 'id' and 'tweet' in simulation posts.csv")
     if "id" not in tox.columns or "toxicity" not in tox.columns:
-        raise ValueError("Expected columns 'id' and 'toxicity' in simulation2 toxigen.csv")
+        raise ValueError("Expected columns 'id' and 'toxicity' in simulation toxigen.csv")
     df = posts.merge(tox[["id", "toxicity"]], on="id", how="left")
     df = df.dropna(subset=["tweet", "toxicity"]).copy()
     df["tweet"] = df["tweet"].astype(str).map(clean_text)
@@ -108,7 +108,7 @@ def best_sim_match(query_vecs: np.ndarray, cand_vecs: np.ndarray) -> Tuple[np.nd
 def write_report(out_path: Path, voat_df: pd.DataFrame, voat_texts: List[str], voat_sims: np.ndarray, sim2_df: pd.DataFrame, sim2_indices: np.ndarray, sim_threshold: float) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     lines: List[str] = []
-    lines.append("Voat vs Simulation2: Toxicity and Semantic Similarity Matches\n")
+    lines.append("Voat vs Simulation: Toxicity and Semantic Similarity Matches\n")
     lines.append(f"Criteria: simulation toxicity >= {sim_threshold:.2f} (floor), similarity >= threshold if stated in CLI\n")
     lines.append("")
     for i, row in voat_df.iterrows():
@@ -120,7 +120,7 @@ def write_report(out_path: Path, voat_df: pd.DataFrame, voat_texts: List[str], v
         lines.append(f"=== Example {i+1} ===")
         lines.append(f"Voat post_id: {row.get('post_id', 'NA')} | toxicity: {vtox:.3f}")
         lines.append(f"Voat text: {vtxt[:500]}{'...' if len(vtxt) > 500 else ''}")
-        lines.append(f"-- Matched Simulation2 --")
+        lines.append(f"-- Matched Simulation --")
         lines.append(f"sim2 id: {cand['id']} | toxicity: {cand['toxicity']:.3f} | similarity: {sim:.3f}")
         stxt = str(cand["tweet"]) if isinstance(cand["tweet"], str) else ""
         lines.append(f"sim2 text: {stxt[:500]}{'...' if len(stxt) > 500 else ''}")
@@ -129,12 +129,12 @@ def write_report(out_path: Path, voat_df: pd.DataFrame, voat_texts: List[str], v
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    p = argparse.ArgumentParser(description="Match most toxic Voat sample_1 posts to similar toxic simulation2 posts")
+    p = argparse.ArgumentParser(description="Match most toxic Voat sample_1 posts to similar toxic simulation posts")
     p.add_argument("--madoc-parquet", type=Path, default=Path("MADOC/voat-technology/sample_1/voat_sample_1.parquet"))
-    p.add_argument("--sim2-posts", type=Path, default=Path("simulation2/posts.csv"))
-    p.add_argument("--sim2-tox", type=Path, default=Path("simulation2/toxigen.csv"))
+    p.add_argument("--sim2-posts", type=Path, default=Path("simulation/posts.csv"))
+    p.add_argument("--sim2-tox", type=Path, default=Path("simulation/toxigen.csv"))
     p.add_argument("--topn", type=int, default=20, help="Number of most toxic Voat items to use")
-    p.add_argument("--sim-tox-floor", type=float, default=0.1, help="Minimum toxicity in simulation2 candidates")
+    p.add_argument("--sim-tox-floor", type=float, default=0.1, help="Minimum toxicity in simulation candidates")
     p.add_argument("--sim-threshold", type=float, default=0.85, help="Similarity threshold considered 'very high'")
     p.add_argument("--device", type=str, default=None, help="Force device for embeddings: cuda/cpu")
     p.add_argument("--embedding-model", type=str, default="sentence-transformers/all-MiniLM-L6-v2")
@@ -148,7 +148,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     sim2_df = load_sim2_candidates(args.sim2_posts, args.sim2_tox, tox_threshold=args.sim_tox_floor)
 
     if sim2_df.empty:
-        print("No simulation2 candidates meet toxicity floor.", file=sys.stderr)
+        print("No simulation candidates meet toxicity floor.", file=sys.stderr)
         return 1
 
     # Embed

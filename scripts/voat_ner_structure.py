@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Named-entity structure comparisons between simulation2 and Voat MADOC parquet data.
+Named-entity structure comparisons between simulation and Voat MADOC parquet data.
 
 Outputs per subset (posts, comments):
 - Doc–Entity bipartite graph (GEXF/GraphML or CSV edgelist)
@@ -54,9 +54,9 @@ def load_sim2_subset(posts_csv: Path, tox_csv: Path, want_comments: bool) -> pd.
     posts = pd.read_csv(posts_csv)
     tox = pd.read_csv(tox_csv)
     if not {"id", "tweet"}.issubset(posts.columns):
-        raise ValueError("simulation2 posts.csv must contain columns: id,tweet")
+        raise ValueError("simulation posts.csv must contain columns: id,tweet")
     if not {"id", "is_comment"}.issubset(tox.columns):
-        raise ValueError("simulation2 toxigen.csv must contain columns: id,is_comment")
+        raise ValueError("simulation toxigen.csv must contain columns: id,is_comment")
     df = posts.merge(tox[["id", "is_comment"]], on="id", how="left")
     df = df[df["is_comment"] == bool(want_comments)].copy()
     df["text"] = df["tweet"].astype(str).map(clean_text)
@@ -677,9 +677,9 @@ def run_subset(
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    p = argparse.ArgumentParser(description="NER bipartite graphs and distributional comparisons: simulation2 vs Voat parquet")
-    p.add_argument("--sim2-posts", type=Path, default=Path("simulation2/posts.csv"))
-    p.add_argument("--sim2-tox", type=Path, default=Path("simulation2/toxigen.csv"))
+    p = argparse.ArgumentParser(description="NER bipartite graphs and distributional comparisons: simulation vs Voat parquet")
+    p.add_argument("--sim2-posts", type=Path, default=Path("simulation/posts.csv"))
+    p.add_argument("--sim2-tox", type=Path, default=Path("simulation/toxigen.csv"))
     p.add_argument("--madoc-parquet", type=Path, default=Path("MADOC/voat-technology/voat_technology_madoc.parquet"))
     p.add_argument("--mode", type=str, choices=["both", "posts", "comments"], default="both")
     p.add_argument("--spacy-model", type=str, default="en_core_web_sm")

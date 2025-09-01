@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Compare topics between simulation2 (Voat) and MADOC Voat samples using BERTopic.
+Compare topics between simulation (Voat) and MADOC Voat samples using BERTopic.
 
 Pipeline:
-- Load and preprocess two corpora (simulation2 posts and MADOC Voat).
+- Load and preprocess two corpora (simulation posts and MADOC Voat).
 - Train BERTopic models separately with MiniLM, UMAP, HDBSCAN, c-TFIDF.
 - Extract topic info and compute topic embeddings.
 - Compute cosine similarity matrix and perform Hungarian matching.
@@ -11,7 +11,7 @@ Pipeline:
 - Export CSVs/JSON and optional heatmap plot.
 
 Run:
-  python scripts/voat_topic_compare.py       --sim2-posts-csv simulation2/posts.csv       --madoc-input MADOC/voat-technology/voat_technology_madoc.parquet       --outdir simulation2/topic_compare --save-heatmap
+  python scripts/voat_topic_compare.py       --sim2-posts-csv simulation/posts.csv       --madoc-input MADOC/voat-technology/voat_technology_madoc.parquet       --outdir simulation/topic_compare --save-heatmap
 
 Dependencies:
   pip install bertopic[visualization] sentence-transformers umap-learn hdbscan               scikit-learn pandas numpy scipy matplotlib
@@ -507,13 +507,13 @@ def write_csv(df: pd.DataFrame, path: Path) -> None:
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="Compare topics between simulation2 Voat and MADOC Voat samples using BERTopic.")
-    parser.add_argument("--sim2-posts-csv", type=Path, default=Path("simulation3/posts.csv"))
+    parser = argparse.ArgumentParser(description="Compare topics between simulation Voat and MADOC Voat samples using BERTopic.")
+    parser.add_argument("--sim2-posts-csv", type=Path, default=Path("simulation/posts.csv"))
     parser.add_argument("--madoc-input", type=Path, default=Path("MADOC/voat-technology/voat_technology_madoc.parquet"))
     parser.add_argument("--madoc-merge-samples", action="store_true", help="Merge MADOC/voat-technology/sample_* files instead of using --madoc-input")
     parser.add_argument("--madoc-root", type=Path, default=Path("MADOC/voat-technology"), help="Root directory for MADOC voat samples when --madoc-merge-samples is used")
     parser.add_argument("--text-cols", type=str, default=None, help="Comma-separated list of text columns to use for both corpora (e.g., 'title,body'). Use per-source overrides below if needed.")
-    parser.add_argument("--sim2-text-cols", type=str, default=None, help="Comma-separated list of text columns specifically for simulation2")
+    parser.add_argument("--sim2-text-cols", type=str, default=None, help="Comma-separated list of text columns specifically for simulation")
     parser.add_argument("--madoc-text-cols", type=str, default=None, help="Comma-separated list of text columns specifically for MADOC (default prefers 'content')")
     parser.add_argument("--min-docs", type=int, default=200)
     parser.add_argument("--min-topic-size", type=int, default=10)
@@ -525,7 +525,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--embedding-model", type=str, default="sentence-transformers/all-MiniLM-L6-v2", help="HuggingFace model id for sentence embeddings")
     parser.add_argument("--embedding-local-path", type=str, default=None, help="Path to a local SentenceTransformer model directory (offline)")
     parser.add_argument("--hf-offline", action="store_true", help="Set HF_HUB_OFFLINE=1 to avoid network calls when loading the model")
-    parser.add_argument("--outdir", type=Path, default=Path("simulation3/topic_compare"))
+    parser.add_argument("--outdir", type=Path, default=Path("simulation/topic_compare"))
     parser.add_argument("--save-heatmap", action="store_true")
     parser.add_argument("--vectorizer-min-df", type=int, default=1)
     parser.add_argument("--topk-per-sim2", type=int, default=3, help="Top-K MADOC matches to keep per simulation topic (many-to-one)")
@@ -570,7 +570,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     sim2_series = filter_docs(sim2_series, min_chars=args.min_doc_chars, drop_headers=args.drop_header_rows)
     sim2_texts = sim2_series.tolist()
     if len(sim2_texts) < args.min_docs:
-        print(f"Simulation2 corpus too small: {len(sim2_texts)} < min_docs={args.min_docs}", file=sys.stderr)
+        print(f"Simulation corpus too small: {len(sim2_texts)} < min_docs={args.min_docs}", file=sys.stderr)
     if args.madoc_merge_samples:
         madoc_texts, madoc_df, madoc_used_cols = load_madoc_samples(args.madoc_root, max_docs=args.max_docs, seed=args.seed, text_cols=madoc_text_cols)
     else:

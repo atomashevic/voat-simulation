@@ -8,8 +8,8 @@ Export AB-alternating chain texts to a wide CSV.
 
 Run:
   python scripts/export_chain_texts.py \
-    --posts-csv simulation2/posts.csv \
-    --out-csv simulation2/chain_texts.csv \
+    --posts-csv simulation/posts.csv \
+    --out-csv simulation/chain_texts.csv \
     --min-chain-len 4
 
 Notes:
@@ -178,7 +178,7 @@ def run(posts_csv: Path, out_csv: Path, min_chain_len: int) -> int:
 
 def main(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(description="Export AB-alternating chain texts to a wide CSV")
-    p.add_argument("--posts-csv", type=Path, default=Path("simulation2/posts.csv"))
+    p.add_argument("--posts-csv", type=Path, default=Path("simulation/posts.csv"))
     p.add_argument("--out-csv", type=Path, default=None)
     p.add_argument("--min-chain-len", type=int, default=4)
     args = p.parse_args(argv)

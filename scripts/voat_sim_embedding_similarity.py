@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Compute embedding-based similarity between simulation2 posts/comments and Voat posts/comments
+Compute embedding-based similarity between simulation posts/comments and Voat posts/comments
 from the full MADOC parquet. Reports average cosine similarity and counts above thresholds,
 with optional t-SNE/UMAP visualizations.
 
@@ -97,16 +97,16 @@ def l2_normalize(a: np.ndarray, axis: int = 1, eps: float = 1e-12) -> np.ndarray
 # Data loading
 # -------------------------
 def load_sim2_subset(posts_csv: Path, tox_csv: Path, want_comments: bool) -> pd.DataFrame:
-    """Load simulation2 posts.csv merged with toxigen.csv and filter by is_comment flag.
+    """Load simulation posts.csv merged with toxigen.csv and filter by is_comment flag.
 
     Returns columns: id, text (string)
     """
     posts = pd.read_csv(posts_csv)
     tox = pd.read_csv(tox_csv)
     if not {"id", "tweet"}.issubset(posts.columns):
-        raise ValueError("simulation2 posts.csv must contain columns: id,tweet")
+        raise ValueError("simulation posts.csv must contain columns: id,tweet")
     if not {"id", "is_comment"}.issubset(tox.columns):
-        raise ValueError("simulation2 toxigen.csv must contain columns: id,is_comment")
+        raise ValueError("simulation toxigen.csv must contain columns: id,is_comment")
     df = posts.merge(tox[["id", "is_comment"]], on="id", how="left")
     df = df[df["is_comment"] == bool(want_comments)].copy()
     df["text"] = df["tweet"].astype(str).map(clean_text)
@@ -339,9 +339,9 @@ def run_one(
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    p = argparse.ArgumentParser(description="Embedding similarity between simulation2 and Voat (posts and/or comments)")
-    p.add_argument("--sim2-posts", type=Path, default=Path("simulation3/posts.csv"))
-    p.add_argument("--sim2-tox", type=Path, default=Path("simulation3/toxigen.csv"))
+    p = argparse.ArgumentParser(description="Embedding similarity between simulation and Voat (posts and/or comments)")
+    p.add_argument("--sim2-posts", type=Path, default=Path("simulation/posts.csv"))
+    p.add_argument("--sim2-tox", type=Path, default=Path("simulation/toxigen.csv"))
     p.add_argument("--madoc-parquet", type=Path, default=Path("MADOC/voat-technology/voat_technology_madoc.parquet"))
     p.add_argument("--mode", type=str, choices=["both", "posts", "comments"], default="both")
     p.add_argument("--device", type=str, default=None, help="Force device for embeddings: cuda/cpu")

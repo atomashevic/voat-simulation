@@ -2,13 +2,13 @@
 """
 Convergence Entropy Analysis (AB chains, legacy entropy)
 
-- Extracts A–B–A–B… alternating chains (two users, strict alternation) from simulation2 reply threads.
+- Extracts A–B–A–B… alternating chains (two users, strict alternation) from simulation reply threads.
 - For each chain, computes legacy-style convergence entropy for all ordered pairs (i -> j), j>i,
   up to a maximum lag using the formulation in scripts/entropy.py.
 - Produces plots with x = turn distance (lag) and y = entropy (H and H/T_x), plus overall distributions and ECDFs.
 
 Run:
-  python scripts/convergence_entropy_chains.py --posts-csv simulation2/posts.csv --outdir simulation2/convergence_entropy
+  python scripts/convergence_entropy_chains.py --posts-csv simulation/posts.csv --outdir simulation/convergence_entropy
 
 Notes:
 - Uses Normal(μ=1, σ) on (1 + max cosine) per token as in scripts/entropy.py, then sums −exp(log_prob)*log_prob.
@@ -400,51 +400,87 @@ def run(posts_csv: Path, outdir: Path, model_name: str, device: str, sigma: floa
         import seaborn as sns
 
         df = pd.read_csv(pairs_csv)
-        # Lag vs Entropy (H)
-        plt.figure(figsize=(7, 5))
-        sns.stripplot(data=df, x="lag", y="H", jitter=True, alpha=0.3, size=3)
-        sns.pointplot(data=df, x="lag", y="H", errorbar="ci", color="red")
-        plt.xlabel("Turn distance (lag)")
-        plt.ylabel("Convergence entropy H")
-        plt.title("Lag vs Convergence Entropy (H)")
-        plt.tight_layout()
-        plt.savefig(outdir / "lag_vs_entropy.png", dpi=150)
-        plt.close()
-
-        # Lag vs Entropy (H per token)
-        plt.figure(figsize=(7, 5))
-        sns.stripplot(data=df, x="lag", y="H_per_token", jitter=True, alpha=0.3, size=3)
-        sns.pointplot(data=df, x="lag", y="H_per_token", errorbar="ci", color="red")
-        plt.xlabel("Turn distance (lag)")
-        plt.ylabel("Convergence entropy per token (H/T_x)")
-        plt.title("Lag vs Convergence Entropy (per token)")
-        plt.tight_layout()
-        plt.savefig(outdir / "lag_vs_entropy_per_token.png", dpi=150)
-        plt.close()
-
-        # Distribution plots (H)
-        plt.figure(figsize=(7, 5))
+        # Consistent scientific style and palette
         try:
-            sns.kdeplot(data=df, x="H", fill=True, alpha=0.3)
+            plt.style.use("seaborn-v0_8-whitegrid")
         except Exception:
-            pass
-        plt.hist(df["H"], bins=50, alpha=0.3, color="C0")
-        plt.title("Distribution of convergence entropy (H)")
-        plt.tight_layout()
-        plt.savefig(outdir / "entropy_dist.png", dpi=150)
-        plt.close()
+            plt.style.use("seaborn-whitegrid")
+        plt.rcParams.update({
+            "axes.spines.top": False,
+            "axes.spines.right": False,
+            "axes.titlesize": 11,
+            "axes.labelsize": 10,
+            "xtick.labelsize": 9,
+            "ytick.labelsize": 9,
+            "lines.linewidth": 2.6,
+            "figure.dpi": 150,
+        })
 
-        # Distribution plots (H per token)
-        plt.figure(figsize=(7, 5))
+        # Ensure pair_type exists
+        if "pair_type" not in df.columns:
+            df["pair_type"] = np.where(df["user_x"] == df["user_y"], "intrapersonal", "interpersonal")
+
+        # Lag vs Entropy (H): blue/orange lines by pair_type
+        pal = {"interpersonal": "#1f77b4", "intrapersonal": "#ff7f0e"}
+        fig, ax = plt.subplots(figsize=(7.2, 4.8))
+        for ptype in ("interpersonal", "intrapersonal"):
+            grp = df[df["pair_type"] == ptype]
+            if grp.empty:
+                continue
+            g = grp.groupby("lag")["H"].median().sort_index()
+            ax.plot(g.index.values, g.values, label=ptype.capitalize(), color=pal.get(ptype, None))
+        ax.set_xlabel("Turn distance (lag)")
+        ax.set_ylabel("Convergence entropy H")
+        ax.set_title("Lag vs Convergence Entropy (H)")
+        ax.legend(frameon=False)
+        fig.tight_layout()
+        fig.savefig(outdir / "lag_vs_entropy.png")
+        plt.close(fig)
+
+        # Lag vs Entropy (H per token): blue/orange lines by pair_type
+        fig, ax = plt.subplots(figsize=(7.2, 4.8))
+        for ptype in ("interpersonal", "intrapersonal"):
+            grp = df[df["pair_type"] == ptype]
+            if grp.empty:
+                continue
+            g = grp.groupby("lag")["H_per_token"].median().sort_index()
+            ax.plot(g.index.values, g.values, label=ptype.capitalize(), color=pal.get(ptype, None))
+        ax.set_xlabel("Turn distance (lag)")
+        ax.set_ylabel("Convergence entropy per token (H/T_x)")
+        ax.set_title("Lag vs Convergence Entropy (per token)")
+        ax.legend(frameon=False)
+        fig.tight_layout()
+        fig.savefig(outdir / "lag_vs_entropy_per_token.png")
+        plt.close(fig)
+
+        # Distribution plots (H) — thick-line KDE, scientific style
+        fig, ax = plt.subplots(figsize=(7.0, 4.6))
         try:
-            sns.kdeplot(data=df, x="H_per_token", fill=True, alpha=0.3)
+            sns.kdeplot(data=df, x="H", color="#1f77b4", lw=2.6, fill=False, ax=ax)
         except Exception:
-            pass
-        plt.hist(df["H_per_token"], bins=50, alpha=0.3, color="C1")
-        plt.title("Distribution of convergence entropy per token (H/T_x)")
-        plt.tight_layout()
-        plt.savefig(outdir / "entropy_dist_per_token.png", dpi=150)
-        plt.close()
+            # fallback: simple histogram outline
+            vals = df["H"].dropna().values
+            ax.hist(vals, bins=50, histtype="step", color="#1f77b4")
+        ax.set_xlabel("Convergence entropy H")
+        ax.set_ylabel("Density")
+        ax.set_title("Distribution of convergence entropy (H)")
+        fig.tight_layout()
+        fig.savefig(outdir / "entropy_dist.png")
+        plt.close(fig)
+
+        # Distribution plots (H per token) — thick-line KDE
+        fig, ax = plt.subplots(figsize=(7.0, 4.6))
+        try:
+            sns.kdeplot(data=df, x="H_per_token", color="#ff7f0e", lw=2.6, fill=False, ax=ax)
+        except Exception:
+            vals = df["H_per_token"].dropna().values
+            ax.hist(vals, bins=50, histtype="step", color="#ff7f0e")
+        ax.set_xlabel("Convergence entropy per token (H/T_x)")
+        ax.set_ylabel("Density")
+        ax.set_title("Distribution of convergence entropy per token (H/T_x)")
+        fig.tight_layout()
+        fig.savefig(outdir / "entropy_dist_per_token.png")
+        plt.close(fig)
 
         # ECDFs (H and H per token)
         plt.figure(figsize=(7, 5))
@@ -475,15 +511,17 @@ def run(posts_csv: Path, outdir: Path, model_name: str, device: str, sigma: floa
         if "pair_type" not in df.columns:
             df["pair_type"] = np.where(df["user_x"] == df["user_y"], "intrapersonal", "interpersonal")
 
-        plt.figure(figsize=(7, 5))
+        fig, ax = plt.subplots(figsize=(7.0, 4.6))
         try:
-            sns.kdeplot(data=df, x="H", hue="pair_type", common_norm=False, fill=True, alpha=0.3)
+            sns.kdeplot(data=df, x="H", hue="pair_type", common_norm=False, fill=False, lw=2.6, palette=pal, ax=ax)
         except Exception:
             pass
-        plt.title("H: intra vs inter (distribution)")
-        plt.tight_layout()
-        plt.savefig(outdir / "entropy_dist_inter_vs_intra.png", dpi=150)
-        plt.close()
+        ax.set_xlabel("Convergence entropy H")
+        ax.set_ylabel("Density")
+        ax.set_title("H: intra vs inter (distribution)")
+        fig.tight_layout()
+        fig.savefig(outdir / "entropy_dist_inter_vs_intra.png")
+        plt.close(fig)
 
         plt.figure(figsize=(7, 5))
         try:
@@ -503,15 +541,17 @@ def run(posts_csv: Path, outdir: Path, model_name: str, device: str, sigma: floa
         plt.close()
 
         # Distributional comparison: H per token
-        plt.figure(figsize=(7, 5))
+        fig, ax = plt.subplots(figsize=(7.0, 4.6))
         try:
-            sns.kdeplot(data=df, x="H_per_token", hue="pair_type", common_norm=False, fill=True, alpha=0.3)
+            sns.kdeplot(data=df, x="H_per_token", hue="pair_type", common_norm=False, fill=False, lw=2.6, palette=pal, ax=ax)
         except Exception:
             pass
-        plt.title("H/T_x: intra vs inter (distribution)")
-        plt.tight_layout()
-        plt.savefig(outdir / "entropy_per_token_dist_inter_vs_intra.png", dpi=150)
-        plt.close()
+        ax.set_xlabel("Convergence entropy per token (H/T_x)")
+        ax.set_ylabel("Density")
+        ax.set_title("H/T_x: intra vs inter (distribution)")
+        fig.tight_layout()
+        fig.savefig(outdir / "entropy_per_token_dist_inter_vs_intra.png")
+        plt.close(fig)
 
         plt.figure(figsize=(7, 5))
         try:
@@ -528,6 +568,64 @@ def run(posts_csv: Path, outdir: Path, model_name: str, device: str, sigma: floa
         plt.tight_layout()
         plt.savefig(outdir / "entropy_per_token_ecdf_inter_vs_intra.png", dpi=150)
         plt.close()
+
+        # New: point-level distributions colored by lag (intra vs inter)
+        # H scatter by pair_type, colored by lag
+        try:
+            dplot = df.dropna(subset=["H", "lag"]).copy()
+            if "pair_type" not in dplot.columns:
+                dplot["pair_type"] = np.where(dplot["user_x"] == dplot["user_y"], "intrapersonal", "interpersonal")
+            x_map = {"interpersonal": 0, "intrapersonal": 1}
+            dplot = dplot[dplot["pair_type"].isin(x_map.keys())]
+            if not dplot.empty:
+                # Stable jitter for readability
+                rng = np.random.default_rng(42)
+                x_base = dplot["pair_type"].map(x_map).astype(float).values
+                x_jit = rng.uniform(-0.2, 0.2, size=x_base.shape[0])
+                x = x_base + x_jit
+                y = dplot["H"].astype(float).values
+                c = dplot["lag"].astype(float).values
+                plt.figure(figsize=(8, 5))
+                sc = plt.scatter(x, y, c=c, cmap="viridis", alpha=0.5, s=12, edgecolors="none")
+                plt.xticks([0, 1], ["interpersonal", "intrapersonal"])
+                plt.xlabel("Pair type")
+                plt.ylabel("Convergence entropy H")
+                plt.title("H by pair type, colored by lag")
+                cbar = plt.colorbar(sc)
+                cbar.set_label("Lag (turn distance)")
+                plt.tight_layout()
+                plt.savefig(outdir / "scatter_H_by_pair_type_colored_by_lag.png", dpi=150)
+                plt.close()
+        except Exception:
+            pass
+
+        # H_per_token scatter by pair_type, colored by lag
+        try:
+            dplot = df.dropna(subset=["H_per_token", "lag"]).copy()
+            if "pair_type" not in dplot.columns:
+                dplot["pair_type"] = np.where(dplot["user_x"] == dplot["user_y"], "intrapersonal", "interpersonal")
+            x_map = {"interpersonal": 0, "intrapersonal": 1}
+            dplot = dplot[dplot["pair_type"].isin(x_map.keys())]
+            if not dplot.empty:
+                rng = np.random.default_rng(42)
+                x_base = dplot["pair_type"].map(x_map).astype(float).values
+                x_jit = rng.uniform(-0.2, 0.2, size=x_base.shape[0])
+                x = x_base + x_jit
+                y = dplot["H_per_token"].astype(float).values
+                c = dplot["lag"].astype(float).values
+                plt.figure(figsize=(8, 5))
+                sc = plt.scatter(x, y, c=c, cmap="viridis", alpha=0.5, s=12, edgecolors="none")
+                plt.xticks([0, 1], ["interpersonal", "intrapersonal"])
+                plt.xlabel("Pair type")
+                plt.ylabel("Convergence entropy per token (H/T_x)")
+                plt.title("H/T_x by pair type, colored by lag")
+                cbar = plt.colorbar(sc)
+                cbar.set_label("Lag (turn distance)")
+                plt.tight_layout()
+                plt.savefig(outdir / "scatter_H_per_token_by_pair_type_colored_by_lag.png", dpi=150)
+                plt.close()
+        except Exception:
+            pass
     except Exception as e:
         print(f"Warning: plotting failed: {e}")
 
@@ -566,9 +664,194 @@ def run(posts_csv: Path, outdir: Path, model_name: str, device: str, sigma: floa
     return 0
 
 
+def generate_plots(outdir: Path) -> None:
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+
+    pairs_csv = outdir / "pairs_all.csv"
+    if not pairs_csv.exists():
+        raise FileNotFoundError(f"pairs_all.csv not found in {outdir}")
+
+    df = pd.read_csv(pairs_csv)
+
+    # Consistent scientific style and palette
+    try:
+        plt.style.use("seaborn-v0_8-whitegrid")
+    except Exception:
+        plt.style.use("seaborn-whitegrid")
+    plt.rcParams.update({
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "axes.titlesize": 11,
+        "axes.labelsize": 10,
+        "xtick.labelsize": 9,
+        "ytick.labelsize": 9,
+        "lines.linewidth": 2.6,
+        "figure.dpi": 150,
+    })
+
+    # Ensure pair_type exists
+    if "pair_type" not in df.columns:
+        df["pair_type"] = np.where(df["user_x"] == df["user_y"], "intrapersonal", "interpersonal")
+
+    pal = {"interpersonal": "#1f77b4", "intrapersonal": "#ff7f0e"}
+
+    # Lag vs Entropy (H): revert to dots + summary line
+    fig, ax = plt.subplots(figsize=(7.2, 4.8))
+    try:
+        sns.stripplot(data=df, x="lag", y="H", jitter=True, alpha=0.35, size=3,
+                      color="#1f77b4", ax=ax)
+        sns.pointplot(data=df, x="lag", y="H", errorbar="ci", color="#ff7f0e",
+                      markers="o", linestyles="-", ax=ax)
+    except Exception:
+        # Fallback: scatter of all points and median line
+        sub = df.dropna(subset=["lag", "H"]).copy()
+        ax.scatter(sub["lag"].values, sub["H"].values, s=8, alpha=0.35, color="#1f77b4")
+        m = sub.groupby("lag")["H"].median().sort_index()
+        ax.plot(m.index.values, m.values, color="#ff7f0e")
+    ax.set_xlabel("Turn distance (lag)")
+    ax.set_ylabel("Convergence entropy H")
+    ax.set_title("Lag vs Convergence Entropy (H)")
+    fig.tight_layout()
+    fig.savefig(outdir / "lag_vs_entropy.png")
+    plt.close(fig)
+
+    # Lag vs Entropy (H per token): dots + summary line
+    fig, ax = plt.subplots(figsize=(7.2, 4.8))
+    try:
+        sns.stripplot(data=df, x="lag", y="H_per_token", jitter=True, alpha=0.35, size=3,
+                      color="#1f77b4", ax=ax)
+        sns.pointplot(data=df, x="lag", y="H_per_token", errorbar="ci", color="#ff7f0e",
+                      markers="o", linestyles="-", ax=ax)
+    except Exception:
+        sub = df.dropna(subset=["lag", "H_per_token"]).copy()
+        ax.scatter(sub["lag"].values, sub["H_per_token"].values, s=8, alpha=0.35, color="#1f77b4")
+        m = sub.groupby("lag")["H_per_token"].median().sort_index()
+        ax.plot(m.index.values, m.values, color="#ff7f0e")
+    ax.set_xlabel("Turn distance (lag)")
+    ax.set_ylabel("Convergence entropy per token (H/T_x)")
+    ax.set_title("Lag vs Convergence Entropy (per token)")
+    fig.tight_layout()
+    fig.savefig(outdir / "lag_vs_entropy_per_token.png")
+    plt.close(fig)
+
+    # Distribution plots (H)
+    fig, ax = plt.subplots(figsize=(7.0, 4.6))
+    try:
+        sns.kdeplot(data=df, x="H", color="#1f77b4", lw=2.6, fill=False, ax=ax)
+    except Exception:
+        vals = df["H"].dropna().values
+        ax.hist(vals, bins=50, histtype="step", color="#1f77b4")
+    ax.set_xlabel("Convergence entropy H")
+    ax.set_ylabel("Density")
+    ax.set_title("Distribution of convergence entropy (H)")
+    fig.tight_layout()
+    fig.savefig(outdir / "entropy_dist.png")
+    plt.close(fig)
+
+    # Distribution plots (H per token)
+    fig, ax = plt.subplots(figsize=(7.0, 4.6))
+    try:
+        sns.kdeplot(data=df, x="H_per_token", color="#ff7f0e", lw=2.6, fill=False, ax=ax)
+    except Exception:
+        vals = df["H_per_token"].dropna().values
+        ax.hist(vals, bins=50, histtype="step", color="#ff7f0e")
+    ax.set_xlabel("Convergence entropy per token (H/T_x)")
+    ax.set_ylabel("Density")
+    ax.set_title("Distribution of convergence entropy per token (H/T_x)")
+    fig.tight_layout()
+    fig.savefig(outdir / "entropy_dist_per_token.png")
+    plt.close(fig)
+
+    # ECDFs (H and H per token)
+    plt.figure(figsize=(7, 5))
+    try:
+        sns.ecdfplot(data=df, x="H")
+    except Exception:
+        x = np.sort(df["H"].dropna().values)
+        y = np.arange(1, len(x) + 1) / len(x)
+        plt.step(x, y, where="post")
+    plt.title("ECDF of convergence entropy (H)")
+    plt.tight_layout()
+    plt.savefig(outdir / "entropy_ecdf.png", dpi=150)
+    plt.close()
+
+    plt.figure(figsize=(7, 5))
+    try:
+        sns.ecdfplot(data=df, x="H_per_token")
+    except Exception:
+        x = np.sort(df["H_per_token"].dropna().values)
+        y = np.arange(1, len(x) + 1) / len(x)
+        plt.step(x, y, where="post")
+    plt.title("ECDF of convergence entropy per token (H/T_x)")
+    plt.tight_layout()
+    plt.savefig(outdir / "entropy_ecdf_per_token.png", dpi=150)
+    plt.close()
+
+    # Distributional comparison: intra vs inter (H)
+    fig, ax = plt.subplots(figsize=(7.0, 4.6))
+    try:
+        sns.kdeplot(data=df, x="H", hue="pair_type", common_norm=False, fill=False, lw=2.6, palette=pal, ax=ax)
+    except Exception:
+        pass
+    ax.set_xlabel("Convergence entropy H")
+    ax.set_ylabel("Density")
+    ax.set_title("H: intra vs inter (distribution)")
+    fig.tight_layout()
+    fig.savefig(outdir / "entropy_dist_inter_vs_intra.png")
+    plt.close(fig)
+
+    # Distributional comparison: H per token
+    fig, ax = plt.subplots(figsize=(7.0, 4.6))
+    try:
+        sns.kdeplot(data=df, x="H_per_token", hue="pair_type", common_norm=False, fill=False, lw=2.6, palette=pal, ax=ax)
+    except Exception:
+        pass
+    ax.set_xlabel("Convergence entropy per token (H/T_x)")
+    ax.set_ylabel("Density")
+    ax.set_title("H/T_x: intra vs inter (distribution)")
+    fig.tight_layout()
+    fig.savefig(outdir / "entropy_per_token_dist_inter_vs_intra.png")
+    plt.close(fig)
+
+    # ECDFs split by pair_type (H and H_per_token)
+    plt.figure(figsize=(7, 5))
+    try:
+        sns.ecdfplot(data=df, x="H", hue="pair_type")
+    except Exception:
+        # fallback simple ECDF by split
+        for subset, color in [("interpersonal", "C0"), ("intrapersonal", "C1")]:
+            dsub = df[df["pair_type"] == subset]["H"].dropna().sort_values()
+            if dsub.empty:
+                continue
+            y = np.arange(1, len(dsub) + 1) / len(dsub)
+            plt.step(dsub.values, y, where="post", label=subset)
+        plt.legend()
+    plt.title("H: intra vs inter (ECDF)")
+    plt.tight_layout()
+    plt.savefig(outdir / "entropy_ecdf_inter_vs_intra.png", dpi=150)
+    plt.close()
+
+    plt.figure(figsize=(7, 5))
+    try:
+        sns.ecdfplot(data=df, x="H_per_token", hue="pair_type")
+    except Exception:
+        for subset, color in [("interpersonal", "C0"), ("intrapersonal", "C1")]:
+            dsub = df[df["pair_type"] == subset]["H_per_token"].dropna().sort_values()
+            if dsub.empty:
+                continue
+            y = np.arange(1, len(dsub) + 1) / len(dsub)
+            plt.step(dsub.values, y, where="post", label=subset)
+        plt.legend()
+    plt.title("H/T_x: intra vs inter (ECDF)")
+    plt.tight_layout()
+    plt.savefig(outdir / "entropy_per_token_ecdf_inter_vs_intra.png", dpi=150)
+    plt.close()
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(description="Convergence entropy analysis (BERT-only)")
-    p.add_argument("--posts-csv", type=Path, default=Path("simulation3/posts.csv"))
+    p.add_argument("--posts-csv", type=Path, default=Path("simulation/posts.csv"))
     p.add_argument("--outdir", type=Path, default=None)
     p.add_argument("--model", type=str, default="bert-base-uncased")
     p.add_argument("--device", type=str, default="auto", help="cpu|cuda|auto")
@@ -576,11 +859,81 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument("--max-tokens", type=int, default=256)
     p.add_argument("--max-lag", type=int, default=10, help="Compute pairs up to this turn distance (lag)")
     p.add_argument("--min-chain-len", type=int, default=3, help="Minimum length of AB-alternating chains to keep")
+    # Replot mode (alias for common typo: --repolot)
+    p.add_argument("--replot", dest="replot", action="store_true", help="Rebuild plots from existing pairs_all.csv in --outdir")
+    p.add_argument("--repolot", dest="replot", action="store_true", help="Alias for --replot")
     args = p.parse_args(argv)
 
     outdir = args.outdir or (args.posts_csv.parent / "convergence_entropy")
+    if args.replot:
+        generate_plots(outdir)
+        print(f"Rebuilt plots from {outdir / 'pairs_all.csv'}")
+        return 0
     return run(args.posts_csv, outdir, args.model, args.device, args.sigma, args.max_tokens, args.max_lag, args.min_chain_len)
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
+    plt.title("ECDF of convergence entropy per token (H/T_x)")
+    plt.tight_layout()
+    plt.savefig(outdir / "entropy_ecdf_per_token.png", dpi=150)
+    plt.close()
+
+    # Distributional comparison: intra vs inter (H)
+    fig, ax = plt.subplots(figsize=(7.0, 4.6))
+    try:
+        sns.kdeplot(data=df, x="H", hue="pair_type", common_norm=False, fill=False, lw=2.6, palette=pal, ax=ax)
+    except Exception:
+        pass
+    ax.set_xlabel("Convergence entropy H")
+    ax.set_ylabel("Density")
+    ax.set_title("H: intra vs inter (distribution)")
+    fig.tight_layout()
+    fig.savefig(outdir / "entropy_dist_inter_vs_intra.png")
+    plt.close(fig)
+
+    # Distributional comparison: H per token
+    fig, ax = plt.subplots(figsize=(7.0, 4.6))
+    try:
+        sns.kdeplot(data=df, x="H_per_token", hue="pair_type", common_norm=False, fill=False, lw=2.6, palette=pal, ax=ax)
+    except Exception:
+        pass
+    ax.set_xlabel("Convergence entropy per token (H/T_x)")
+    ax.set_ylabel("Density")
+    ax.set_title("H/T_x: intra vs inter (distribution)")
+    fig.tight_layout()
+    fig.savefig(outdir / "entropy_per_token_dist_inter_vs_intra.png")
+    plt.close(fig)
+
+    # ECDFs split by pair_type (H and H_per_token)
+    plt.figure(figsize=(7, 5))
+    try:
+        sns.ecdfplot(data=df, x="H", hue="pair_type")
+    except Exception:
+        for subset, color in [("interpersonal", "C0"), ("intrapersonal", "C1")]:
+            dsub = df[df["pair_type"] == subset]["H"].dropna().sort_values()
+            if dsub.empty:
+                continue
+            y = np.arange(1, len(dsub) + 1) / len(dsub)
+            plt.step(dsub.values, y, where="post", label=subset)
+        plt.legend()
+    plt.title("H: intra vs inter (ECDF)")
+    plt.tight_layout()
+    plt.savefig(outdir / "entropy_ecdf_inter_vs_intra.png", dpi=150)
+    plt.close()
+
+    plt.figure(figsize=(7, 5))
+    try:
+        sns.ecdfplot(data=df, x="H_per_token", hue="pair_type")
+    except Exception:
+        for subset, color in [("interpersonal", "C0"), ("intrapersonal", "C1")]:
+            dsub = df[df["pair_type"] == subset]["H_per_token"].dropna().sort_values()
+            if dsub.empty:
+                continue
+            y = np.arange(1, len(dsub) + 1) / len(dsub)
+            plt.step(dsub.values, y, where="post", label=subset)
+        plt.legend()
+    plt.title("H/T_x: intra vs inter (ECDF)")
+    plt.tight_layout()
+    plt.savefig(outdir / "entropy_per_token_ecdf_inter_vs_intra.png", dpi=150)
+    plt.close()

@@ -4,8 +4,8 @@ for simulation outputs, aligning with real-data diagnostics.
 
 Usage:
   python scripts/additional_plots.py \
-    --sim-dir simulation2 \
-    --out-dir simulation2 \
+    --sim-dir simulation \
+    --out-dir simulation \
     [--generate-network-sim] \
     [--generate-network-voat --voat-dir MADOC/voat-technology/sample_1]
 
@@ -267,7 +267,7 @@ def plot_user_active_days(posts: pd.DataFrame, out_dir: Path) -> None:
 
 def main():
     parser = argparse.ArgumentParser(description="Generate per-day activity and onboarding/churn plots; optionally add network visuals.")
-    parser.add_argument("--sim-dir", type=Path, default=Path("simulation3"), help="Directory containing users.csv and posts.csv")
+    parser.add_argument("--sim-dir", type=Path, default=Path("simulation"), help="Directory containing users.csv and posts.csv")
     parser.add_argument("--out-dir", type=Path, default=None, help="Output directory for plots/CSVs (default: sim-dir)")
     parser.add_argument("--time-col", type=str, default=None, help="Optional posts time column to use instead of 'round'")
     parser.add_argument("--hours-per-day", type=int, default=24, help="Number of rounds per day (default: 24)")
@@ -323,10 +323,10 @@ def main():
     if args.generate_network_sim or args.generate_network_voat:
         try:
             # Local import to avoid adding a hard dependency when unused
-            import scripts.visualize_simulation2_additional as vis  # type: ignore
+            import scripts.visualize_simulation_additional as vis  # type: ignore
         except Exception:
             try:
-                import visualize_simulation2_additional as vis  # fallback if running from scripts/
+                import visualize_simulation_additional as vis  # fallback if running from scripts/
             except Exception as e:
                 raise SystemExit(f"Unable to import network visual module: {e}")
 

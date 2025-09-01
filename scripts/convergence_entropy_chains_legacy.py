@@ -2,15 +2,15 @@
 """
 Alternate Convergence Entropy Analysis using scripts/entropy.py
 
-- Extracts A–B–A–B alternating chains from simulation2 reply threads.
+- Extracts A–B–A–B alternating chains from simulation reply threads.
 - For each chain, computes legacy entropy for all ordered pairs (i -> j), j>i,
   up to a maximum lag distance using the formulation in scripts/entropy.py.
 - Produces lag-vs-entropy plots and distributional comparisons for intra vs inter pairs.
 
 Run:
   python scripts/convergence_entropy_chains_legacy.py \
-    --posts-csv simulation2/posts.csv \
-    --outdir simulation2/convergence_entropy_legacy \
+    --posts-csv simulation/posts.csv \
+    --outdir simulation/convergence_entropy_legacy \
     --sigma 0.3 --max-tokens 256 --max-lag 10 --min-chain-len 3
 
 Notes:
@@ -426,7 +426,7 @@ def run(posts_csv: Path, outdir: Path, model_name: str, device: str, sigma: floa
 
 def main(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(description="Convergence entropy analysis using scripts/entropy.py")
-    p.add_argument("--posts-csv", type=Path, default=Path("simulation2/posts.csv"))
+    p.add_argument("--posts-csv", type=Path, default=Path("simulation/posts.csv"))
     p.add_argument("--outdir", type=Path, default=None)
     p.add_argument("--model", type=str, default="bert-base-uncased")
     p.add_argument("--device", type=str, default="auto")

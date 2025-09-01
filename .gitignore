@@ -76,3 +76,16 @@ scripts/__pycache__/
 *.swo
 
 misc/*
+
+# AI stuff
+AGENTS.md
+CLAUDE.md
+misc.txt
+.claude/*
+
+# Reddit scripts
+
+scripts/reddit_end_parent_check.py
+scripts/reddit_real_reputation.py
+scripts/reddit_reputation.py
+scripts/reddit_samples.py
