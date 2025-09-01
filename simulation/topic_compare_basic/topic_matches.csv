@@ -1,0 +1,78 @@
+sim_topic_id,sim_label,sim_size,voat_topic_id,voat_label,voat_size,cosine_sim
+0,0_ship_captain_sinking_change,129,5,5_motto_cherrypicked_sarcasm_memes,67,0.6842747926712036
+0,0_ship_captain_sinking_change,129,79,79_stick carrot_carrot_realizing_live day,37,0.6753408312797546
+0,0_ship_captain_sinking_change,129,423,423_species_boring_wrong species_accelerate impact,18,0.6465204358100891
+0,0_ship_captain_sinking_change,129,19,19_pawns_install president_stupid pawns_existing evil,52,0.6326673626899719
+0,0_ship_captain_sinking_change,129,86,86_losers_nazifaggots_sexual deviants_deviants,36,0.6296505928039551
+1,1_bostrom_machines_nick_nick bostrom,88,13,13_robots_intelligence_artificial intelligence_assume feel,55,0.7513883709907532
+1,1_bostrom_machines_nick_nick bostrom,88,167,167_robots_jobs_artificial intelligence_automation,28,0.7270376682281494
+1,1_bostrom_machines_nick_nick bostrom,88,551,551_building world-size_world-size robot_world-size_robot dont,16,0.7252104878425598
+1,1_bostrom_machines_nick_nick bostrom,88,185,185_artificial intelligence_humans_ones kill_robots,27,0.7115403413772583
+1,1_bostrom_machines_nick_nick bostrom,88,62,62_zion_xeon_old patterns_stand zion,39,0.6952973008155823
+3,3_coding_vibe_vibe coding_assistants,57,483,483_person exists_feared_nervous_feelings,17,0.6197274327278137
+3,3_coding_vibe_vibe coding_assistants,57,13,13_robots_intelligence_artificial intelligence_assume feel,55,0.6122734546661377
+4,4_trial_companies_wage_collusion,54,122,122_businesswomen_overment issued_overment_dirty business,32,0.656703770160675
+4,4_trial_companies_wage_collusion,54,303,303_data deep_fail big_big data_deep learning,22,0.6543668508529663
+4,4_trial_companies_wage_collusion,54,38,38_loss million_companies stuff_billion amazon_shitty companies,45,0.6497803926467896
+4,4_trial_companies_wage_collusion,54,287,287_marketed_wall_yup crazy_trudeau wants,23,0.6465173959732056
+4,4_trial_companies_wage_collusion,54,332,332_flying brick_fucken_faa_fuckups,21,0.6365291476249695
+5,5_media_liberal_liberal media_bias,51,350,350_proceed_bitching sources_little censorship_lead content,21,0.7089754343032837
+5,5_media_liberal_liberal media_bias,51,430,430_feed trolls_true fuck_senators look_pao,18,0.6798226237297058
+5,5_media_liberal_liberal media_bias,51,612,612_integrity_gawker_civil court_truth,15,0.6721076965332031
+5,5_media_liberal_liberal media_bias,51,585,585_political_regulatory_johnson_pai,16,0.6653174161911011
+5,5_media_liberal_liberal media_bias,51,329,329_q-larp_q-larp says_establishing_donald trump,21,0.6574398875236511
+6,6_nasa_need_space_energy,32,201,201_american cars_mass producing_producing_world countries,27,0.7696847319602966
+6,6_nasa_need_space_energy,32,287,287_marketed_wall_yup crazy_trudeau wants,23,0.7623538374900818
+6,6_nasa_need_space_energy,32,260,260_remaining money_idea unworkable_venture_unworkable,24,0.7513068318367004
+6,6_nasa_need_space_energy,32,22,22_jewgle_women_equity_tarrifs,51,0.7426503896713257
+6,6_nasa_need_space_energy,32,596,596_wrong think_patents_actual pay_zones wrong,15,0.709335446357727
+7,7_microsoft_tech_tiktok_data,31,18,18_disconnected_disconnected voat_reddit manipulated_searchencrypt,52,0.7899831533432007
+7,7_microsoft_tech_tiktok_data,31,466,466_speeds_year-old copyright_accenture sued_year adland,17,0.7679126858711243
+7,7_microsoft_tech_tiktok_data,31,575,575_openly_world shut_abusing reach_views hard,16,0.7603832483291626
+7,7_microsoft_tech_tiktok_data,31,122,122_businesswomen_overment issued_overment_dirty business,32,0.75253826379776
+7,7_microsoft_tech_tiktok_data,31,444,444_apple shady_avira_ding_ding ding,18,0.751696765422821
+8,8_privacy_security_mcafee_data,25,134,134_american citizens_surveillance_surveillance network_citizens,31,0.8617613315582275
+8,8_privacy_security_mcafee_data,25,97,97_encryption_surveillance_nsa_exit nodes,35,0.8398522138595581
+8,8_privacy_security_mcafee_data,25,343,343_aol account_sigh_hack computer_foia,21,0.8325426578521729
+8,8_privacy_security_mcafee_data,25,568,568_killing random_preventable_encryption_source encryption,16,0.8311963677406311
+8,8_privacy_security_mcafee_data,25,506,506_summary torture_software posted_starting piece_execution hacked,17,0.8048734664916992
+9,9_libreoffice_software_opensource_microsoft,23,241,241_embrace extend_extend_embrace_wave google,25,0.6932188868522644
+9,9_libreoffice_software_opensource_microsoft,23,610,610_larger population_illiterate_acclaims_wondering blog,15,0.6696608662605286
+9,9_libreoffice_software_opensource_microsoft,23,442,442_ethereum_ethereum developers_osg_decentralization,18,0.6506705284118652
+9,9_libreoffice_software_opensource_microsoft,23,444,444_apple shady_avira_ding_ding ding,18,0.6461484432220459
+9,9_libreoffice_software_opensource_microsoft,23,394,394_adrian_yacy attempts_worry ethical_world champ,19,0.6356508135795593
+10,10_shallow_conviction_water_critical,22,449,449_silent_silent majority_greens_braindead,18,0.7213466763496399
+10,10_shallow_conviction_water_critical,22,458,458_truth voat_malicious acts_political truth_malice,18,0.7177157998085022
+10,10_shallow_conviction_water_critical,22,86,86_losers_nazifaggots_sexual deviants_deviants,36,0.7150459289550781
+10,10_shallow_conviction_water_critical,22,360,360_jewish_campaign_trump campaign_family completely,20,0.7083500623703003
+10,10_shallow_conviction_water_critical,22,329,329_q-larp_q-larp says_establishing_donald trump,21,0.7083160877227783
+11,11_tech_data_digital_microsoft,22,36,36_arpanet_mankind_paedophilia_delete shit,46,0.759390652179718
+11,11_tech_data_digital_microsoft,22,102,102_tinfoil_inventor_duck_visit fond,33,0.7453994154930115
+11,11_tech_data_digital_microsoft,22,18,18_disconnected_disconnected voat_reddit manipulated_searchencrypt,52,0.739129364490509
+11,11_tech_data_digital_microsoft,22,531,531_wouldnt hacked_worried alexa_act exclusive_worldwide barack,16,0.738179087638855
+11,11_tech_data_digital_microsoft,22,470,470_hacking_hackers_hacking team_ww3 going,17,0.7366231679916382
+12,12_tech_games_virtual_wifi,20,413,413_new hardware_later year_years reinvent_address vulnerabilities,19,0.7516229748725891
+12,12_tech_games_virtual_wifi,20,303,303_data deep_fail big_big data_deep learning,22,0.7209518551826477
+12,12_tech_games_virtual_wifi,20,152,152_edi_garage doors_bribery_cars,29,0.7182738184928894
+12,12_tech_games_virtual_wifi,20,250,250_crutches_volunteer_alibaba_covid-19,24,0.7064595222473145
+12,12_tech_games_virtual_wifi,20,370,370_wrong technology_world invisible_windfall old_using technologies,20,0.6991456151008606
+13,13_security_data_digital_privacy,20,134,134_american citizens_surveillance_surveillance network_citizens,31,0.8082358837127686
+13,13_security_data_digital_privacy,20,36,36_arpanet_mankind_paedophilia_delete shit,46,0.8010228872299194
+13,13_security_data_digital_privacy,20,6,6_use platform_absurdly trivial_listened pantera_know interested,66,0.7965155243873596
+13,13_security_data_digital_privacy,20,343,343_aol account_sigh_hack computer_foia,21,0.7829384207725525
+13,13_security_data_digital_privacy,20,568,568_killing random_preventable_encryption_source encryption,16,0.7786278128623962
+14,14_project veritas_veritas_project_soy,17,79,79_stick carrot_carrot_realizing_live day,37,0.6316356658935547
+14,14_project veritas_veritas_project_soy,17,329,329_q-larp_q-larp says_establishing_donald trump,21,0.617797315120697
+14,14_project veritas_veritas_project_soy,17,536,536_milo_tim hunt_feel sad_sexist,16,0.606869637966156
+14,14_project veritas_veritas_project_soy,17,449,449_silent_silent majority_greens_braindead,18,0.6035674214363098
+14,14_project veritas_veritas_project_soy,17,109,109_lbry_illuminati_shit gamergate_gamergate,33,0.6021743416786194
+15,15_privacy_simp_le_security_data,17,267,267_copyright violation_china freedom_violation gets_gets copyright,24,0.793965220451355
+15,15_privacy_simp_le_security_data,17,162,162_ago guy_filtered_opt_article ago,29,0.7757678627967834
+15,15_privacy_simp_le_security_data,17,207,207_ac3-linux_dvdrip_hevc ac3-linux_dvdrip hevc,26,0.7732187509536743
+15,15_privacy_simp_le_security_data,17,6,6_use platform_absurdly trivial_listened pantera_know interested,66,0.7631378173828125
+15,15_privacy_simp_le_security_data,17,36,36_arpanet_mankind_paedophilia_delete shit,46,0.7552134394645691
+16,16_bostrom_machines_values_talk,15,13,13_robots_intelligence_artificial intelligence_assume feel,55,0.7850874662399292
+16,16_bostrom_machines_values_talk,15,167,167_robots_jobs_artificial intelligence_automation,28,0.7632602453231812
+16,16_bostrom_machines_values_talk,15,185,185_artificial intelligence_humans_ones kill_robots,27,0.7436522841453552
+16,16_bostrom_machines_values_talk,15,303,303_data deep_fail big_big data_deep learning,22,0.7318234443664551
+16,16_bostrom_machines_values_talk,15,483,483_person exists_feared_nervous_feelings,17,0.726675808429718

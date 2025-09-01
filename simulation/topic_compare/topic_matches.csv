@@ -1,0 +1,23 @@
+sim2_topic_id,sim2_label,sim2_size,madoc_topic_id,madoc_label,madoc_size,cosine_sim,jaccard_topn,soft_jaccard_topn,rank
+0,0_gladwell_mnuchin_simp_le_10,1011,430,430_fuding_fuding lowing_5g fuding_lowing,7,0.7415069937705994,0.0,0.0,1
+0,0_gladwell_mnuchin_simp_le_10,1011,284,284_bolton_repression_facebookgoogle bolton_repression bolton,8,0.7261616587638855,0.0,0.0,2
+0,0_gladwell_mnuchin_simp_le_10,1011,187,187_absolut_righters absolut_righters_,11,0.7185763120651245,0.0,0.0,3
+0,0_gladwell_mnuchin_simp_le_10,1011,321,321_phuck_excramernaise1488_smes excramernaise1488_smes,8,0.7139173150062561,0.0,0.0,4
+0,0_gladwell_mnuchin_simp_le_10,1011,77,77_17 3ffa_3ffa ttip_2001 erring_erring hewing,16,0.7059618830680847,0.0,0.0,5
+1,1_talkin_somethin_doodoo somethin_99 nickyboy,97,227,227_50 decrying_decrying_decrying 2002_05 50,10,0.7157362699508667,0.0,0.0,1
+1,1_talkin_somethin_doodoo somethin_99 nickyboy,97,671,671_400___,5,0.7018570303916931,0.0,0.0,2
+1,1_talkin_somethin_doodoo somethin_99 nickyboy,97,276,276_demeaning_demeaning cmdr_evolutionarily extermination_1980s 1990s,9,0.695923388004303,0.0,0.0,3
+1,1_talkin_somethin_doodoo somethin_99 nickyboy,97,618,618_eighty___,5,0.6871617436408997,0.0,0.0,4
+1,1_talkin_somethin_doodoo somethin_99 nickyboy,97,321,321_phuck_excramernaise1488_smes excramernaise1488_smes,8,0.6867845058441162,0.0,0.0,5
+2,2_bigname_flattery_testimonial smokeandmirrors_testimonial,74,321,321_phuck_excramernaise1488_smes excramernaise1488_smes,8,0.6556260585784912,0.0,0.0,1
+4,4_pigeonholed_wagefixing_2021 duking_1920s misbehaving,40,321,321_phuck_excramernaise1488_smes excramernaise1488_smes,8,0.67230224609375,0.0,0.0,1
+5,5_10 stayrelevantordissolve_2000s_2000s selfexecuting_stayrelevantordissolve,12,321,321_phuck_excramernaise1488_smes excramernaise1488_smes,8,0.7358254790306091,0.0,0.0,1
+5,5_10 stayrelevantordissolve_2000s_2000s selfexecuting_stayrelevantordissolve,12,430,430_fuding_fuding lowing_5g fuding_lowing,7,0.6785719990730286,0.0,0.0,2
+5,5_10 stayrelevantordissolve_2000s_2000s selfexecuting_stayrelevantordissolve,12,417,417_eddystone_ibeacon_eddystone ibeacon_,7,0.6715747117996216,0.0,0.0,3
+5,5_10 stayrelevantordissolve_2000s_2000s selfexecuting_stayrelevantordissolve,12,325,325_10___,8,0.6680154204368591,0.0,0.0,4
+5,5_10 stayrelevantordissolve_2000s_2000s selfexecuting_stayrelevantordissolve,12,301,301_hapening chattel_hoopy_iqs_hoopy 50k,8,0.6569988131523132,0.0,0.0,5
+6,6_lowballed_lattes_lowballed reshaped_reshaped 20,6,321,321_phuck_excramernaise1488_smes excramernaise1488_smes,8,0.6998249888420105,0.0,0.0,1
+6,6_lowballed_lattes_lowballed reshaped_reshaped 20,6,430,430_fuding_fuding lowing_5g fuding_lowing,7,0.6759592294692993,0.0,0.04343829303979874,2
+6,6_lowballed_lattes_lowballed reshaped_reshaped 20,6,401,401_40 transpiration_transpiration 10_20th 40_transpiration,7,0.6666262149810791,0.0,0.0,3
+6,6_lowballed_lattes_lowballed reshaped_reshaped 20,6,301,301_hapening chattel_hoopy_iqs_hoopy 50k,8,0.6628538370132446,0.0,0.0,4
+6,6_lowballed_lattes_lowballed reshaped_reshaped 20,6,219,219_hippocratic fooooooooiaaaaaal_fooooooooiaaaaaal freeman_fooooooooiaaaaaal_hippocratic,10,0.6586135625839233,0.0,0.0,5

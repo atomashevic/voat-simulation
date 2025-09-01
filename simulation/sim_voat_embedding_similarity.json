@@ -1,0 +1,39 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "madoc_parquet": "MADOC/voat-technology/voat_technology_madoc.parquet",
+  "mode": "both",
+  "thresholds": {
+    "mid": 0.6,
+    "high": 0.8
+  },
+  "results": [
+    {
+      "label": "comments",
+      "n_sim2": 914,
+      "n_voat": 48236,
+      "mean_cosine": 0.5277180671691895,
+      "median_cosine": 0.5276551246643066,
+      "count_ge_high": 0,
+      "count_ge_mid_lt_high": 131,
+      "threshold_mid": 0.6,
+      "threshold_high": 0.8
+    },
+    {
+      "label": "posts",
+      "n_sim2": 836,
+      "n_voat": 34677,
+      "mean_cosine": 0.5731961131095886,
+      "median_cosine": 0.5742337703704834,
+      "count_ge_high": 1,
+      "count_ge_mid_lt_high": 282,
+      "threshold_mid": 0.6,
+      "threshold_high": 0.8
+    }
+  ],
+  "tsne_perplexities": [
+    5,
+    30,
+    80
+  ],
+  "removed_top_k_tokens": 50
+}

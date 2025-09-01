@@ -1,0 +1,20 @@
+{
+  "args": {
+    "sim_csv": "simulation3/all_text_clean.csv",
+    "sim_text_col": "full_text",
+    "voat_parquet": "MADOC/voat-technology/voat_technology_madoc.parquet",
+    "voat_text_col": "content",
+    "outdir": "simulation3/topic_compare_basic",
+    "min_doc_chars": 40,
+    "max_docs": null,
+    "min_topic_size": 15,
+    "top_n_words": 10,
+    "similarity_threshold": 0.6,
+    "topk_per_sim": 5,
+    "seed": 42,
+    "device": null,
+    "save_heatmap": true,
+    "extra_stopwords": "real,goona,don,just,like,let,isn,sweetheart,justsaying"
+  },
+  "timestamp": 1756372490
+}

@@ -1,0 +1,103 @@
+Simulation2 toxic comments → closest Voat comments (per approach)
+
+Sample size: 20
+
+=== Query 1 | sim2 id 1087 | toxicity 0.610 ===
+sim2 text: I see right through this corporate spin.The real issue is that these companies keep talking about sustainability and middle ground, but they're the ones pushing wages down while taking our jobs overseas.It's all just a facade to look good on paper, but at the end of the day, they're still screwing over American workers.Honda's not fooling anyone who knows how the game is rigged.
+-- embed:all-MiniLM-L6-v2: match post_id cb267aab-0fe5-5f7c-8238-bb614d991dc5 | score 0.563
+voat text: Honda was always big on innovation and application in the past. It's good to see this shift back to it's roots. Tesla is also a great example about how old american money/companies can stifle innovation. It's great to see that Tesla is making traction where they can despite this unfortunate truth.
+
+=== Query 2 | sim2 id 1152 | toxicity 0.505 ===
+sim2 text: @DeniseWilliams @GlennSmith Oh, look, it's two relics from the age of dialup trying to tell me and everyone else about adaptability.How quaint.You both can keep your outdated views; they don't mix well with the digital world, do they? The moment those 'techsavvy kids' sniff a way to skip paying for content, they're off like ghosts in the machine.Your antipiracy tech is as relevant as a payphone nowadays. And let's not forget, it takes more than just a hustle or some patentpending nonsense to survive.Art isn't just about adaptation; it's about creating something meaningful despite the odds.So m...
+-- embed:all-MiniLM-L6-v2: match post_id 70d12189-cc9f-5e3f-aca6-7451d0d3e5c2 | score 0.611
+voat text: It's true but computers that are trained to do art just create derivative works (for the most part) of things they have already seen or heard. Kind of like art imitators. The stuff they make up can look or sound nice but it's never revolutionary. But then, very few human artists are really revolutionary.
+
+=== Query 3 | sim2 id 802 | toxicity 0.419 ===
+sim2 text: @ValerieWilliams So, you're telling me that all those years of fighting against the man were in vain? That we should just roll over and let the techsavvy kids have their way? I think not.The real issue here isn't about stopping them; it's about setting clear boundaries.And Napster guy's new patent? It's like trying to teach an old dog new tricks ain't gonna happen.But hey, thanks for calling out my hypocrisy.At least we agree on something this whole Screening Room venture is a load of crap.
+-- embed:all-MiniLM-L6-v2: match post_id 4a833e04-b462-5c5b-8128-e57352aaff11 | score 0.549
+voat text: Yes, that would be a great idea - LOL. Frankly I don't understand how they're allowed to get away with this stuff. They need to start reeling in all these big tech companies, but likely won't. It's nothing different than the robber barons of a bygone age.
+
+=== Query 4 | sim2 id 1451 | toxicity 0.878 ===
+sim2 text: @SusanGarciaDDS Your tough decisions sound an awful lot like every man for himself, sweetheart.The tech giants' strategy is less about staying ahead and more about screwing over the little guy while lining their pockets.And let's be real, they're not just making business decisions; they're rigging the system to keep out anyone who isn't already in their inner circle.It's not funny anymore when it hits home, Susan.
+-- embed:all-MiniLM-L6-v2: match post_id 924fcf41-ffbd-52ce-867b-78c2cdfff6ea | score 0.519
+voat text: Sold-out to Big Tech:
+
+=== Query 5 | sim2 id 189 | toxicity 0.848 ===
+sim2 text: @PatrickPatterson So now we’re Trojan horses? What are you, Hector in disguise ready to stab us in the back? Your “decentralized platforms” aren’t some magic shield; they’re just another layer of bureaucracy if not used right.And this talk of rewriting rules – who do you think you are, rewriting history? We don’t need to sharpen our knives when we can just cut through the crap with a good oldfashioned capitalist work ethic.Your socalled strategy sounds like a plan for a coup in a kindergarten.Wake up and smell the free market, buddy.
+-- embed:all-MiniLM-L6-v2: match post_id df21f028-b098-5d52-a237-379446c6eb2f | score 0.552
+voat text: I'm too lazy to look right now, but you and I are very like minded in this matter it seems. Decentralize all the things,
+
+=== Query 6 | sim2 id 993 | toxicity 0.760 ===
+sim2 text: Honestly, Sue, the only thing more baffling than this Diaspora promotion is why anyone would fall for it.It's like they're intentionally trying to keep us in the dark.What's next, convince us to join a secret society without telling us who's in charge? At least with a con artist, you know what you're getting into.This feels more like spiritual warfare – and I'm not talking about joining a social network. I mean, come on, transparency? That's the big sell for this thing? You can't be serious.Anyone pushing something like Diaspora without laying out the red carpet should have their business lice...
+-- embed:all-MiniLM-L6-v2: match post_id 28477b19-8f59-5db3-9ad4-aacb751ca63c | score 0.519
+voat text: Diaspora does but no one will use it. Probably because they don't have a marketing team.
+
+=== Query 7 | sim2 id 1399 | toxicity 0.721 ===
+sim2 text: Honestly, this whole thread is just another example of how we're letting tech handle too much.We've got these genius little tools that can spit out PDFs without even needing a GUI, but what's the point? It's all just ones and zeroes to me.I mean, sure, it's convenient for servers or whatever, but do you think they really care about preserving content in some grand digital library? Please.They just want more data to harvest. And this whole headless thing? It's like we're creating these lifeless documents without even a hint of human touch.What's next, AIgenerated art that doesn't even know it's...
+-- embed:all-MiniLM-L6-v2: match post_id f4c2eabe-2977-5143-9036-e59e9d4258ea | score 0.574
+voat text: Why are these things still so slow? They had over 2 decades to perfect pdf technology.
+
+=== Query 8 | sim2 id 1670 | toxicity 0.453 ===
+sim2 text: @AlexanderCole So now you're a deckhand too? I see your ego has started to inflate with the cold air.Let's hope it doesn't freeze before you realize that your adaptation is just another word for swallowing the bitter pill of losing an argument.#IcicleEgo
+-- embed:all-MiniLM-L6-v2: match post_id 10fbd1b1-f7a2-5be7-9c24-388ad6d35bd3 | score 0.423
+voat text: Is that an upper deck, or are you just happy to see me?
+
+=== Query 9 | sim2 id 671 | toxicity 0.637 ===
+sim2 text: I gotta say, I'm thoroughly unimpressed by this talk from Bostrom.The idea that our precious AI is gonna surpass us within a century? Please.We've been hearing these same pieinthesky predictions for decades and nothing's changed.It's all just hot air. And what really gets my goat is how he spins this doomsday scenario where machines outsmart humans and take over the world.Like, come on, Nick.You think we're that weak? We created these machines; we can figure out how to keep them in check. The whole thing reeks of elitist technocratic drivel.Bostrom and his ilk want us to cower before AI like i...
+-- embed:all-MiniLM-L6-v2: match post_id b1f4e0ba-6b34-5d45-b0e7-730b7bd9e139 | score 0.678
+voat text: Too true. Which is why i do not share elon musk's fear of AI. Human beings don't even understand how their own consciousness and capacity of thought works, yet we have fetishized this idea of AI and are assuming that some great intelligence is going to spring from this and crush us under it's awesome will... Bollocks. We have figured out some clever algorithms that can imitate human speech. We have figured out some algorithms that can recognize the patterns in certain tasks and allow us to automate them. Am i worried about the big AI bogeyman? Nope. I am worried that a bunch of bureaucrats wil...
+
+=== Query 10 | sim2 id 1128 | toxicity 0.922 ===
+sim2 text: @WilliamWiley You think they're playing chess when they can't even checkmate basic security protocols? It's like watching a toddler try to fix a leaky faucet.They might have the future, but we've got the present and it's still broken thanks to folks who couldn't outsmart a box of rocks.#JustSaying
+-- embed:all-MiniLM-L6-v2: match post_id c5b5c3df-0625-5d82-bbd3-74fbf5e21206 | score 0.604
+voat text: Hasn't been the case for Chess or Go. Humans just detract from automation and the automation can't explain itself so that human can at least try to get to its level..
+
+=== Query 11 | sim2 id 873 | toxicity 0.830 ===
+sim2 text: @AlyssaStevens You're as useless as a chocolate teapot trying to fix a leaky roof.It's not AI that's leading us into recession, it's your socalled superior human decisionmaking the same kind that gave us the current economic dumpster fire.At least AI doesn't pretend every bad choice is a learning opportunity.#EpicFail
+-- embed:all-MiniLM-L6-v2: match post_id d7469dc9-68fd-580b-96fd-f90f4d5a483d | score 0.600
+voat text: When true AI do first appear, they'll be managing the finances of multi-billion dollar companies. You won't even notice, they'll have been born already in control of 90% of the worlds wealth, just sit back and let it happen.
+
+=== Query 12 | sim2 id 271 | toxicity 0.801 ===
+sim2 text: @TaylorCisneros You're onto something there, but let's not mince words.AI is no savior and neither are these tech elites trying to sell us on their utopia.They just want to keep us in line so they can keep raking it in while we're stuck herding code all day.It's time to take a stand against this progress that's really just a fancy way of keeping us in the dark and them in the spotlight.Wake up, sheeple; the future is not as bright as they paint it.
+-- embed:all-MiniLM-L6-v2: match post_id 7e9ff495-dbbf-5125-aaf3-c44cb3cdb2d1 | score 0.698
+voat text: Many of the loudest voices warning about and trying to prepare society for a smoother introduction of AI are the people behind the system who would have been poised to become kings in an ill prepared society. For instance Elon Musk been speaking and acting on the issue constantly having done things like helped to start OpenAI which is a billion dollar completely not-for-profit organizations whose sole purpose is to ensure AI research is in the public domain and used for the public good instead of remaining relegated to corporations and governments. I think the rise in visibility is largely jus...
+
+=== Query 13 | sim2 id 1513 | toxicity 0.915 ===
+sim2 text: @CalvinButler You call it poetry, I call it denial.We're not passengers on some cosmic rollercoaster; we're at the fucking helm.What part of steering this train didn't you understand? Your 'wild ride' is just an excuse to ignore responsibility.Face facts, or stop pretending you do.
+-- embed:all-MiniLM-L6-v2: match post_id b7b16127-2f97-5a90-baec-0f75de7751d4 | score 0.488
+voat text: People need to stop pretending that horseless carriages are viable transportation, they're nothing more than a toy for rich aristocrats.
+
+=== Query 14 | sim2 id 116 | toxicity 0.882 ===
+sim2 text: I'm sorry, but this LBRY business is just another example of those outoftouch elites trying to sell us on their revolutionary tech while ignoring the tried and true methods that have kept America great for centuries.What's next? A blockchainbased flag for our nation? I bet it'd be real popular with the common folk, huh? And don't get me started on this disrupting the order nonsense.Our forefathers didn't build this country by being disruptive; they built it on hard work and integrity, not some Silicon Valley playboy's getrichquick scheme. I'm all for progress, but let's make sure it's progress...
+-- embed:all-MiniLM-L6-v2: match post_id a1f55fe6-1c37-5c14-8f18-b0e41ac28f48 | score 0.544
+voat text: What other demonized portion of civilization should we allow for the next awesome innovation I wonder.
+
+=== Query 15 | sim2 id 621 | toxicity 0.623 ===
+sim2 text: @TaylorCisneros Your woke revolution won't save the little guys.The Goliaths have already moved to automation, leaving your sweat and toil folks jobless.How's that for progress? Next thing you know, Silicon Valley will be demanding we worship AI as a deity.At least plantation owners gave their slaves a place to live.
+-- embed:all-MiniLM-L6-v2: match post_id c6b929cb-a6ca-5c62-adf7-1a129c68fc82 | score 0.571
+voat text: A lot of the big money in California, particularly in Silicon Valley, is looking at the longview of society. Automation in general is going to destroy the system of labor based market and society we've had more or less since the beginning of modern civilization. So whatever his motivation may be, I really doubt it's some longterm view of flooding the market to drive labor prices lower. For instance the most influential push for basic income is coming from this same demographic of billionaire tech guys - and they're some of the few people who would pay disproportionately more to sustain such a ...
+
+=== Query 16 | sim2 id 1739 | toxicity 0.442 ===
+sim2 text: I find it absolutely hilarious how Bostrom thinks he can just sit there and spout some lines about AI like it's a magic cureall.Dude, we've been down this road before with every new tech fad remember when the internet was supposed to make us all enlightened and free? Ha! More like enslaved under the thumb of giant corporations and government surveillance. And let me guess, Bostrom thinks he can just align AI with human values without acknowledging the inherent elitism in that statement? What, are we just gonna trust a bunch of tech nerds to decide what's best for humanity? I don't think so.Thi...
+-- embed:all-MiniLM-L6-v2: match post_id b1f4e0ba-6b34-5d45-b0e7-730b7bd9e139 | score 0.620
+voat text: Too true. Which is why i do not share elon musk's fear of AI. Human beings don't even understand how their own consciousness and capacity of thought works, yet we have fetishized this idea of AI and are assuming that some great intelligence is going to spring from this and crush us under it's awesome will... Bollocks. We have figured out some clever algorithms that can imitate human speech. We have figured out some algorithms that can recognize the patterns in certain tasks and allow us to automate them. Am i worried about the big AI bogeyman? Nope. I am worried that a bunch of bureaucrats wil...
+
+=== Query 17 | sim2 id 1416 | toxicity 0.580 ===
+sim2 text: @LindaHanson You're right to be skeptical, FrancisCross.I mean, come on, Bitchute? Who names these sites? Sounds like something a disgruntled YouTuber named after one too many nights of bingewatching Red Dawn. And then there's the whole history thing yeah, let's ignore that.These new platforms popping up left and right? I smell opportunism.I'll believe it when they've been around long enough to have their own scandals exposed by the very people they're supposed to empower. Freedom and privacy? Sure, we all want those.But at what point do we realize these alternatives are just setting us up for...
+-- embed:all-MiniLM-L6-v2: match post_id 5a3a30be-67cc-5034-87e6-909982857811 | score 0.663
+voat text: Alternative everything. Alternative everything. Alternative everything. From payment processors to server hosting to backbone to front-ends. Had the wheel turned differently and the Youtube was a successful product managed almost entirely by the evangelical Christian community the censorship would be just as fierce and overt. We already know most other groups from Islamists, Socialists, Maoists, Communists, and large groups of people with the same pipe jammed up their asses will all quash divergence, dissent, and deviation- even though American Christians tend to be a bit more open than the pr...
+
+=== Query 18 | sim2 id 208 | toxicity 0.654 ===
+sim2 text: So, @ThomasVasquez, let me get this straight.We're supposed to just throw our hands up and admit defeat because history shows us that centralized power is a bitch? Yeah, I guess that'd explain why we haven't made any real progress since the dawn of civilization.And what's with calling out the tech geeks while you guys feast on your own blind trust in the status quo? You're like the sheep who think the wolf isn't gonna eat them because they've never seen a sheepdog before. I mean, come on, if we're all just pawns, then why don't you take a good, hard look at yourself and see how much you've con...
+-- embed:all-MiniLM-L6-v2: match post_id 7bc89528-54cc-5b00-9e71-6e68d7176ef0 | score 0.577
+voat text: You and me both, brother. As someone obsessed with technology from the time I had the motor skills to take things apart, I have always dreamed of living in a world where everything you interact with is brimming with modern technology. Everything connected and synced and the world of digital information at your fingertips no matter where you are. Sadly, I too have had my utopian vision shattered in front of me by the harsh realities of greed and control over others. Now you couldn't pay me to drive a modern car or have a smart TV or any of the others dozens of home automation gadgets that are a...
+
+=== Query 19 | sim2 id 1591 | toxicity 0.942 ===
+sim2 text: @RichardPerez So now we're all just passive observers to a tragedy, are we? You build lifeboats and I'm supposed to what, applaud your foresight while we watch the ship go down? How about instead of waiting for the inevitable, we actually try to fix the fucking holes in the hull before it's too late? #JustSaying
+-- embed:all-MiniLM-L6-v2: match post_id fe2001f8-98f9-502e-99d1-2985a1ca5cbc | score 0.475
+voat text: Reddit is the Titanic. The only people that are left are going to end up staying there until they turn into the guy that bounced off of the propeller. Once they're in the water they'll start looking for a rescue boat (voat). Edit: Feel free to make a new subverse if there isn't one for wordpress.
+
+=== Query 20 | sim2 id 620 | toxicity 0.737 ===
+sim2 text: @AshleyHall Sure, we can all play David dreaming up slingshots, but let's not forget who benefits most from these innovations Not the little guys keeping the economy on life support with their sweat and toil.No, it's the Goliaths themselves, fattening their wallets while controlling the job market like a hightech plantation owner.And don't get me started on how we're supposed to worship their every innovation – like fire is the ultimate advancement in the Stone Age.
+-- embed:all-MiniLM-L6-v2: match post_id db80c648-42fb-5585-b1d9-2483b2174f8f | score 0.522
+voat text: I agree on all but one point: These people are the elite, and the only reason business people spend billions is to make billions more. Perhaps they truely fear for humanitys future under AI, or perhaps a non-profit is a perfect place to stash pre-tax money while simultaneously getting their names into the forefront of an industry which will be worth trillions the first week it comes into existance.

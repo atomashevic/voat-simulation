@@ -1,0 +1,12 @@
+{
+  "sim_docs": 1749,
+  "voat_docs": 66577,
+  "sim_topics": 17,
+  "voat_topics": 655,
+  "matches": 77,
+  "coverage_sim": 0.9411764705882353,
+  "similarity_threshold": 0.6,
+  "mean_cosine_top1": 0.7366876527667046,
+  "median_cosine_top1": 0.7515056729316711,
+  "seed": 42
+}

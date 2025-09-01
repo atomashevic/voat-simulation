@@ -1,0 +1,293 @@
+{
+  "subset": "comments",
+  "n_simulation_docs": 914,
+  "n_voat_docs": 5000,
+  "n_simulation_entities": 1441,
+  "n_voat_entities": 4591,
+  "label_js_distance": 0.11431471245467965,
+  "top_entity_jaccard@200": 0.08991825613079019,
+  "top_simulation_entities": [
+    {
+      "entity": "ai",
+      "count": 141
+    },
+    {
+      "entity": "microsoft",
+      "count": 34
+    },
+    {
+      "entity": "america",
+      "count": 30
+    },
+    {
+      "entity": "american",
+      "count": 30
+    },
+    {
+      "entity": "bostrom",
+      "count": 29
+    },
+    {
+      "entity": "bitchute",
+      "count": 28
+    },
+    {
+      "entity": "justsaying",
+      "count": 24
+    },
+    {
+      "entity": "google",
+      "count": 23
+    },
+    {
+      "entity": "project veritas",
+      "count": 22
+    },
+    {
+      "entity": "sunxdcc",
+      "count": 22
+    },
+    {
+      "entity": "libreoffice",
+      "count": 15
+    },
+    {
+      "entity": "silicon valley",
+      "count": 14
+    },
+    {
+      "entity": "wifi",
+      "count": 14
+    },
+    {
+      "entity": "big tech",
+      "count": 13
+    },
+    {
+      "entity": "parler",
+      "count": 13
+    },
+    {
+      "entity": "youtube",
+      "count": 12
+    },
+    {
+      "entity": "doc",
+      "count": 11
+    },
+    {
+      "entity": "lol",
+      "count": 11
+    },
+    {
+      "entity": "tiktok",
+      "count": 11
+    },
+    {
+      "entity": "trojan",
+      "count": 11
+    },
+    {
+      "entity": "intel",
+      "count": 10
+    },
+    {
+      "entity": "toronto",
+      "count": 10
+    },
+    {
+      "entity": "judeochristian",
+      "count": 9
+    },
+    {
+      "entity": "koolaid",
+      "count": 9
+    },
+    {
+      "entity": "demonsaw",
+      "count": 8
+    }
+  ],
+  "top_voat_entities": [
+    {
+      "entity": "google",
+      "count": 137
+    },
+    {
+      "entity": "microsoft",
+      "count": 115
+    },
+    {
+      "entity": "linux",
+      "count": 106
+    },
+    {
+      "entity": "apple",
+      "count": 86
+    },
+    {
+      "entity": "windows",
+      "count": 82
+    },
+    {
+      "entity": "us",
+      "count": 72
+    },
+    {
+      "entity": "ai",
+      "count": 55
+    },
+    {
+      "entity": "windows 10",
+      "count": 47
+    },
+    {
+      "entity": "china",
+      "count": 44
+    },
+    {
+      "entity": "intel",
+      "count": 43
+    },
+    {
+      "entity": "american",
+      "count": 40
+    },
+    {
+      "entity": "nsa",
+      "count": 38
+    },
+    {
+      "entity": "youtube",
+      "count": 37
+    },
+    {
+      "entity": "amd",
+      "count": 35
+    },
+    {
+      "entity": "android",
+      "count": 34
+    },
+    {
+      "entity": "chinese",
+      "count": 31
+    },
+    {
+      "entity": "jews",
+      "count": 30
+    },
+    {
+      "entity": "amazon",
+      "count": 28
+    },
+    {
+      "entity": "tor",
+      "count": 26
+    },
+    {
+      "entity": "america",
+      "count": 21
+    },
+    {
+      "entity": "europe",
+      "count": 20
+    },
+    {
+      "entity": "chrome",
+      "count": 19
+    },
+    {
+      "entity": "english",
+      "count": 19
+    },
+    {
+      "entity": "firefox",
+      "count": 19
+    },
+    {
+      "entity": "mac",
+      "count": 19
+    }
+  ],
+  "label_counts_simulation": [
+    {
+      "label": "ORG",
+      "count": 530
+    },
+    {
+      "label": "PERSON",
+      "count": 453
+    },
+    {
+      "label": "GPE",
+      "count": 247
+    },
+    {
+      "label": "NORP",
+      "count": 103
+    },
+    {
+      "label": "PRODUCT",
+      "count": 49
+    },
+    {
+      "label": "LOC",
+      "count": 33
+    },
+    {
+      "label": "WORK_OF_ART",
+      "count": 18
+    },
+    {
+      "label": "EVENT",
+      "count": 4
+    },
+    {
+      "label": "LAW",
+      "count": 4
+    }
+  ],
+  "label_counts_voat": [
+    {
+      "label": "ORG",
+      "count": 2205
+    },
+    {
+      "label": "PERSON",
+      "count": 924
+    },
+    {
+      "label": "GPE",
+      "count": 649
+    },
+    {
+      "label": "NORP",
+      "count": 397
+    },
+    {
+      "label": "PRODUCT",
+      "count": 166
+    },
+    {
+      "label": "LOC",
+      "count": 118
+    },
+    {
+      "label": "WORK_OF_ART",
+      "count": 66
+    },
+    {
+      "label": "LAW",
+      "count": 26
+    },
+    {
+      "label": "LANGUAGE",
+      "count": 21
+    },
+    {
+      "label": "EVENT",
+      "count": 19
+    }
+  ]
+}

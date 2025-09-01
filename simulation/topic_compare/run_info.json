@@ -1,0 +1,43 @@
+{
+  "args": {
+    "sim2_posts_csv": "simulation3/posts.csv",
+    "madoc_input": "MADOC/voat-technology/voat_technology_madoc.parquet",
+    "madoc_merge_samples": false,
+    "madoc_root": "MADOC/voat-technology",
+    "text_cols": null,
+    "sim2_text_cols": null,
+    "madoc_text_cols": null,
+    "min_docs": 200,
+    "min_topic_size": 5,
+    "top_n_words": 10,
+    "similarity_threshold": 0.65,
+    "max_docs": null,
+    "seed": 42,
+    "device": null,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "embedding_local_path": null,
+    "hf_offline": false,
+    "outdir": "simulation3/topic_compare",
+    "save_heatmap": true,
+    "vectorizer_min_df": 1,
+    "topk_per_sim2": 5,
+    "word_sim_threshold": 0.6,
+    "topic_repr": "hybrid",
+    "centroid_max_docs": 200,
+    "repr_alpha": 0.6,
+    "composite_alpha": 0.85,
+    "remove_contraction_fragments": true,
+    "df_threshold": 0.0,
+    "min_doc_chars": 25,
+    "drop_header_rows": true,
+    "extra_stopwords": "title,body,selftext,text,content,don,ve,isn",
+    "min_token_freq": 3
+  },
+  "sim2_used_text_cols": [
+    "tweet"
+  ],
+  "madoc_used_text_cols": [
+    "content"
+  ],
+  "timestamp": 1756321687
+}

@@ -1,0 +1,18 @@
+{
+  "sim2_docs": 1749,
+  "madoc_docs": 73007,
+  "sim2_topics": 7,
+  "madoc_topics": 766,
+  "matches": 22,
+  "coverage_sim2": 0.8571428571428571,
+  "similarity_threshold": 0.65,
+  "mean_cosine": 0.7034703393777212,
+  "median_cosine": 0.7077806293964386,
+  "mean_jaccard": 0.0,
+  "median_jaccard": 0.0,
+  "mean_soft_jaccard": 0.0,
+  "median_soft_jaccard": 0.0,
+  "unmatched_sim2_count": 1,
+  "unmatched_madoc_count": 752,
+  "seed": 42
+}

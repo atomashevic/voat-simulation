@@ -1,0 +1,93 @@
+
+--------------------------------------------------------------------------------
+Enhanced Core-Periphery Analysis for Simulation: Voat Technology 12
+Multi-Sample Analysis with Quality Assessment
+--------------------------------------------------------------------------------
+
+Date: 2025-08-27 08:55:12
+Input data: results/voat-technology-12/posts.csv
+Number of independent runs: 5
+[1/7] Loading posts data...
+  - Loaded 1750 posts
+[2/7] Building network...
+  - Added 672 nodes (users)
+  - Created 905 edges (comments)
+  - Normalizing edge weights...
+[3/7] Calculating network statistics...
+[4/7] Running enhanced core-periphery detection...
+  - Network is disconnected, focusing on largest connected component...
+  - Largest component: 486 nodes (72.3% of network)
+  - Component has 734 edges, density: 0.0062
+  - Performing 5 independent runs for robustness...
+  - Run 1/5...
+    - Extracting samples from posterior...
+  - Run 2/5...
+    - Extracting samples from posterior...
+  - Run 3/5...
+    - Extracting samples from posterior...
+  - Run 4/5...
+    - Extracting samples from posterior...
+  - Run 5/5...
+    - Extracting samples from posterior...
+  - Found 25 valid partitions with non-empty cores out of 25 total partitions
+[5/7] Analyzing partition ensemble...
+  - Best partition by MDL: Core=26, MDL=4353.73
+  - Best partition by core density: Core=26, Density=0.111
+  - Best partition by composite score: Core=26, Score=0.078
+  - Core size range: 26 - 36 nodes
+  - Average core size: 28.9 nodes
+[6/7] Saving enhanced analysis results...
+[7/7] Creating enhanced visualizations...
+
+Enhanced Core-Periphery Analysis Complete!
+
+Network Statistics:
+- Num Nodes: 672
+- Num Edges: 758
+- Is Directed: False
+- Is Connected: False
+- Avg Degree: 2.255952380952381
+- Avg Weighted Degree: 0.26934523809523686
+- Avg Clustering: 0.004179439397227295
+- Num Components: 163
+- Density: 0.003362075083386559
+- Largest Component Size: 486
+- Largest Component Ratio: 0.7232142857142857
+- Avg Shortest Path Length: N/A (disconnected graph)
+- Diameter: N/A (disconnected graph)
+
+Core-Periphery Analysis Scope:
+- Analyzed largest connected component only
+- Component size: 486 nodes (72.3% of network)
+- Component edges: 734
+- Component density: 0.0062
+
+Best Core-Periphery Partition:
+- Core Size: 26 nodes (5.35% of analyzed component)
+- Periphery Size: 460 nodes (94.65% of analyzed component)
+- MDL Score: 4353.73
+- Composite Quality Score: 0.0776
+
+Partition Quality Metrics:
+- Core Density: 0.1108
+- Core-Periphery Density: 0.0212
+- Modularity: 0.0035
+- Core Avg Degree: 12.50
+
+Top Core Nodes by Weighted Degree:
+- User 199: 5.8000
+- User 556: 4.0000
+- User 90: 3.0000
+- User 68: 2.5000
+- User 258: 2.3000
+- User 10: 2.1000
+- User 554: 1.9000
+- User 814: 1.8000
+- User 236: 1.8000
+- User 497: 1.7000
+
+Results saved to:
+- Enhanced membership: results/voat-technology-12/enhanced_core_periphery_membership.csv
+- Detailed analysis: results/voat-technology-12/partition_analysis.txt
+- Enhanced visualization: results/voat-technology-12/enhanced_core_periphery_visualization.png
+- Complete log: results/voat-technology-12/enhanced_network_analysis.txt

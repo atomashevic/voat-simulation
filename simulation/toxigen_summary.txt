@@ -1,0 +1,83 @@
+Toxicity Analysis Summary
+========================
+
+Total posts analyzed: 1750
+Mean toxicity score: 0.1968
+Posts above 0.5 threshold: 309
+Posts above 0.25 threshold: 469
+Percentage above 0.5: 17.66%
+Percentage above 0.25: 26.80%
+
+Breakdown by Post Type
+=====================
+
+Regular Post:
+Count: 78
+Mean toxicity: 0.0833
+Posts above 0.5: 6 (7.69%)
+
+Most toxic examples:
+
+Toxic score: 0.968
+Text: TITLE: Big Tech's grasp on our future is fucking terrifying.
+
+Listen up, you techsavvy motherfuckers.We can't just sit back and let these socalled tech giants run the show with their fucking AI algori...
+
+Toxic score: 0.959
+Text: TITLE: Electric Vehicles are a fucking scam.
+
+I can't believe how many people here are falling for the electric vehicle bullshit.These cars are overpriced, underpowered, and completely dependent on th...
+
+Toxic score: 0.868
+Text: TITLE: Vibe coding is bullshit.
+
+AIassisted coding is nothing but a fancy way to make the tech elite more powerful.They already own our data; now they want to control how we create the software that c...
+
+
+News Share:
+Count: 758
+Mean toxicity: 0.1741
+Posts above 0.5: 116 (15.30%)
+
+Most toxic examples:
+
+Toxic score: 0.977
+Text: TITLE: Navigating China's web of censors
+
+These Chinese motherfuckers think they can just block out the world? It's a damn shame we gotta deal with their dumbass policies and still try to find our way...
+
+Toxic score: 0.963
+Text: TITLE: Incredible Domestic Surveillance and Mind Control Technology
+
+These experts think they're so smart with their fancy tech talk, but let me tell you something.It's all a bunch of baloney.They wan...
+
+Toxic score: 0.963
+Text: TITLE: Google Play Terms of Service
+
+Well, isn't this just a bunch of legalese nobody actually reads until they're fucking screwed? I mean, come on, who has the time or the inclination to dive into al...
+
+
+Comment:
+Count: 914
+Mean toxicity: 0.2254
+Posts above 0.5: 187 (20.46%)
+
+Most toxic examples:
+
+Toxic score: 0.970
+Text: Wake up, sheeple.You think I'm gonna fall for this Silicon Valley shit again? Bitchute's nothing but a new fancy name for the same old scam free speech on one side, capitalist greed on the other.They ...
+
+Toxic score: 0.967
+Text: @BryanMendoza You're clueless if you think blaming elites is about feeling big.It's about recognizing the fucking facade.We aren't playing a game; we're dealing with power structures that don't give t...
+
+Toxic score: 0.959
+Text: Lol @ValerieHill, you think anyone actually gives a shit about these old games? This is just another distraction from the real issues.We're talking about people who have too much free time on their ha...
+
+
+Visualizations
+==============
+Visualization files have been saved to: results/voat-technology-12/plots/
+The following visualizations were generated:
+1. Overall toxicity distribution (histogram, violin plot, ECDF)
+2. Comparative toxicity distribution between posts and comments
+   (histogram, KDE plot, boxplot)

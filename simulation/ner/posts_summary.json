@@ -1,0 +1,293 @@
+{
+  "subset": "posts",
+  "n_simulation_docs": 836,
+  "n_voat_docs": 5000,
+  "n_simulation_entities": 4018,
+  "n_voat_entities": 5568,
+  "label_js_distance": 0.08984076773333248,
+  "top_entity_jaccard@200": 0.1267605633802817,
+  "top_simulation_entities": [
+    {
+      "entity": "ai",
+      "count": 338
+    },
+    {
+      "entity": "bostrom",
+      "count": 169
+    },
+    {
+      "entity": "nick bostrom",
+      "count": 158
+    },
+    {
+      "entity": "google",
+      "count": 131
+    },
+    {
+      "entity": "toronto",
+      "count": 130
+    },
+    {
+      "entity": "american",
+      "count": 114
+    },
+    {
+      "entity": "america",
+      "count": 93
+    },
+    {
+      "entity": "ted talk",
+      "count": 90
+    },
+    {
+      "entity": "apple",
+      "count": 80
+    },
+    {
+      "entity": "software development company toronto",
+      "count": 76
+    },
+    {
+      "entity": "intel",
+      "count": 75
+    },
+    {
+      "entity": "microsoft",
+      "count": 51
+    },
+    {
+      "entity": "judeochristian",
+      "count": 50
+    },
+    {
+      "entity": "adobe still headed for trial over wage collusion pact",
+      "count": 38
+    },
+    {
+      "entity": "mrc",
+      "count": 37
+    },
+    {
+      "entity": "linux",
+      "count": 33
+    },
+    {
+      "entity": "religiouspatriot conservatives",
+      "count": 32
+    },
+    {
+      "entity": "bitchute",
+      "count": 31
+    },
+    {
+      "entity": "the media research center",
+      "count": 29
+    },
+    {
+      "entity": "android & ios",
+      "count": 28
+    },
+    {
+      "entity": "antielite",
+      "count": 28
+    },
+    {
+      "entity": "americans",
+      "count": 27
+    },
+    {
+      "entity": "big tech",
+      "count": 26
+    },
+    {
+      "entity": "joe",
+      "count": 26
+    },
+    {
+      "entity": "china",
+      "count": 25
+    }
+  ],
+  "top_voat_entities": [
+    {
+      "entity": "microsoft",
+      "count": 183
+    },
+    {
+      "entity": "google",
+      "count": 143
+    },
+    {
+      "entity": "apple",
+      "count": 96
+    },
+    {
+      "entity": "us",
+      "count": 86
+    },
+    {
+      "entity": "windows 10",
+      "count": 69
+    },
+    {
+      "entity": "android",
+      "count": 62
+    },
+    {
+      "entity": "amazon",
+      "count": 59
+    },
+    {
+      "entity": "trump",
+      "count": 55
+    },
+    {
+      "entity": "ai",
+      "count": 53
+    },
+    {
+      "entity": "linux",
+      "count": 53
+    },
+    {
+      "entity": "intel",
+      "count": 46
+    },
+    {
+      "entity": "china",
+      "count": 45
+    },
+    {
+      "entity": "windows",
+      "count": 37
+    },
+    {
+      "entity": "youtube",
+      "count": 37
+    },
+    {
+      "entity": "fcc",
+      "count": 35
+    },
+    {
+      "entity": "uk",
+      "count": 35
+    },
+    {
+      "entity": "chinese",
+      "count": 33
+    },
+    {
+      "entity": "fbi",
+      "count": 32
+    },
+    {
+      "entity": "twitter",
+      "count": 30
+    },
+    {
+      "entity": "amd",
+      "count": 28
+    },
+    {
+      "entity": "jewish",
+      "count": 22
+    },
+    {
+      "entity": "tesla",
+      "count": 21
+    },
+    {
+      "entity": "ibm",
+      "count": 20
+    },
+    {
+      "entity": "jews",
+      "count": 20
+    },
+    {
+      "entity": "u.s.",
+      "count": 20
+    }
+  ],
+  "label_counts_simulation": [
+    {
+      "label": "ORG",
+      "count": 1817
+    },
+    {
+      "label": "PERSON",
+      "count": 983
+    },
+    {
+      "label": "GPE",
+      "count": 666
+    },
+    {
+      "label": "NORP",
+      "count": 319
+    },
+    {
+      "label": "LOC",
+      "count": 87
+    },
+    {
+      "label": "PRODUCT",
+      "count": 69
+    },
+    {
+      "label": "WORK_OF_ART",
+      "count": 56
+    },
+    {
+      "label": "LAW",
+      "count": 14
+    },
+    {
+      "label": "EVENT",
+      "count": 7
+    }
+  ],
+  "label_counts_voat": [
+    {
+      "label": "ORG",
+      "count": 2997
+    },
+    {
+      "label": "PERSON",
+      "count": 1089
+    },
+    {
+      "label": "GPE",
+      "count": 683
+    },
+    {
+      "label": "NORP",
+      "count": 320
+    },
+    {
+      "label": "PRODUCT",
+      "count": 168
+    },
+    {
+      "label": "WORK_OF_ART",
+      "count": 128
+    },
+    {
+      "label": "LOC",
+      "count": 125
+    },
+    {
+      "label": "EVENT",
+      "count": 28
+    },
+    {
+      "label": "LAW",
+      "count": 23
+    },
+    {
+      "label": "LANGUAGE",
+      "count": 7
+    }
+  ]
+}

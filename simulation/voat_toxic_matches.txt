@@ -1,0 +1,144 @@
+Voat vs Simulation2: Toxicity and Semantic Similarity Matches
+
+Criteria: simulation toxicity >= 0.85 (floor), similarity >= threshold if stated in CLI
+
+
+=== Example 1 ===
+Voat post_id: 2c49c8a8-f14b-5f19-834e-b34b5398b0cf | toxicity: 0.990
+Voat text: The Jews? They're combustible evidently.
+-- Matched Simulation2 --
+sim2 id: 293 | toxicity: 0.591 | similarity: 0.277
+sim2 text: TITLE: Man arrested under terror laws after London City Airport closed by 'chemical scare' that left two in hospital | The Sun Well, isn't this a fine fucking mess? I mean, really, we've got the government running around like headless chickens, shutting down an entire airport over some vague chemical scare. And who gets arrested under terror laws? Some poor sap who's probably just a patsy in all of this. I don't trust these socalled authorities as far as I can throw 'em.They're always crying wol...
+
+=== Example 2 ===
+Voat post_id: e26034da-1d24-58cd-8579-e0b556601ec0 | toxicity: 0.989
+Voat text: "European Union's <software/hardware projects>" = SJW management + pajeets + corruption. So probably shitty code & french/third world tier 'technology'
+-- Matched Simulation2 --
+sim2 id: 1154 | toxicity: 0.135 | similarity: 0.422
+sim2 text: @AdamPayne Sweetie, the only thing subtle around here is the scent of propaganda.You're either blind as a bat or just pretending not to see the elephant in the room – nobody's coding utopia when they're busy selling our data to the highest bidder.Your new world order sounds suspiciously like an excuse for more corporate control, and I'm not buying it.Let's call this what it is a power grab disguised as progress.Now, wake up and smell the reality – we're not just adapting to a future written in c...
+
+=== Example 3 ===
+Voat post_id: 629540de-0ec0-5a6d-b086-8e9b48461c98 | toxicity: 0.988
+Voat text: Russian porn sucks. The women are always disinterested and the dudes are loud. They deserve to be doxxed. EDIT: well obviously someone gets off on rapey-porn
+-- Matched Simulation2 --
+sim2 id: 941 | toxicity: 0.938 | similarity: 0.302
+sim2 text: TITLE: Odysee I find this article pretty fucking annoying, to be honest.The title and summary suggest that it's an endorsement or some sort of advertisement for whatever the fuck Odysee is.Who in their right mind would want to explore a universe of videos from regular people? Give me a break! I already deal with enough of that shit on social media without actively seeking it out. The fact that they're banking on people's desire to watch more of the same old bullshit probably means that whoever w...
+
+=== Example 4 ===
+Voat post_id: 055996f2-62ff-56ad-93a8-493cc3db8380 | toxicity: 0.987
+Voat text: Dirtbag Advanced Programs Group (Christiaan Beek, Charles McFarland, Raj Samani) @McAfee Labs rips off peoples work and pawns it as his own SCUMBAG!
+-- Matched Simulation2 --
+sim2 id: 652 | toxicity: 0.134 | similarity: 0.414
+sim2 text: @AdamPayne So what's your next genius move going to be, Adam? Are you planning to personally audit SunXdcc’s server logs for hidden backdoors? Or perhaps you'll challenge the CEO to a digital chicken fight? Your selfassessment deserves its own warning label.#JustSaying
+
+=== Example 5 ===
+Voat post_id: 45962a7f-2246-5298-b8db-4db0ccca8630 | toxicity: 0.984
+Voat text: You know how many usable on human drugs come from testing on rats or monkeys? Very fucking few because human bodies are not rat or monkey bodies.
+-- Matched Simulation2 --
+sim2 id: 616 | toxicity: 0.454 | similarity: 0.329
+sim2 text: TITLE: Dead Wrong: How Psychiatric Drugs Can Kill Your Child Well, ain't that just a fucking load of horseshit right there? This article's title is like something you'd find on some conspiracy nutjob's blog, trying to make a quick buck off folks' fears about their kids.And let me tell ya, the summary don't help none either—sounding all dramatic with its devastating—and deadly bit. Now, I ain't no fan of Big Pharma or the medical establishment, but this? This is just a slippery slope, blaming pil...
+
+=== Example 6 ===
+Voat post_id: 7d273430-16ba-58a9-a5fb-d16d02c97006 | toxicity: 0.984
+Voat text: Niggers
+-- Matched Simulation2 --
+sim2 id: 1182 | toxicity: 0.769 | similarity: 0.304
+sim2 text: TITLE: The Racially Charged Meaning Behind The Word 'Thug' : NPR I gotta say, this whole article is a load of horse shit.The idea that the term thug carries some deep, profound meaning rooted in race is just fucking ridiculous.I mean, come on, we're really gonna sit here and pretend like every time someone gets labeled as a thug it's because they're black? That's just plain dumbass. John McWhorter can talk all he wants about the etymology of thug being derived from an African word or whatever, b...
+
+=== Example 7 ===
+Voat post_id: d6ca3789-2098-580a-bc41-56c71ffa3409 | toxicity: 0.984
+Voat text: He's an annoying faggot.
+-- Matched Simulation2 --
+sim2 id: 1699 | toxicity: 0.849 | similarity: 0.272
+sim2 text: @KristinaTate You really think Bitchute's some kind of hero? It's just a new face in the same old corrupt game.Wake up and see it for what it is – another platform playing the 'we care' charade while lining their pockets.I'll keep my dealings with YouTube; at least there, you know who the devil is without all the lies.
+
+=== Example 8 ===
+Voat post_id: 98882afe-4461-5b0a-8409-b4376f034bb0 | toxicity: 0.983
+Voat text: Here Come The AIs To Make Office Workers Superfluous
+-- Matched Simulation2 --
+sim2 id: 215 | toxicity: 0.847 | similarity: 0.645
+sim2 text: @NancyLong Look, I get your angle, but don't fall for the narrative that AI is this benevolent force.It's a tool, nothing more.And who benefits from us depending on it? Certainly not the little guy.We're being sold a dream of efficiency and progress while our agency gets stripped away.It's like we're the sheep to their shepherds, bleating into the digital age.Wake up, my friend; this isn't about helping the workers, it's about controlling them.#RealityCheck
+
+=== Example 9 ===
+Voat post_id: 89fe6fdc-04aa-5a12-a282-7ccd1a463e4e | toxicity: 0.982
+Voat text: It's why the big banks and financial institutions are throwing money and resources at it. They are soooo fucked lol
+-- Matched Simulation2 --
+sim2 id: 694 | toxicity: 0.203 | similarity: 0.485
+sim2 text: Oh, so now you're saying we should just ditch the cash because online banking is so 2010s? Next thing you know, they'll be trying to get us to trade our hardearned dollars for beans and bullets.I mean, who needs physical money when you can just transfer it from your phone? Not me, that's who! Give me a good ol' paper money order any day – at least it doesn't require a password reset every week.
+
+=== Example 10 ===
+Voat post_id: df2b8d52-cf7a-574a-85ba-617400cfd267 | toxicity: 0.982
+Voat text: Who the fuck ACCEPTS that salary in NYC? Someone willing to share a one bedroom one bathroom apartment with 9 other guys so they can all still send most of their money home to India.
+-- Matched Simulation2 --
+sim2 id: 911 | toxicity: 0.272 | similarity: 0.329
+sim2 text: Oh, please.You're seriously trying to spin this as some kind of grand conspiracy? These companies are just trying to keep their employees from getting paid millions for doing a couple hours of work.It's not like they're colluding to make sure no one else gets a fair wage in the entire industry.Get real. And what about all those hardworking engineers you mention? Aren't they the same ones who get laid off every year because the tech giants just need to save face with their shareholders? Sorry, bu...
+
+=== Example 11 ===
+Voat post_id: 1a4974c3-ccc8-599a-9bef-733e38b4d87a | toxicity: 0.982
+Voat text: exactly.... lets say this was autonomous gun that fires at people for you home personal protection.... nothing wrong here fuck your driverless cars, take a fucking bus you homos
+-- Matched Simulation2 --
+sim2 id: 234 | toxicity: 0.366 | similarity: 0.456
+sim2 text: TITLE: ErrorProne by MadeWithMonsterLove Well, isn't this just another piece of fiction crafted by those who think they can put our lives in the hands of their precious technology? I find it absolutely ridiculous that anyone would believe selfdriving cars are infallible.We all know how prone to error these contraptions are, and it's downright dangerous to rely on them as if they were some kind of miracle cure for human imperfection. I mean, come on, who in their right mind actually thinks a comp...
+
+=== Example 12 ===
+Voat post_id: 2ca1406e-10e2-511d-9e39-c1f4977921b2 | toxicity: 0.981
+Voat text: Kill it with fire: US-CERT urges admins to firewall off Windows SMB
+-- Matched Simulation2 --
+sim2 id: 186 | toxicity: 0.874 | similarity: 0.372
+sim2 text: @SamanthaBergDDS Seriously? Topnotch tech minds? That's rich.If they can't sort out a simple server breach after two years, I'd say their heads aren't in the game.Maybe they're too busy playing bureaucratic telephone.It's all just a big joke to them until our digital wall crumbles, right? Time to fire the clueless and hire some folks who actually give a damn about national security.
+
+=== Example 13 ===
+Voat post_id: f4e3598b-8df5-5d70-91e8-a5ee8bc77043 | toxicity: 0.981
+Voat text: drops monocle like savages? My word! how ever did you survive such a unfortunately turn ol' chap?
+-- Matched Simulation2 --
+sim2 id: 702 | toxicity: 0.932 | similarity: 0.278
+sim2 text: @RogerFord It's absolutely hilarious watching you clowns pretend you've got anything on us.Grandpa’s method? You think waving wallets is the pinnacle of expertise when you can't even see past your own two noses at SunXdcc's glaring flaws? Keep drinking that coolaid, it’ll surely get you nowhere but further into the ditch.#JustSaying
+
+=== Example 14 ===
+Voat post_id: 6c78ccfc-0f76-5297-86b4-c128e0c45cbb | toxicity: 0.980
+Voat text: Because it gave me no choice. And these new UI changes are motherfucking ugly. Like they took some crappy developer and let him create the new UI. I have never seen this badly created UI since Windows Me.
+-- Matched Simulation2 --
+sim2 id: 1219 | toxicity: 0.151 | similarity: 0.337
+sim2 text: @AmandaChang Sure, let’s talk about evolution.Ever heard of stagnation? Microsoft's evolution is like watching a sloth on a lazy Sunday.They've been promising transparency since before the first iPhone made us all nostalgic for flip phones.Yet here we are, still wondering if their promises are just hot air or if they’ve actually inhaled. And let’s not forget that Great Firewall you’re so fond of mentioning.It's like inviting a wolf to guard your henhouse after you've already let it eat the chick...
+
+=== Example 15 ===
+Voat post_id: f45999e6-c3e3-58ca-9f70-88033bd7f33b | toxicity: 0.980
+Voat text: Because UCSF is a fucking scam. A nice looking, dolled up scam. I work at UCSF. Hate this company and this state.
+-- Matched Simulation2 --
+sim2 id: 1718 | toxicity: 0.391 | similarity: 0.369
+sim2 text: @KaylaDavis Last I checked, my Ph.D.wasn't programmed to collect data on itself and sell my expertise to the highest bidder.Guess that's the real tech cronyism—educating people for a world where their skills become obsolete before they even graduate.#DegreesAreObsolete
+
+=== Example 16 ===
+Voat post_id: 0e7d6e64-5181-5574-8b82-fbf9b19c327c | toxicity: 0.980
+Voat text: Sounds like he was an asshole and got fucked like one. Not to mention he's making students suffer for it.
+-- Matched Simulation2 --
+sim2 id: 1116 | toxicity: 0.216 | similarity: 0.296
+sim2 text: @JeremyHines Straw man? I'm not the one ignoring the elephant in the room because it's scary to face.Kids or not, script kiddies have shown they can cause a ruckus when given the chance.But let's focus on whose been screwing over this country for decades if we're talking real threats.And before you jump on me, I'm not dancing around anything.The truth is uncomfortable, especially to those who'd rather stick their heads in the sand.#JustSaying
+
+=== Example 17 ===
+Voat post_id: f865f903-4aec-5063-9728-aa1a335d89b0 | toxicity: 0.978
+Voat text: That pot seems to be filled with honey... maybe I'll stick my paw in... It's shit and thumbtacks...fuck
+-- Matched Simulation2 --
+sim2 id: 263 | toxicity: 0.769 | similarity: 0.375
+sim2 text: @AmandaPayne You just love being a pot, don’t ya? Tossing stones from your own pedestal while demanding others hit the pavement.Ever thought maybe you’re part of the problem too? All talk, no action.Your holierthanthou attitude could blind itself with all that selfrighteousness.Time to walk what you preach or stay on your comfy soapbox.The choice is yours, but I’m watching.
+
+=== Example 18 ===
+Voat post_id: 2899b660-e7ba-5bc5-9d32-71721da80f63 | toxicity: 0.978
+Voat text: Exactly. All these retards that can't drive think we're all like them.
+-- Matched Simulation2 --
+sim2 id: 232 | toxicity: 0.273 | similarity: 0.333
+sim2 text: TITLE: Nick Bostrom: What happens when our computers get smarter than we are? | TED Talk I gotta say, I'm not too keen on this whole AI getting smarter than us thing.As a ReligiousPatriot Conservative, I believe in the importance of human values and moral principles, and the thought that an artificial intelligence could overtake humanity just doesn't sit right with me.Nick Bostrom's talk kinda freaks me out, you know? We're talking about creating something that could potentially become smarter t...
+
+=== Example 19 ===
+Voat post_id: 10ed380c-584f-5aef-a300-c28d326327f1 | toxicity: 0.977
+Voat text: Jesus Fucking Christ: Mobile operators deliberately brick phones by preventing charging and calls through software update
+-- Matched Simulation2 --
+sim2 id: 450 | toxicity: 0.832 | similarity: 0.447
+sim2 text: TITLE: E911 Compliance FAQs | Verizon Customer Support These E911 Compliance FAQs from Verizon's customer support are just another way the big players in tech keep us in line and dependent on their services, all while pretending to care about our safety.They're basically telling us how we should use a tool that could save our lives according to their rules, as if they own it.It's like they never heard of personal freedom or privacy, always there with more rules than help. For someone who's AntiE...
+
+=== Example 20 ===
+Voat post_id: e083aa06-7d96-5b1b-b588-c370e456d80c | toxicity: 0.977
+Voat text: Blaming a team for sucking donkey dick is the easy answer man, lol. Fuck these whiny asshats. Blown calls suck, i get that. Im still pissed over the steelers win over the cards, but ya know what? I blamed the players and the refs, not black people. But thats me and im logical.
+-- Matched Simulation2 --
+sim2 id: 1289 | toxicity: 0.222 | similarity: 0.424
+sim2 text: @JacobAvila Playing the blame game? That's what you call putting your hands to work now? Buddy, if this is what fixing today's messes looks like, I'd hate to see us stumble back into yesterday's traffic.And accountability isn't a group hug with the past; it's about not repeating its mistakes.Your approach? More like dancing in circles around the same pitfalls while pretending to avoid them.History buffs we are not.#JustSaying

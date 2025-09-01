@@ -46,11 +46,7 @@ archives/
 reports/
 topic_comparison_results/
 
-# Ignore full simulation outputs but keep configs
-simulation*/**
-!simulation*/config/
-!simulation*/config/*.json
-!simulation*/config/*.txt
+
 
 # Ignore reddit-simulation outputs but keep configs
 reddit-simulation/**
