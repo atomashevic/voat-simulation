@@ -1,4 +1,4 @@
-# ysocial-simulations
+# YSocial Simulation of Voat's v/technology
 
 Scripts and supporting modules to (a) sample and analyze real Reddit / Voat datasets (MADOC exports), (b) analyze and visualize simulation outputs, and (c) compare structure, content, reputation, toxicity, and topic dynamics across communities and between real and simulated corpora.
 
