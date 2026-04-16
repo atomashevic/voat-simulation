@@ -8,6 +8,9 @@ __pycache__/
 .venv/
 venv/
 .env
+.vscode/
+.cursor/
+.claude/
 
 # Build / scratch
 build/
@@ -51,4 +54,3 @@ urls.md
 # SQLite and parquet generated outside retained data/
 *.sqlite-shm
 *.sqlite-wal
-
