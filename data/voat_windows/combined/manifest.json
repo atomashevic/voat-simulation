@@ -1,0 +1,7 @@
+{
+  "files": [
+    "voat_technology_madoc.parquet",
+    "voat_technology_madoc_7d.parquet"
+  ],
+  "note": "Compact combined Voat corpus parquets retained for legacy topic, toxicity, and embedding pipelines."
+}

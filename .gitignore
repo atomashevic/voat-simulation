@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Build / scratch
+build/
+tmp/
+*.log
+nohup.out
+.DS_Store
+
+# Generated analysis outputs
+results/
+simulation/
+simulation2/
+simulation3/
+backup/
+workshop/
+figures_llm_reddit_client/
+
+# Legacy data trees not retained in the public package
+MADOC/
+runs/
+sensitivity/
+
+# Nested manuscript repository
+paper/
+
+# Notebooks and local scratch
+*.ipynb
+.ipynb_checkpoints/
+chain-example.md
+conflict_chains_top20.txt
+literature_review_summary.md
+main.py
+papers/
+urls.md
+
+# Large generated assets
+*.png
+*.pdf
+*.svg
+
+# SQLite and parquet generated outside retained data/
+*.sqlite-shm
+*.sqlite-wal
+

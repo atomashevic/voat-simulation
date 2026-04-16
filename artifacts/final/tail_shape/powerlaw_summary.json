@@ -1,0 +1,38 @@
+{
+  "simulation": {
+    "n_networks": 30,
+    "alpha_mean": 2.188,
+    "alpha_std": 0.335,
+    "alpha_ci95": [
+      1.954,
+      2.933
+    ],
+    "xmin_median": 2.0,
+    "D_mean": 0.0854,
+    "D_std": 0.0131,
+    "vs_lognormal_R_mean": -3.221,
+    "vs_lognormal_p_mean": 0.023,
+    "vs_lognormal_favours_pl": 0,
+    "vs_exponential_R_mean": -1.281,
+    "vs_exponential_p_mean": 0.298,
+    "vs_exponential_favours_pl": 3
+  },
+  "voat_uniform": {
+    "n_networks": 30,
+    "alpha_mean": 2.349,
+    "alpha_std": 0.122,
+    "alpha_ci95": [
+      2.2,
+      2.601
+    ],
+    "xmin_median": 1.0,
+    "D_mean": 0.0194,
+    "D_std": 0.0074,
+    "vs_lognormal_R_mean": -0.73,
+    "vs_lognormal_p_mean": 0.489,
+    "vs_lognormal_favours_pl": 5,
+    "vs_exponential_R_mean": 3.033,
+    "vs_exponential_p_mean": 0.013,
+    "vs_exponential_favours_pl": 30
+  }
+}

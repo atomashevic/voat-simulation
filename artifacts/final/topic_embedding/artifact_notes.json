@@ -1,0 +1,13 @@
+{
+  "figure3_main_asset": "Figure3_linear_logx1.png",
+  "figure5_pair": {
+    "simulation_run": "run21",
+    "voat_sample": "sample_11"
+  },
+  "figure7_best_run": {
+    "simulation_run": "run11",
+    "comments_mean_cosine": 0.5981,
+    "posts_mean_cosine": 0.6055
+  },
+  "figure8_source": "paper/figures/convergence_entropy_benchmark_comparison.png"
+}

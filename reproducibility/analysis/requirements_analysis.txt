@@ -1,0 +1,57 @@
+# YSocial Analysis Requirements
+# Post-processing scripts for validation metrics and figures
+# Python 3.12+
+
+# Data science core
+numpy==2.1.3
+pandas==2.2.3
+scipy==1.15.2
+matplotlib==3.10.0
+seaborn==0.13.2
+
+# Network analysis
+networkx==3.4.2
+python-louvain==0.16
+
+# NLP and embeddings
+sentence-transformers==5.1.0
+transformers==4.49.0
+torch==2.6.0
+tokenizers==0.21.0
+safetensors==0.5.2
+huggingface-hub==0.28.1
+
+# Topic modeling
+bertopic==0.17.3
+hdbscan==0.8.40
+umap-learn==0.5.9.post2
+pynndescent==0.5.13
+
+# Machine learning
+scikit-learn==1.7.2
+
+# NLP utilities
+spacy==3.8.7
+nltk==3.9.1
+
+# Visualization
+plotly==6.3.0
+
+# Utilities
+tqdm==4.67.1
+joblib==1.4.2
+regex==2024.11.6
+PyYAML==6.0.2
+
+# Data formats
+pyarrow==19.0.1
+
+# Numerical
+numba==0.61.2
+llvmlite==0.44.0
+
+# CUDA support (optional, for GPU acceleration)
+# nvidia-cublas-cu12==12.4.5.8
+# nvidia-cuda-runtime-cu12==12.4.127
+# nvidia-cudnn-cu12==9.1.0.70
+

@@ -1,0 +1,453 @@
+{
+  "artifacts": [
+    {
+      "file": "artifacts/final/benchmark/benchmark_report.json",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/benchmark/claim_audit.json",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/benchmark/figure_audit.json",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/benchmark/sim_metrics_all.csv",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/benchmark/sim_metrics_ci.csv",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/benchmark/table_network_analysis.csv",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/benchmark/table_overall_voat.csv",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/benchmark/voat_baseline_ci.json",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/benchmark/voat_metrics_ci.csv",
+      "section": "main+SI",
+      "claim_or_table": "benchmark tables and audit summaries",
+      "source_script": "scripts/aggregate_30runs.py / scripts/build_voat_baseline.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/power_analysis/power_analysis_results.json",
+      "section": "SI",
+      "claim_or_table": "benchmark power analysis",
+      "source_script": "scripts/power_analysis_30runs.py",
+      "inputs": [
+        "artifacts/final/benchmark/sim_metrics_ci.csv",
+        "artifacts/final/benchmark/voat_metrics_ci.csv"
+      ]
+    },
+    {
+      "file": "artifacts/final/power_analysis/power_analysis_summary.txt",
+      "section": "SI",
+      "claim_or_table": "benchmark power analysis",
+      "source_script": "scripts/power_analysis_30runs.py",
+      "inputs": [
+        "artifacts/final/benchmark/sim_metrics_ci.csv",
+        "artifacts/final/benchmark/voat_metrics_ci.csv"
+      ]
+    },
+    {
+      "file": "artifacts/final/tail_shape/powerlaw_fits.csv",
+      "section": "SI",
+      "claim_or_table": "formal tail-shape analysis",
+      "source_script": "scripts/powerlaw_fit.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/tail_shape/powerlaw_summary.json",
+      "section": "SI",
+      "claim_or_table": "formal tail-shape analysis",
+      "source_script": "scripts/powerlaw_fit.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/topic_embedding/table_embed_sim.csv",
+      "section": "main+SI",
+      "claim_or_table": "topic and embedding summaries",
+      "source_script": "scripts/voat_sim_embedding_similarity.py / scripts/voat_topic_compare.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/topic_embedding/table_topic_matches_run01_rank1.csv",
+      "section": "main+SI",
+      "claim_or_table": "topic and embedding summaries",
+      "source_script": "scripts/voat_sim_embedding_similarity.py / scripts/voat_topic_compare.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/topic_embedding/table_topic_matches_run01_top8.csv",
+      "section": "main+SI",
+      "claim_or_table": "topic and embedding summaries",
+      "source_script": "scripts/voat_sim_embedding_similarity.py / scripts/voat_topic_compare.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/topic_embedding/artifact_notes.json",
+      "section": "main+SI",
+      "claim_or_table": "topic and embedding summaries",
+      "source_script": "scripts/voat_sim_embedding_similarity.py / scripts/voat_topic_compare.py",
+      "inputs": [
+        "data/benchmark_runs",
+        "data/voat_windows/validation"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/persona/comparison_c0_c1_c2.json",
+      "section": "SI",
+      "claim_or_table": "persona OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/persona/tables/activity_table.csv",
+      "section": "SI",
+      "claim_or_table": "persona OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/persona/tables/entropy_table.csv",
+      "section": "SI",
+      "claim_or_table": "persona OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/persona/tables/network_table.csv",
+      "section": "SI",
+      "claim_or_table": "persona OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/persona/tables/topic_table.csv",
+      "section": "SI",
+      "claim_or_table": "persona OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/persona/tables/toxicity_table.csv",
+      "section": "SI",
+      "claim_or_table": "persona OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/temperature/comparison_c0_c3_c4.json",
+      "section": "SI",
+      "claim_or_table": "temperature OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/temperature/tables/activity_table.csv",
+      "section": "SI",
+      "claim_or_table": "temperature OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/temperature/tables/entropy_table.csv",
+      "section": "SI",
+      "claim_or_table": "temperature OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/temperature/tables/network_table.csv",
+      "section": "SI",
+      "claim_or_table": "temperature OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/temperature/tables/topic_table.csv",
+      "section": "SI",
+      "claim_or_table": "temperature OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/temperature/tables/toxicity_table.csv",
+      "section": "SI",
+      "claim_or_table": "temperature OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/budget/comparison_c0_c5_c6.json",
+      "section": "SI",
+      "claim_or_table": "budget OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/budget/tables/activity_table.csv",
+      "section": "SI",
+      "claim_or_table": "budget OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/budget/tables/entropy_table.csv",
+      "section": "SI",
+      "claim_or_table": "budget OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/budget/tables/network_table.csv",
+      "section": "SI",
+      "claim_or_table": "budget OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/budget/tables/topic_table.csv",
+      "section": "SI",
+      "claim_or_table": "budget OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/budget/tables/toxicity_table.csv",
+      "section": "SI",
+      "claim_or_table": "budget OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/cpr/comparison_c0_c7_c8.json",
+      "section": "SI",
+      "claim_or_table": "cpr OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/cpr/tables/activity_table.csv",
+      "section": "SI",
+      "claim_or_table": "cpr OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/cpr/tables/entropy_table.csv",
+      "section": "SI",
+      "claim_or_table": "cpr OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/cpr/tables/network_table.csv",
+      "section": "SI",
+      "claim_or_table": "cpr OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/cpr/tables/topic_table.csv",
+      "section": "SI",
+      "claim_or_table": "cpr OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/cpr/tables/toxicity_table.csv",
+      "section": "SI",
+      "claim_or_table": "cpr OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/churn/comparison_c0_c9_c10.json",
+      "section": "SI",
+      "claim_or_table": "churn OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/churn/tables/activity_table.csv",
+      "section": "SI",
+      "claim_or_table": "churn OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/churn/tables/entropy_table.csv",
+      "section": "SI",
+      "claim_or_table": "churn OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/churn/tables/network_table.csv",
+      "section": "SI",
+      "claim_or_table": "churn OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/churn/tables/topic_table.csv",
+      "section": "SI",
+      "claim_or_table": "churn OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/churn/tables/toxicity_table.csv",
+      "section": "SI",
+      "claim_or_table": "churn OAT local robustness panel",
+      "source_script": "scripts/compare_sensitivity_conditions.py",
+      "inputs": [
+        "data/sensitivity_runs"
+      ]
+    },
+    {
+      "file": "artifacts/final/sensitivity/sensitivity_table.csv",
+      "section": "SI",
+      "claim_or_table": "combined OAT robustness table",
+      "source_script": "scripts/workshop_sensitivity_tornado.py",
+      "inputs": [
+        "artifacts/final/sensitivity"
+      ]
+    }
+  ]
+}

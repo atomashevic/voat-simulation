@@ -1,0 +1,246 @@
+{
+  "count": 30,
+  "note": "Validation windows are copied from the non-overlapping family with sample_2..31 mapped to public windows 1..30.",
+  "windows": [
+    {
+      "public_id": "window_01",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_2",
+      "source_parquet": "voat_nonoverlap_1.parquet",
+      "retained_file": "data/voat_windows/validation/window_01/voat_nonoverlap_1.parquet"
+    },
+    {
+      "public_id": "window_02",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_3",
+      "source_parquet": "voat_nonoverlap_2.parquet",
+      "retained_file": "data/voat_windows/validation/window_02/voat_nonoverlap_2.parquet"
+    },
+    {
+      "public_id": "window_03",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_4",
+      "source_parquet": "voat_nonoverlap_3.parquet",
+      "retained_file": "data/voat_windows/validation/window_03/voat_nonoverlap_3.parquet"
+    },
+    {
+      "public_id": "window_04",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_5",
+      "source_parquet": "voat_nonoverlap_4.parquet",
+      "retained_file": "data/voat_windows/validation/window_04/voat_nonoverlap_4.parquet"
+    },
+    {
+      "public_id": "window_05",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_6",
+      "source_parquet": "voat_nonoverlap_5.parquet",
+      "retained_file": "data/voat_windows/validation/window_05/voat_nonoverlap_5.parquet"
+    },
+    {
+      "public_id": "window_06",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_7",
+      "source_parquet": "voat_nonoverlap_6.parquet",
+      "retained_file": "data/voat_windows/validation/window_06/voat_nonoverlap_6.parquet"
+    },
+    {
+      "public_id": "window_07",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_8",
+      "source_parquet": "voat_nonoverlap_7.parquet",
+      "retained_file": "data/voat_windows/validation/window_07/voat_nonoverlap_7.parquet"
+    },
+    {
+      "public_id": "window_08",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_9",
+      "source_parquet": "voat_nonoverlap_8.parquet",
+      "retained_file": "data/voat_windows/validation/window_08/voat_nonoverlap_8.parquet"
+    },
+    {
+      "public_id": "window_09",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_10",
+      "source_parquet": "voat_nonoverlap_9.parquet",
+      "retained_file": "data/voat_windows/validation/window_09/voat_nonoverlap_9.parquet"
+    },
+    {
+      "public_id": "window_10",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_11",
+      "source_parquet": "voat_nonoverlap_10.parquet",
+      "retained_file": "data/voat_windows/validation/window_10/voat_nonoverlap_10.parquet"
+    },
+    {
+      "public_id": "window_11",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_12",
+      "source_parquet": "voat_nonoverlap_11.parquet",
+      "retained_file": "data/voat_windows/validation/window_11/voat_nonoverlap_11.parquet"
+    },
+    {
+      "public_id": "window_12",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_13",
+      "source_parquet": "voat_nonoverlap_12.parquet",
+      "retained_file": "data/voat_windows/validation/window_12/voat_nonoverlap_12.parquet"
+    },
+    {
+      "public_id": "window_13",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_14",
+      "source_parquet": "voat_nonoverlap_13.parquet",
+      "retained_file": "data/voat_windows/validation/window_13/voat_nonoverlap_13.parquet"
+    },
+    {
+      "public_id": "window_14",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_15",
+      "source_parquet": "voat_nonoverlap_14.parquet",
+      "retained_file": "data/voat_windows/validation/window_14/voat_nonoverlap_14.parquet"
+    },
+    {
+      "public_id": "window_15",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_16",
+      "source_parquet": "voat_nonoverlap_15.parquet",
+      "retained_file": "data/voat_windows/validation/window_15/voat_nonoverlap_15.parquet"
+    },
+    {
+      "public_id": "window_16",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_17",
+      "source_parquet": "voat_nonoverlap_16.parquet",
+      "retained_file": "data/voat_windows/validation/window_16/voat_nonoverlap_16.parquet"
+    },
+    {
+      "public_id": "window_17",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_18",
+      "source_parquet": "voat_nonoverlap_17.parquet",
+      "retained_file": "data/voat_windows/validation/window_17/voat_nonoverlap_17.parquet"
+    },
+    {
+      "public_id": "window_18",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_19",
+      "source_parquet": "voat_nonoverlap_18.parquet",
+      "retained_file": "data/voat_windows/validation/window_18/voat_nonoverlap_18.parquet"
+    },
+    {
+      "public_id": "window_19",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_20",
+      "source_parquet": "voat_nonoverlap_19.parquet",
+      "retained_file": "data/voat_windows/validation/window_19/voat_nonoverlap_19.parquet"
+    },
+    {
+      "public_id": "window_20",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_21",
+      "source_parquet": "voat_nonoverlap_20.parquet",
+      "retained_file": "data/voat_windows/validation/window_20/voat_nonoverlap_20.parquet"
+    },
+    {
+      "public_id": "window_21",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_22",
+      "source_parquet": "voat_nonoverlap_21.parquet",
+      "retained_file": "data/voat_windows/validation/window_21/voat_nonoverlap_21.parquet"
+    },
+    {
+      "public_id": "window_22",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_23",
+      "source_parquet": "voat_nonoverlap_22.parquet",
+      "retained_file": "data/voat_windows/validation/window_22/voat_nonoverlap_22.parquet"
+    },
+    {
+      "public_id": "window_23",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_24",
+      "source_parquet": "voat_nonoverlap_23.parquet",
+      "retained_file": "data/voat_windows/validation/window_23/voat_nonoverlap_23.parquet"
+    },
+    {
+      "public_id": "window_24",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_25",
+      "source_parquet": "voat_nonoverlap_24.parquet",
+      "retained_file": "data/voat_windows/validation/window_24/voat_nonoverlap_24.parquet"
+    },
+    {
+      "public_id": "window_25",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_26",
+      "source_parquet": "voat_nonoverlap_25.parquet",
+      "retained_file": "data/voat_windows/validation/window_25/voat_nonoverlap_25.parquet"
+    },
+    {
+      "public_id": "window_26",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_27",
+      "source_parquet": "voat_nonoverlap_26.parquet",
+      "retained_file": "data/voat_windows/validation/window_26/voat_nonoverlap_26.parquet"
+    },
+    {
+      "public_id": "window_27",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_28",
+      "source_parquet": "voat_nonoverlap_27.parquet",
+      "retained_file": "data/voat_windows/validation/window_27/voat_nonoverlap_27.parquet"
+    },
+    {
+      "public_id": "window_28",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_29",
+      "source_parquet": "voat_nonoverlap_28.parquet",
+      "retained_file": "data/voat_windows/validation/window_28/voat_nonoverlap_28.parquet"
+    },
+    {
+      "public_id": "window_29",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_30",
+      "source_parquet": "voat_nonoverlap_29.parquet",
+      "retained_file": "data/voat_windows/validation/window_29/voat_nonoverlap_29.parquet"
+    },
+    {
+      "public_id": "window_30",
+      "reported_use": "30-window matched benchmark baseline",
+      "source_family": "MADOC/voat-technology-nonoverlap",
+      "source_directory": "sample_31",
+      "source_parquet": "voat_nonoverlap_30.parquet",
+      "retained_file": "data/voat_windows/validation/window_30/voat_nonoverlap_30.parquet"
+    }
+  ]
+}

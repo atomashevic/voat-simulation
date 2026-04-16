@@ -1,0 +1,61 @@
+{
+  "figure3_posts_per_user": {
+    "status": "regenerate_recommended",
+    "note": "Empirical sample set is now midlife30, so pooled Voat distributions used for Figure3 should be regenerated before manuscript edits."
+  },
+  "figure4_degree_distribution": {
+    "status": "regenerate_recommended",
+    "note": "Figure4 depends on the full 30-sample Voat comparison set and should be redrawn under midlife30."
+  },
+  "figure5_core_periphery_pair": {
+    "status": "manual_review",
+    "run29_comments_rank": 24,
+    "midlife30_sample_8_resolves_to": "/home/socio/ysocial-simulations/MADOC/voat-technology-nonoverlap/sample_9",
+    "sample_8_network_metrics": {
+      "nodes": 448.0,
+      "edges": 481.0,
+      "avg_degree": 2.1473214285714284,
+      "avg_weighted_degree": 0.2195616883116883,
+      "avg_clustering": 0.0019475061608508776,
+      "density_total": 0.004803851070629594,
+      "lcc_nodes": 354.0,
+      "lcc_ratio": 0.7901785714285714,
+      "density": 0.0069,
+      "core_nodes": 12.0,
+      "periphery_nodes": 342.0,
+      "core_pct": 3.39,
+      "core_density": 0.197,
+      "core_periphery_density": 0.0585,
+      "core_avg_degree": 22.17,
+      "lcc_share": 79.01785714285714,
+      "repeated_interaction_pct": 7.7894736842105265
+    },
+    "note": "Caption references run29 and sample_8 explicitly; verify that pair remains representative under the refreshed baseline."
+  },
+  "figure7_embedding_pair": {
+    "status": "manual_review",
+    "best_run_by_comment_similarity": {
+      "run": "run11",
+      "embedding.comments_mean_cosine": 0.5981210470199585,
+      "rank": 1
+    },
+    "note": "Figure7 should continue using the run with highest comment cosine under the refreshed audit."
+  },
+  "repeated_interaction_diagnostic": {
+    "status": "new_quantitative_check",
+    "simulation": {
+      "mean": 5.899484778464524,
+      "min": 3.1980319803198034,
+      "max": 8.611825192802057
+    },
+    "voat": {
+      "mean": 8.697079493524225,
+      "ci_lower": 8.043928866727168,
+      "ci_upper": 9.350230120321282,
+      "std": 1.2978864760608328,
+      "n_samples": 30,
+      "ci_method": "t"
+    },
+    "note": "Repeated interactions are in manuscript scope but not currently tabulated."
+  }
+}

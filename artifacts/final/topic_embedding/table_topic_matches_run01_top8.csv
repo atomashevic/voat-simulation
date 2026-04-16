@@ -1,0 +1,9 @@
+sim2_topic_id,sim2_label,sim2_size,madoc_topic_id,madoc_label,madoc_size,cosine_sim,jaccard_topn,soft_jaccard_topn,rank
+3,3_businesses_maybe_small_just,31,40,40_data_privacy_breaches_track,40,0.8188796639442444,0.0526315789473684,0.0526315793395042,1
+16,16_computers_machines_let_smarter,14,15,15_artificial intelligence_intelligence_artificial_humans,85,0.7663754224777222,0.0,0.1026580706238746,1
+11,11_companies_just_intel_repair,18,85,85_iot_internet things_internet_secure internet,21,0.7584128379821777,0.0,0.0312926620244979,1
+18,18_bostrom_values_machines_human,12,15,15_artificial intelligence_intelligence_artificial_humans,85,0.7481634616851807,0.0526315789473684,0.2121414095163345,1
+6,6_apple_email_tech_proton,25,2,2_google_com_search_results,259,0.7461645603179932,0.0,0.0,1
+2,2_bitchute_platforms_just_platform,33,68,68_copyright_happy happy_tpp_happy,27,0.7416741847991943,0.0,0.0,1
+17,17_google_android_tech_just,13,77,77_googles_google_deepmind_google deepmind,23,0.7340259552001953,0.0526315789473684,0.0787005573511123,1
+19,19_nasa_pen_bostrom_computers,10,15,15_artificial intelligence_intelligence_artificial_humans,85,0.7317644357681274,0.0,0.0609723180532455,1

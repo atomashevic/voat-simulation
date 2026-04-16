@@ -1,0 +1,522 @@
+{
+  "conditions": [
+    {
+      "condition": "c0",
+      "label": "baseline",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c0/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c0/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c0/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c0/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c0/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c0/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c0/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c0/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c0/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c0/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c1",
+      "label": "neutral_persona",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c1/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c1/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c1/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c1/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c1/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c1/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c1/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c1/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c1/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c1/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c2",
+      "label": "no_politics_persona",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c2/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c2/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c2/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c2/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c2/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c2/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c2/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c2/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c2/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c2/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c3",
+      "label": "temperature_low_0_3",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c3/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c3/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c3/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c3/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c3/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c3/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c3/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c3/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c3/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c3/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c4",
+      "label": "temperature_high_0_9",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c4/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c4/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c4/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c4/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c4/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c4/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c4/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c4/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c4/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c4/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c5",
+      "label": "budget_flat_s1_5",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c5/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c5/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c5/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c5/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c5/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c5/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c5/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c5/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c5/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c5/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c6",
+      "label": "budget_steep_s3_5",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c6/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c6/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c6/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c6/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c6/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c6/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c6/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c6/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c6/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c6/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c7",
+      "label": "comment_to_post_low_2_to_1",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c7/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c7/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c7/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c7/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c7/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c7/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c7/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c7/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c7/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c7/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c8",
+      "label": "comment_to_post_high_50_to_1",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c8/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c8/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c8/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c8/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c8/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c8/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c8/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c8/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c8/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c8/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c9",
+      "label": "churn_low",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c9/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c9/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c9/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c9/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c9/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c9/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c9/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c9/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c9/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c9/run9.sqlite"
+        }
+      ]
+    },
+    {
+      "condition": "c10",
+      "label": "churn_high",
+      "authority": "server db only",
+      "runs": [
+        {
+          "run_id": "run0",
+          "file": "data/sensitivity_runs/c10/run0.sqlite"
+        },
+        {
+          "run_id": "run1",
+          "file": "data/sensitivity_runs/c10/run1.sqlite"
+        },
+        {
+          "run_id": "run2",
+          "file": "data/sensitivity_runs/c10/run2.sqlite"
+        },
+        {
+          "run_id": "run3",
+          "file": "data/sensitivity_runs/c10/run3.sqlite"
+        },
+        {
+          "run_id": "run4",
+          "file": "data/sensitivity_runs/c10/run4.sqlite"
+        },
+        {
+          "run_id": "run5",
+          "file": "data/sensitivity_runs/c10/run5.sqlite"
+        },
+        {
+          "run_id": "run6",
+          "file": "data/sensitivity_runs/c10/run6.sqlite"
+        },
+        {
+          "run_id": "run7",
+          "file": "data/sensitivity_runs/c10/run7.sqlite"
+        },
+        {
+          "run_id": "run8",
+          "file": "data/sensitivity_runs/c10/run8.sqlite"
+        },
+        {
+          "run_id": "run9",
+          "file": "data/sensitivity_runs/c10/run9.sqlite"
+        }
+      ]
+    }
+  ],
+  "note": "Client DB duplicates were dropped; only the authoritative server DB is retained for each run."
+}

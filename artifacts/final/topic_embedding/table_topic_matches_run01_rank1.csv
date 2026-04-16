@@ -1,0 +1,21 @@
+sim2_topic_id,sim2_label,sim2_size,madoc_topic_id,madoc_label,madoc_size,cosine_sim,jaccard_topn,soft_jaccard_topn,rank
+3,3_businesses_maybe_small_just,31,40,40_data_privacy_breaches_track,40,0.8188796639442444,0.0526315789473684,0.0526315793395042,1
+16,16_computers_machines_let_smarter,14,15,15_artificial intelligence_intelligence_artificial_humans,85,0.7663754224777222,0.0,0.1026580706238746,1
+11,11_companies_just_intel_repair,18,85,85_iot_internet things_internet_secure internet,21,0.7584128379821777,0.0,0.0312926620244979,1
+18,18_bostrom_values_machines_human,12,15,15_artificial intelligence_intelligence_artificial_humans,85,0.7481634616851807,0.0526315789473684,0.2121414095163345,1
+6,6_apple_email_tech_proton,25,2,2_google_com_search_results,259,0.7461645603179932,0.0,0.0,1
+2,2_bitchute_platforms_just_platform,33,68,68_copyright_happy happy_tpp_happy,27,0.7416741847991943,0.0,0.0,1
+17,17_google_android_tech_just,13,77,77_googles_google_deepmind_google deepmind,23,0.7340259552001953,0.0526315789473684,0.0787005573511123,1
+19,19_nasa_pen_bostrom_computers,10,15,15_artificial intelligence_intelligence_artificial_humans,85,0.7317644357681274,0.0,0.0609723180532455,1
+0,0_media_just_news_like,96,39,39_trump_jews_jewish_goldman sachs,41,0.725794792175293,0.0526315789473684,0.0526315867900848,1
+9,9_browser_web_activex_download,18,19,19_firefox_browser_mozilla_opera,67,0.7120590209960938,0.0526315789473684,0.1582070589065551,1
+8,8_intel_pcs_gaming_gaming pcs,21,23,23_intel_amd_security_spectre,56,0.7067078948020935,0.0526315789473684,0.092437595129013,1
+12,12_open source_source_open_linux,17,71,71_open source_source_open_osg,26,0.7035852670669556,0.3333333333333333,0.4418823719024658,1
+7,7_opal_white_people_diversity,22,39,39_trump_jews_jewish_goldman sachs,41,0.7031309604644775,0.0526315789473684,0.0526315793395042,1
+14,14_voting_voters_just_rankedchoice,15,47,47_valley_silicon valley_silicon_layoffs,35,0.6948684453964233,0.0,0.0,1
+4,4_tech_big tech_regulation_development,29,40,40_data_privacy_breaches_track,40,0.681727409362793,0.0526315789473684,0.0908692851662635,1
+1,1_wages_trial_companies_collusion,34,47,47_valley_silicon valley_silicon_layoffs,35,0.6757469773292542,0.0,0.0324390865862369,1
+10,10_download_private_just_trackers,18,50,50_internet_china_open_global,34,0.6667105555534363,0.0526315789473684,0.0526315867900848,1
+13,13_medicine_genetic_science_pharma,15,47,47_valley_silicon valley_silicon_layoffs,35,0.6591445207595825,0.0,0.0,1
+15,15_values_conservative_development_national,14,16,16_bitcoin_currency_crypto_cryptocurrency,74,0.6505868434906006,0.0,0.0,1
+5,5_energy_solar_evs_electric,28,1,1_tesla_solar_electric_energy,307,0.6103682518005371,0.1764705882352941,0.2849381566047668,1

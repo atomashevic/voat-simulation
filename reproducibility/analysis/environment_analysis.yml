@@ -1,0 +1,55 @@
+# YSocial Analysis Environment
+# Conda environment for post-processing and validation
+# Usage: conda env create -f environment_analysis.yml
+
+name: ysocial-analysis
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+  - defaults
+
+dependencies:
+  - python=3.12
+  # Data science core
+  - numpy=2.1
+  - pandas=2.2
+  - scipy=1.15
+  - matplotlib=3.10
+  - seaborn=0.13
+  # Network analysis
+  - networkx=3.4
+  # Machine learning
+  - scikit-learn=1.7
+  # PyTorch with CUDA
+  - pytorch=2.6
+  - pytorch-cuda=12.4
+  # NLP
+  - nltk=3.9
+  # Numerical acceleration
+  - numba=0.61
+  # Data formats
+  - pyarrow=19
+  - pip
+  - pip:
+    # NLP and embeddings
+    - sentence-transformers==5.1.0
+    - transformers==4.49.0
+    - tokenizers==0.21.0
+    - safetensors==0.5.2
+    - huggingface-hub==0.28.1
+    # Topic modeling
+    - bertopic==0.17.3
+    - hdbscan==0.8.40
+    - umap-learn==0.5.9.post2
+    - pynndescent==0.5.13
+    # Network
+    - python-louvain==0.16
+    # NLP
+    - spacy==3.8.7
+    # Visualization
+    - plotly==6.3.0
+    # Utilities
+    - tqdm==4.67.1
+    - joblib==1.4.2
+

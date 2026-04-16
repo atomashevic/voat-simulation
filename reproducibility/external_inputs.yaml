@@ -1,0 +1,100 @@
+paper:
+  manuscript_repo: "git@github.com:atomashevic/voat-simulation-paper.git"
+  title: "Towards Operational Validation of LLM-Agent Social Simulations: A Replicated Study of a Voat-like Technology Forum"
+
+data:
+  source_dataset:
+    name: "MADOC"
+    community: "Voat v/technology"
+    note: "Raw parquet windows retained locally in this repository."
+  calibration_windows:
+    retained_root: "data/voat_windows/calibration"
+    count: 10
+    provenance: "Copied from MADOC/voat-technology-backup-10samples because this bundle matches the reported calibration table."
+  validation_windows:
+    retained_root: "data/voat_windows/validation"
+    count: 30
+    provenance: "Copied from MADOC/voat-technology-nonoverlap with sample_2..31 remapped to window_01..window_30."
+  combined_parquets:
+    retained_root: "data/voat_windows/combined"
+    files:
+      - "voat_technology_madoc.parquet"
+      - "voat_technology_madoc_7d.parquet"
+    note: "Retained because several legacy public pipelines use the compact combined Voat corpus directly."
+  url_catalog:
+    retained_path: "data/url_catalog/voat_external_urls.csv"
+    note: "Voat URL catalog used for link seeding."
+
+benchmark_runs:
+  retained_root: "data/benchmark_runs"
+  count: 30
+  seeds:
+    start: 42
+    end: 71
+    explicit:
+      run01: 42
+      run02: 43
+      run03: 44
+      run04: 45
+      run05: 46
+      run06: 47
+      run07: 48
+      run08: 49
+      run09: 50
+      run10: 51
+      run11: 52
+      run12: 53
+      run13: 54
+      run14: 55
+      run15: 56
+      run16: 57
+      run17: 58
+      run18: 59
+      run19: 60
+      run20: 61
+      run21: 62
+      run22: 63
+      run23: 64
+      run24: 65
+      run25: 66
+      run26: 67
+      run27: 68
+      run28: 69
+      run29: 70
+      run30: 71
+
+sensitivity_runs:
+  retained_root: "data/sensitivity_runs"
+  authority: "server_db_only"
+  conditions:
+    c0: "baseline"
+    c1: "neutral_persona"
+    c2: "no_politics_persona"
+    c3: "temperature_low_0_3"
+    c4: "temperature_high_0_9"
+    c5: "budget_flat_s1_5"
+    c6: "budget_steep_s3_5"
+    c7: "comment_to_post_low_2_to_1"
+    c8: "comment_to_post_high_50_to_1"
+    c9: "churn_low"
+    c10: "churn_high"
+  runs_per_condition: 10
+
+external_code:
+  ysocial_upstream:
+    url: "https://github.com/YSocialTwin/YSocial"
+    role: "platform upstream"
+  yclient_reddit:
+    url: "https://github.com/atomashevic/YClient-Reddit"
+    role: "modified simulation client"
+
+models:
+  simulation_llm:
+    id: "ikiru/Dolphin-Mistral-24B-Venice-Edition"
+    runtime: "Ollama"
+  toxicity:
+    id: "tomh/toxigen_roberta"
+  embeddings:
+    id: "sentence-transformers/all-MiniLM-L6-v2"
+  convergence_entropy_encoder:
+    id: "bert-base-uncased"

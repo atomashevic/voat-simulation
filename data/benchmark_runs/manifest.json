@@ -1,0 +1,156 @@
+{
+  "count": 30,
+  "authority": "single sqlite per benchmark run",
+  "runs": [
+    {
+      "run_id": "run01",
+      "seed": 42,
+      "file": "data/benchmark_runs/run01.sqlite"
+    },
+    {
+      "run_id": "run02",
+      "seed": 43,
+      "file": "data/benchmark_runs/run02.sqlite"
+    },
+    {
+      "run_id": "run03",
+      "seed": 44,
+      "file": "data/benchmark_runs/run03.sqlite"
+    },
+    {
+      "run_id": "run04",
+      "seed": 45,
+      "file": "data/benchmark_runs/run04.sqlite"
+    },
+    {
+      "run_id": "run05",
+      "seed": 46,
+      "file": "data/benchmark_runs/run05.sqlite"
+    },
+    {
+      "run_id": "run06",
+      "seed": 47,
+      "file": "data/benchmark_runs/run06.sqlite"
+    },
+    {
+      "run_id": "run07",
+      "seed": 48,
+      "file": "data/benchmark_runs/run07.sqlite"
+    },
+    {
+      "run_id": "run08",
+      "seed": 49,
+      "file": "data/benchmark_runs/run08.sqlite"
+    },
+    {
+      "run_id": "run09",
+      "seed": 50,
+      "file": "data/benchmark_runs/run09.sqlite"
+    },
+    {
+      "run_id": "run10",
+      "seed": 51,
+      "file": "data/benchmark_runs/run10.sqlite"
+    },
+    {
+      "run_id": "run11",
+      "seed": 52,
+      "file": "data/benchmark_runs/run11.sqlite"
+    },
+    {
+      "run_id": "run12",
+      "seed": 53,
+      "file": "data/benchmark_runs/run12.sqlite"
+    },
+    {
+      "run_id": "run13",
+      "seed": 54,
+      "file": "data/benchmark_runs/run13.sqlite"
+    },
+    {
+      "run_id": "run14",
+      "seed": 55,
+      "file": "data/benchmark_runs/run14.sqlite"
+    },
+    {
+      "run_id": "run15",
+      "seed": 56,
+      "file": "data/benchmark_runs/run15.sqlite"
+    },
+    {
+      "run_id": "run16",
+      "seed": 57,
+      "file": "data/benchmark_runs/run16.sqlite"
+    },
+    {
+      "run_id": "run17",
+      "seed": 58,
+      "file": "data/benchmark_runs/run17.sqlite"
+    },
+    {
+      "run_id": "run18",
+      "seed": 59,
+      "file": "data/benchmark_runs/run18.sqlite"
+    },
+    {
+      "run_id": "run19",
+      "seed": 60,
+      "file": "data/benchmark_runs/run19.sqlite"
+    },
+    {
+      "run_id": "run20",
+      "seed": 61,
+      "file": "data/benchmark_runs/run20.sqlite"
+    },
+    {
+      "run_id": "run21",
+      "seed": 62,
+      "file": "data/benchmark_runs/run21.sqlite"
+    },
+    {
+      "run_id": "run22",
+      "seed": 63,
+      "file": "data/benchmark_runs/run22.sqlite"
+    },
+    {
+      "run_id": "run23",
+      "seed": 64,
+      "file": "data/benchmark_runs/run23.sqlite"
+    },
+    {
+      "run_id": "run24",
+      "seed": 65,
+      "file": "data/benchmark_runs/run24.sqlite"
+    },
+    {
+      "run_id": "run25",
+      "seed": 66,
+      "file": "data/benchmark_runs/run25.sqlite"
+    },
+    {
+      "run_id": "run26",
+      "seed": 67,
+      "file": "data/benchmark_runs/run26.sqlite"
+    },
+    {
+      "run_id": "run27",
+      "seed": 68,
+      "file": "data/benchmark_runs/run27.sqlite"
+    },
+    {
+      "run_id": "run28",
+      "seed": 69,
+      "file": "data/benchmark_runs/run28.sqlite"
+    },
+    {
+      "run_id": "run29",
+      "seed": 70,
+      "file": "data/benchmark_runs/run29.sqlite"
+    },
+    {
+      "run_id": "run30",
+      "seed": 71,
+      "file": "data/benchmark_runs/run30.sqlite"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "avg_churn_pct": {
+    "mean": 82.04660396482058,
+    "ci_lower": 80.67880193476839,
+    "ci_upper": 83.41440599487277,
+    "std": 2.7179821681238145,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_comments_per_day": {
+    "mean": 24.43777777777778,
+    "ci_lower": 20.029239299075897,
+    "ci_upper": 28.84631625647966,
+    "std": 8.760280149710102,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_interactions_per_user_per_day": {
+    "mean": 1.3290869103890597,
+    "ci_lower": 1.3089948953912256,
+    "ci_upper": 1.3491789253868938,
+    "std": 0.039925177244915774,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_new_users_pct": {
+    "mean": 53.02352140477009,
+    "ci_lower": 50.82786166624351,
+    "ci_upper": 55.219181143296666,
+    "std": 4.3630319925427505,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_posts_per_day": {
+    "mean": 18.956666666666663,
+    "ci_lower": 16.506312629128473,
+    "ci_upper": 21.407020704204854,
+    "std": 4.869139271101137,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_thread_active_days": {
+    "mean": 1.2092327952921518,
+    "ci_lower": 1.1921732492512387,
+    "ci_upper": 1.2262923413330649,
+    "std": 0.0338993077336783,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_thread_length": {
+    "mean": 2.251594984391117,
+    "ci_lower": 2.1431640700341874,
+    "ci_upper": 2.3600258987480465,
+    "std": 0.21546487373194628,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_toxicity": {
+    "mean": 0.11860907181816217,
+    "ci_lower": 0.10830099042579394,
+    "ci_upper": 0.1289171532105304,
+    "std": 0.02048336001589108,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_unique_active_users_per_day": {
+    "mean": 32.66444444444445,
+    "ci_lower": 27.726985087094185,
+    "ci_upper": 37.60190380179471,
+    "std": 9.811307626588336,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "comments": {
+    "mean": 733.1333333333333,
+    "ci_lower": 600.8771789722769,
+    "ci_upper": 865.3894876943898,
+    "std": 262.80840449130307,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "comments_mean": {
+    "mean": 0.18891614911671392,
+    "ci_lower": 0.17266828291793598,
+    "ci_upper": 0.20516401531549186,
+    "std": 0.032286405216590444,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "median_thread_active_days": {
+    "mean": 1.0,
+    "ci_lower": 1.0,
+    "ci_upper": 1.0,
+    "std": 0.0,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "median_thread_length": {
+    "mean": 1.1666666666666667,
+    "ci_lower": 0.9759133837447267,
+    "ci_upper": 1.3574199495886068,
+    "std": 0.3790490217894517,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "median_toxicity": {
+    "mean": 0.001326758071081713,
+    "ci_lower": 0.0012547304642520477,
+    "ci_upper": 0.0013987856779113781,
+    "std": 0.0001431272557536657,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "post_comment_ratio": {
+    "mean": 1.278726636246892,
+    "ci_lower": 1.1700007266086367,
+    "ci_upper": 1.3874525458851474,
+    "std": 0.21605106376289165,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "posts_mean": {
+    "mean": 0.030668775078236295,
+    "ci_lower": 0.026512004838627427,
+    "ci_upper": 0.034825545317845166,
+    "std": 0.008259987293492721,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "root_posts": {
+    "mean": 568.7,
+    "ci_lower": 495.18937887385437,
+    "ci_upper": 642.2106211261457,
+    "std": 146.0741781330341,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "total_interactions": {
+    "mean": 1301.8333333333333,
+    "ci_lower": 1103.20752804409,
+    "ci_upper": 1500.4591386225766,
+    "std": 394.692641949651,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "unique_users": {
+    "mean": 591.0666666666667,
+    "ci_lower": 505.31513110871373,
+    "ci_upper": 676.8182022246198,
+    "std": 170.39830283543145,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_clustering": {
+    "mean": 0.003809545533716243,
+    "ci_lower": 0.0026559429939524955,
+    "ci_upper": 0.004963148073479991,
+    "std": 0.0022923427976346594,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_degree": {
+    "mean": 2.305625512315072,
+    "ci_lower": 2.216715765027776,
+    "ci_upper": 2.3945352596023683,
+    "std": 0.17667403790155525,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "avg_weighted_degree": {
+    "mean": 0.4815711975258619,
+    "ci_lower": 0.40164945590712653,
+    "ci_upper": 0.5614929391445973,
+    "std": 0.1588138223166936,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "core_avg_degree": {
+    "mean": 21.198999999999998,
+    "ci_lower": 17.7866000210079,
+    "ci_upper": 24.611399978992097,
+    "std": 6.780836765575419,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "core_density": {
+    "mean": 0.09970666666666668,
+    "ci_lower": 0.05952680897210428,
+    "ci_upper": 0.1398865243612291,
+    "std": 0.07984206364089536,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "core_nodes": {
+    "mean": 21.5,
+    "ci_lower": 16.6267109280664,
+    "ci_upper": 26.3732890719336,
+    "std": 9.683793784925696,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "core_pct": {
+    "mean": 5.136333333333334,
+    "ci_lower": 4.160960348327661,
+    "ci_upper": 6.111706318339007,
+    "std": 1.938179884419353,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "core_periphery_density": {
+    "mean": 0.054773333333333334,
+    "ci_lower": 0.04005487568428037,
+    "ci_upper": 0.0694917909823863,
+    "std": 0.029247292044803447,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "density": {
+    "mean": 0.006513333333333334,
+    "ci_lower": 0.00579447129169338,
+    "ci_upper": 0.007232195374973287,
+    "std": 0.0014284627216439485,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "density_total": {
+    "mean": 0.0050876946311040295,
+    "ci_lower": 0.004447479390949829,
+    "ci_upper": 0.00572790987125823,
+    "std": 0.0012721823540748972,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "edges": {
+    "mean": 568.2666666666667,
+    "ci_lower": 464.27716361039296,
+    "ci_upper": 672.2561697229403,
+    "std": 206.6392714508719,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "lcc_nodes": {
+    "mean": 413.6666666666667,
+    "ci_lower": 351.7606223559819,
+    "ci_upper": 475.57271097735145,
+    "std": 123.01453049393669,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "lcc_ratio": {
+    "mean": 0.8531859142206899,
+    "ci_lower": 0.8292371502519289,
+    "ci_upper": 0.8771346781894509,
+    "std": 0.04758898728437684,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "lcc_share": {
+    "mean": 85.318591422069,
+    "ci_lower": 82.9237150251929,
+    "ci_upper": 87.7134678189451,
+    "std": 4.758898728437685,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "nodes": {
+    "mean": 486.43333333333334,
+    "ci_lower": 413.2438644696413,
+    "ci_upper": 559.6228021970253,
+    "std": 145.43601112975193,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "periphery_nodes": {
+    "mean": 392.1666666666667,
+    "ci_lower": 333.21748241818085,
+    "ci_upper": 451.1158509151525,
+    "std": 117.13890467520068,
+    "n_samples": 30,
+    "ci_method": "t"
+  },
+  "repeated_interaction_pct": {
+    "mean": 8.697079493524225,
+    "ci_lower": 8.043928866727168,
+    "ci_upper": 9.350230120321282,
+    "std": 1.2978864760608328,
+    "n_samples": 30,
+    "ci_method": "t"
+  }
+}
