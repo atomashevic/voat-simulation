@@ -20,25 +20,26 @@ nohup.out
 .DS_Store
 
 # Generated analysis outputs
-results/
-simulation/
-simulation2/
-simulation3/
-backup/
-workshop/
-figures_llm_reddit_client/
+/results/
+/simulation/
+/simulation2/
+/simulation3/
+/backup/
+/workshop/
+/figures_llm_reddit_client/
 
 # Legacy data trees not retained in the public package
-MADOC/
-runs/
-sensitivity/
+/MADOC/
+/runs/
+/sensitivity/
 
 # Nested manuscript repository
-paper/
+/paper/
 
 # Notebooks and local scratch
 *.ipynb
 .ipynb_checkpoints/
+/AGENTS.md
 chain-example.md
 conflict_chains_top20.txt
 literature_review_summary.md
