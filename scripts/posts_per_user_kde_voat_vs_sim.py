@@ -187,7 +187,7 @@ def plot_kde(
         dens_voat_hi,
         color=VOAT_COLOR,
         label=voat_label,
-        linestyle="-",
+        linestyle="--",
     )
     _plot_bands(
         ax,
@@ -226,7 +226,7 @@ def plot_kde(
         dens_voat_log_hi,
         color=VOAT_COLOR,
         label=voat_label,
-        linestyle="-",
+        linestyle="--",
     )
     _plot_bands(
         ax2,
