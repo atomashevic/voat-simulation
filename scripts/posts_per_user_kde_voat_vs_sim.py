@@ -2,10 +2,11 @@
 KDE comparison of posts-per-user: Voat samples vs simulation runs.
 
 Reads:
-  - Simulation runs: <sim-dir>/posts.csv with columns: user_id, comment_to, round
-    Top-level posts are detected as rows with comment_to <= 0 (or NaN).
-  - Voat samples: <voat-dir>/*.parquet with columns including
-    user_id and interaction_type == 'posts' for top-level posts.
+  - Simulation runs: retained SQLite trajectory DBs or <sim-dir>/posts.csv
+    with columns: user_id, comment_to, round. Top-level posts are detected
+    as rows with comment_to <= 0 or missing.
+  - Voat validation windows: retained parquet files or <voat-dir>/*.parquet
+    with columns including user_id and interaction_type == 'posts'.
 
 Outputs:
   - <out-file> (linear posts/user KDE)
@@ -14,13 +15,14 @@ Outputs:
 Usage:
   pyenv activate ysocial && \
   python scripts/posts_per_user_kde_voat_vs_sim.py \
-    --sim-dirs-glob "results/run*" \
-    --voat-dirs-glob "MADOC/voat-technology/sample_*" \
+    --sim-inputs-glob "data/benchmark_runs/run*.sqlite" \
+    --voat-inputs-glob "data/voat_windows/validation/window_*/*.parquet" \
     --out-file paper/figures/voat_vs_sim_posts_per_user_kde.png
 """
 
 import argparse
 import logging
+import sqlite3
 from pathlib import Path
 
 import numpy as np
@@ -50,45 +52,68 @@ def _gaussian_kde_manual(x: np.ndarray, grid: np.ndarray, bandwidth: Optional[fl
     return dens
 
 
-def _list_dirs(glob_pattern: str) -> List[Path]:
-    # Accept both directory globs ("results/run*") and file globs ("results/run*/posts.csv").
+VOAT_COLOR = "#1f77b4"
+SIM_COLOR = "#ff7f0e"
+
+
+def _list_input_paths(glob_pattern: str) -> List[Path]:
+    # Accept directory globs, direct file globs, and single concrete paths.
+    direct_path = Path(glob_pattern)
+    if direct_path.exists():
+        return [direct_path]
+
     paths = sorted(Path().glob(glob_pattern))
     if not paths:
         return []
 
-    if all(p.is_file() for p in paths):
-        return sorted({p.parent for p in paths})
-
-    return [p for p in paths if p.is_dir()]
+    return paths
 
 
-def load_sim_posts_per_user(sim_dir: Path) -> np.ndarray:
-    p = sim_dir / "posts.csv"
-    if not p.exists():
-        raise FileNotFoundError(f"Simulation posts.csv not found at {p}")
-    df = pd.read_csv(p, engine="python")
+def load_sim_posts_per_user(sim_input: Path) -> np.ndarray:
+    if sim_input.is_dir():
+        p = sim_input / "posts.csv"
+        if not p.exists():
+            raise FileNotFoundError(f"Simulation posts.csv not found at {p}")
+        df = pd.read_csv(p, engine="python")
+    elif sim_input.suffix.lower() in {".sqlite", ".sqlite3", ".db"}:
+        with sqlite3.connect(sim_input) as conn:
+            df = pd.read_sql_query(
+                "SELECT user_id, comment_to FROM post",
+                conn,
+            )
+    else:
+        df = pd.read_csv(sim_input, engine="python")
+
     cols = {c.lower(): c for c in df.columns}
     uid_col = cols.get("user_id")
     cto_col = cols.get("comment_to")
     if uid_col is None or cto_col is None:
         raise ValueError("posts.csv must contain 'user_id' and 'comment_to'")
     cto = pd.to_numeric(df[cto_col], errors="coerce")
-    is_post = (cto <= 0) | cto.isna()
-    counts = (
-        df.loc[is_post, uid_col].value_counts().astype(int).to_numpy()
-    )
+    is_post = cto.le(0) | cto.isna()
+    counts = df.loc[is_post, uid_col].value_counts().astype(int).to_numpy()
     return counts
 
 
-def load_voat_posts_per_user(voat_dir: Path) -> np.ndarray:
-    candidates = sorted(voat_dir.glob("*.parquet"))
-    if not candidates:
-        raise FileNotFoundError(f"Voat parquet not found in {voat_dir} (expected *.parquet)")
-    if len(candidates) > 1:
-        logger.warning("Multiple Voat parquet files in %s; using %s", voat_dir, candidates[0])
-    df = pd.read_parquet(candidates[0])
+def load_voat_posts_per_user(voat_input: Path) -> np.ndarray:
+    if voat_input.is_dir():
+        candidates = sorted(voat_input.glob("*.parquet"))
+        if not candidates:
+            raise FileNotFoundError(f"Voat parquet not found in {voat_input} (expected *.parquet)")
+        if len(candidates) > 1:
+            logger.warning("Multiple Voat parquet files in %s; using %s", voat_input, candidates[0])
+        p = candidates[0]
+    else:
+        p = voat_input
+
+    df = pd.read_parquet(p)
     # top-level posts via interaction_type == 'posts'
-    mask = df["interaction_type"].astype(str).str.lower().eq("posts")
+    if "interaction_type" in df.columns:
+        mask = df["interaction_type"].astype(str).str.lower().eq("posts")
+    elif "parent_id" in df.columns:
+        mask = df["parent_id"].isna()
+    else:
+        raise ValueError(f"Cannot identify root posts in {p}")
     counts = df.loc[mask, "user_id"].value_counts().astype(int).to_numpy()
     return counts
 
@@ -127,6 +152,7 @@ def plot_kde(
     *,
     sim_label: str,
     voat_label: str,
+    main_figure_file: Optional[Path] = None,
 ) -> None:
     # Panel 1: linear scale, fixed x-axis range 0..20 (requested)
     grid = np.linspace(0, 20, 400)
@@ -141,24 +167,42 @@ def plot_kde(
     plt.rcParams.update({
         "axes.spines.top": False,
         "axes.spines.right": False,
-        "axes.titlesize": 11,
-        "axes.labelsize": 10,
-        "xtick.labelsize": 9,
-        "ytick.labelsize": 9,
-        "lines.linewidth": 2.8,
-        "figure.dpi": 150,
+        "axes.labelsize": 18,
+        "axes.linewidth": 1.8,
+        "xtick.labelsize": 14,
+        "ytick.labelsize": 14,
+        "legend.fontsize": 19,
+        "lines.linewidth": 3.0,
+        "figure.dpi": 160,
+        "savefig.dpi": 300,
     })
 
-    fig, ax = plt.subplots(1, 1, figsize=(6.2, 4.2), constrained_layout=True)
-    ax.plot(grid, dens_sim_mean, color="#1f77b4", label=sim_label)
-    ax.fill_between(grid, dens_sim_lo, dens_sim_hi, color="#1f77b4", alpha=0.18, linewidth=0)
-    ax.plot(grid, dens_voat_mean, color="#ff7f0e", label=voat_label)
-    ax.fill_between(grid, dens_voat_lo, dens_voat_hi, color="#ff7f0e", alpha=0.18, linewidth=0)
-    ax.set_title("Posts per User: Simulation vs Voat\nMean with 5th-95th Percentile Bands")
-    ax.set_xlabel("Posts per User")
+    fig, ax = plt.subplots(1, 1, figsize=(6.5, 5.0), constrained_layout=True)
+    _style_axis(ax)
+    _plot_bands(
+        ax,
+        grid,
+        dens_voat_mean,
+        dens_voat_lo,
+        dens_voat_hi,
+        color=VOAT_COLOR,
+        label=voat_label,
+        linestyle="--",
+    )
+    _plot_bands(
+        ax,
+        grid,
+        dens_sim_mean,
+        dens_sim_lo,
+        dens_sim_hi,
+        color=SIM_COLOR,
+        label=sim_label,
+        linestyle="-",
+    )
+    ax.set_xlabel("Root Posts per User")
     ax.set_ylabel("Density")
     ax.set_xlim(0, 20)
-    ax.legend(frameon=False, fontsize=9)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=2, frameon=False)
 
     out_file.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_file, bbox_inches="tight")
@@ -172,22 +216,67 @@ def plot_kde(
     dens_sim_log_mean, dens_sim_log_lo, dens_sim_log_hi = _kde_bands(sim_counts_list, grid_log, log1p=True)
     dens_voat_log_mean, dens_voat_log_lo, dens_voat_log_hi = _kde_bands(voat_counts_list, grid_log, log1p=True)
 
-    fig2, ax2 = plt.subplots(1, 1, figsize=(6.2, 4.2), constrained_layout=True)
-    ax2.plot(grid_log, dens_sim_log_mean, color="#1f77b4", label=sim_label)
-    ax2.fill_between(grid_log, dens_sim_log_lo, dens_sim_log_hi, color="#1f77b4", alpha=0.18, linewidth=0)
-    ax2.plot(grid_log, dens_voat_log_mean, color="#ff7f0e", label=voat_label)
-    ax2.fill_between(grid_log, dens_voat_log_lo, dens_voat_log_hi, color="#ff7f0e", alpha=0.18, linewidth=0)
-    ax2.set_title("Posts per User: Simulation vs Voat\nMean with 5th-95th Percentile Bands (Log Scale)")
-    ax2.set_xlabel("Log Posts per User")
+    fig2, ax2 = plt.subplots(1, 1, figsize=(6.5, 5.0), constrained_layout=True)
+    _style_axis(ax2)
+    _plot_bands(
+        ax2,
+        grid_log,
+        dens_voat_log_mean,
+        dens_voat_log_lo,
+        dens_voat_log_hi,
+        color=VOAT_COLOR,
+        label=voat_label,
+        linestyle="--",
+    )
+    _plot_bands(
+        ax2,
+        grid_log,
+        dens_sim_log_mean,
+        dens_sim_log_lo,
+        dens_sim_log_hi,
+        color=SIM_COLOR,
+        label=sim_label,
+        linestyle="-",
+    )
+    ax2.set_xlabel("Log Root Posts per User")
     ax2.set_ylabel("Density")
-    ax2.legend(frameon=False, fontsize=9)
+    ax2.set_ylim(bottom=0)
+    ax2.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=2, frameon=False)
 
     # Save with suffix _logx1 before extension
     out_file = Path(out_file)
     stem, suf = out_file.stem, ''.join(out_file.suffixes) or '.png'
     out_log = out_file.with_name(f"{stem}_logx1{suf}")
+    out_log.parent.mkdir(parents=True, exist_ok=True)
     fig2.savefig(out_log, bbox_inches="tight")
+    if main_figure_file is not None:
+        main_figure_file.parent.mkdir(parents=True, exist_ok=True)
+        fig2.savefig(main_figure_file, bbox_inches="tight")
     plt.close(fig2)
+
+
+def _plot_bands(
+    ax: plt.Axes,
+    grid: np.ndarray,
+    mean: np.ndarray,
+    lower: np.ndarray,
+    upper: np.ndarray,
+    *,
+    color: str,
+    label: str,
+    linestyle: str,
+) -> None:
+    ax.fill_between(grid, lower, upper, color=color, alpha=0.18, linewidth=0)
+    ax.plot(grid, mean, color=color, linestyle=linestyle, label=label)
+
+
+def _style_axis(ax: plt.Axes) -> None:
+    ax.set_facecolor("white")
+    ax.grid(True, which="major", color="#bdbdbd", alpha=0.8, linewidth=0.8)
+    ax.tick_params(axis="both", colors="#222222", width=1.6, length=5)
+    for side in ("left", "bottom"):
+        ax.spines[side].set_color("black")
+        ax.spines[side].set_linewidth(1.8)
 
 
 def main():
@@ -196,60 +285,85 @@ def main():
     parser = argparse.ArgumentParser(
         description="KDE comparison of posts per user across simulation runs vs Voat samples"
     )
-    parser.add_argument("--sim-dir", type=Path, default=None, help="Single simulation directory containing posts.csv")
-    parser.add_argument("--voat-dir", type=Path, default=None, help="Single Voat sample directory containing a parquet window")
-    parser.add_argument("--sim-dirs-glob", type=str, default="results/run*", help="Glob for simulation run directories (default: results/run*)")
-    parser.add_argument("--voat-dirs-glob", type=str, default="MADOC/voat-technology/sample_*", help="Glob for Voat sample directories")
+    parser.add_argument("--sim-dir", type=Path, default=None, help="Single simulation SQLite, CSV, or directory containing posts.csv")
+    parser.add_argument("--voat-dir", type=Path, default=None, help="Single Voat parquet or directory containing a parquet window")
+    parser.add_argument(
+        "--sim-inputs-glob",
+        "--sim-dirs-glob",
+        dest="sim_inputs_glob",
+        type=str,
+        default="data/benchmark_runs/run*.sqlite",
+        help="Glob for simulation SQLite/CSV files or run directories",
+    )
+    parser.add_argument(
+        "--voat-inputs-glob",
+        "--voat-dirs-glob",
+        dest="voat_inputs_glob",
+        type=str,
+        default="data/voat_windows/validation/window_*/*.parquet",
+        help="Glob for Voat parquet files or window directories",
+    )
     parser.add_argument("--max-sim", type=int, default=30, help="Max simulation runs to load (default: 30)")
     parser.add_argument("--max-voat", type=int, default=30, help="Max Voat samples to load (default: 30)")
     parser.add_argument("--out-file", type=Path, default=Path("paper/figures/voat_vs_sim_posts_per_user_kde.png"), help="Output image path for the linear-scale plot")
+    parser.add_argument(
+        "--main-figure-file",
+        type=Path,
+        default=Path("paper/figures_main/Figure3.png"),
+        help="Output image path for the manuscript log-scale Figure 3",
+    )
     args = parser.parse_args()
 
     if args.sim_dir is not None:
-        sim_dirs = [args.sim_dir]
+        sim_inputs = [args.sim_dir]
     else:
-        sim_dirs = _list_dirs(args.sim_dirs_glob)
+        sim_inputs = _list_input_paths(args.sim_inputs_glob)
 
     if args.voat_dir is not None:
-        voat_dirs = [args.voat_dir]
+        voat_inputs = [args.voat_dir]
     else:
-        voat_dirs = _list_dirs(args.voat_dirs_glob)
+        voat_inputs = _list_input_paths(args.voat_inputs_glob)
 
     if args.max_sim is not None:
-        sim_dirs = sim_dirs[: args.max_sim]
+        sim_inputs = sim_inputs[: args.max_sim]
     if args.max_voat is not None:
-        voat_dirs = voat_dirs[: args.max_voat]
+        voat_inputs = voat_inputs[: args.max_voat]
 
-    if not sim_dirs:
-        raise SystemExit(f"No simulation directories found for pattern: {args.sim_dirs_glob}")
-    if not voat_dirs:
-        raise SystemExit(f"No Voat sample directories found for pattern: {args.voat_dirs_glob}")
+    if not sim_inputs:
+        raise SystemExit(f"No simulation inputs found for pattern: {args.sim_inputs_glob}")
+    if not voat_inputs:
+        raise SystemExit(f"No Voat inputs found for pattern: {args.voat_inputs_glob}")
 
-    logger.info("Loading %d simulation runs and %d Voat samples", len(sim_dirs), len(voat_dirs))
+    logger.info("Loading %d simulation runs and %d Voat windows", len(sim_inputs), len(voat_inputs))
 
     sim_counts_list = []  # type: List[np.ndarray]
-    for d in sim_dirs:
+    for d in sim_inputs:
         try:
             sim_counts_list.append(load_sim_posts_per_user(d))
         except Exception as exc:
-            logger.warning("Skipping simulation dir %s: %s", d, exc)
+            logger.warning("Skipping simulation input %s: %s", d, exc)
 
     voat_counts_list = []  # type: List[np.ndarray]
-    for d in voat_dirs:
+    for d in voat_inputs:
         try:
             voat_counts_list.append(load_voat_posts_per_user(d))
         except Exception as exc:
-            logger.warning("Skipping Voat dir %s: %s", d, exc)
+            logger.warning("Skipping Voat input %s: %s", d, exc)
 
     if not sim_counts_list:
-        raise SystemExit("No valid simulation runs loaded (missing posts.csv?)")
+        raise SystemExit("No valid simulation runs loaded")
     if not voat_counts_list:
-        raise SystemExit("No valid Voat samples loaded (missing parquet windows?)")
+        raise SystemExit("No valid Voat windows loaded")
 
-    sim_label = f"Simulation (n={len(sim_counts_list)} runs)"
-    voat_label = f"Voat (n={len(voat_counts_list)} samples)"
-    plot_kde(sim_counts_list, voat_counts_list, args.out_file, sim_label=sim_label, voat_label=voat_label)
-    logger.info("Saved: %s (and _logx1 variant)", args.out_file)
+    plot_kde(
+        sim_counts_list,
+        voat_counts_list,
+        args.out_file,
+        sim_label="Simulation",
+        voat_label="Voat",
+        main_figure_file=args.main_figure_file,
+    )
+    logger.info("Saved: %s, _logx1 variant, and %s", args.out_file, args.main_figure_file)
 
 
 if __name__ == "__main__":
